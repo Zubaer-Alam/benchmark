@@ -35,7 +35,7 @@ const Hero = () => {
         {/* banner content */}
         <div className="px-4 lg:px-24">
           <h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug">
-            <PullUpText words = "We are the best in the business"/>
+            <PullUpText words = "Loyalty is our commitment"/>
           </h1>
 
           {/* banner btn */}

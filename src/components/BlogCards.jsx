@@ -31,7 +31,7 @@ const BlogCards = () => {
             {
                 blogs.map(blog => <motion.div
                     key={blog.id}
-                    className="overflow-hidden bg-cover rounded-lg cursor-pointer  group"
+                    className="overflow-hidden bg-cover rounded-lg cursor-pointer  group h-96 lg:h-72 "
                     style={{
                       backgroundImage: `url(${blog.image})`
                     }}

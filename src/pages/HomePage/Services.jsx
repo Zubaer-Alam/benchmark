@@ -14,7 +14,7 @@ const Services = () => {
       <div className="h-36"></div>
 
       {/* service section */}
-      <div className="lg:flex lg:justify-between items-center" id="services">
+      <div className="flex lg:flex-row flex-col lg:justify-between items-center" id="services">
         {/* contents */}
         <div className="lg:w-1/3 space-y-5">
           <h4 className="text-gray-200 font-semibold text-2xl">
@@ -34,7 +34,7 @@ const Services = () => {
 
         {/* cards */}
         <motion.div
-          className="flex items-center justify-center -mx-4 lg:pl-8"
+          className="lg:flex items-center justify-center -mx-4 lg:pl-8"
           initial="initial"
           whileInView="animate"
         >

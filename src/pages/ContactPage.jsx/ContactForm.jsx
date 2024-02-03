@@ -3,7 +3,7 @@ import { FaEnvelope, FaPaperPlane } from 'react-icons/fa6'
 
 const ContactForm = () => {
     return (
-        <div className='w-4/6 lg:w-3/6'>
+        <div className='w-5/6 lg:w-3/6'>
             <form>
                 <h1 className="text-4xl text-gray-400 font-bold">Contact</h1>
                 <p className="text-sm mt-1 text-gray-500">

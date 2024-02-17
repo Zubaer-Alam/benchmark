@@ -1,11 +1,34 @@
 /* eslint-disable react/no-unknown-property */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsArrowRight } from 'react-icons/bs'
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { PullUpText } from "../../components/Title";
 import FadeUpStagger from "../../components/FadedUpText";
 const Hero = () => {
+
+  const [isSticky, setIsSticky] = useState(false);
+
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 350) {
+        setIsSticky(true);
+      }
+      else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+
   return (
 
     <motion.div
@@ -47,14 +70,14 @@ const Hero = () => {
               </a>
             </div>
             <div className="md:w-1/2">
-              <FadeUpStagger title=" We deliver best problem solving solution for our client and
-                provide finest finishing product in present and upcoming future." />
+              <FadeUpStagger title="The trustworthy Provider of Student Visa & professionals visa to the Best Universities and Colleges of Malaysia, Singapore, UK, NZ, USA, Germany etc." />
             </div>
           </div>
         </div>
 
         {/* scroll arrow to service section */}
-        <Link to="services" spy={true} smooth={true} className="cs-down_btn md:mt-20 mt-8">.</Link>
+         <Link to="services" spy={true} smooth={true} className={`cs-down_btn md:mt-20 mt-8 ${!isSticky ? "flex transition-all duration-300" : "hidden transition-all duration-300"}`}>.</Link>
+   
       </div>
 
     </motion.div>

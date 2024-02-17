@@ -1,25 +1,40 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import BlogCards from "../../components/BlogCards";
-import FadeUpStagger from "../../components/FadedUpText";
-
+import VideoSection from "./VideoSection";
+import { motion } from "framer-motion";
 const Blogs = () => {
+
+  const PreviewAnimation = {
+    initial: {
+      y: 30,
+      opacity: 0,
+      scale: 0.9
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        ease: [0.6, 0.01, 0.05, 0.95],
+        duration: 0.8,
+      }
+    }
+  }
+
   return (
     <div className="text-white lg:px-24 px-4">
       {/* blog top */}
       <div>
-        <h2 className="text-4xl font-bold text-center leading-snug lg:w-4/6 mx-auto pb-20">
-          <FadeUpStagger title={"Our agile process is ability to adapt and respond to change"}/>
-        </h2>
-
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          variants={PreviewAnimation}
+          className=" text-center leading-snug  mx-auto text-6xl flex justify-center font-bold md:px-20 text-gradient bg-gradient-to-r from-[#ffa31d] to-[#ed1c24] bg-clip-text text-transparent">
+          Our agile process is ability to adapt and respond to change
+        </motion.div>
         {/* video player */}
-        <a href="https://www.youtube.com/watch?v=g75FZ6XfL5U">
-          <div className="bg-[url('/src/assets/video_bg.jpeg')] bg-cover bg-no-repeat cursor-pointer cs-video_block cs-style1 cs-video_open cs-bg">
-            <span className="cs-player_btn cs-accent_color">
-              <span></span>
-            </span>
-          </div>
-        </a>
+        <VideoSection />
       </div>
 
       <div className="h-28"></div>
@@ -46,7 +61,7 @@ const Blogs = () => {
 
           {/* cards */}
           <div className="lg:w-2/3 my-8">
-         
+
 
             {/* blog cards */}
             <BlogCards />

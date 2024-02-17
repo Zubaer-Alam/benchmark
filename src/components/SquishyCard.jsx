@@ -1,19 +1,11 @@
 
 import { motion } from "framer-motion";
 
-const SquishyCard = () => {
+const SquishyCard = ({color}) => {
     return (
       <section className="bg-neutral-900 px-4 py-12">
         <div className="mx-auto w-fit">
-          <Card />
-        </div>
-      </section>
-    );
-  };
-  
-  const Card = () => {
-    return (
-      <motion.div
+        <motion.div
         whileHover="hover"
         transition={{
           duration: 1,
@@ -24,7 +16,7 @@ const SquishyCard = () => {
             scale: 1.05,
           },
         }}
-        className="relative  w-80 shrink-0 overflow-hidden rounded-xl bg-indigo-500 p-8"
+        className={`relative w-80 shrink-0 overflow-hidden rounded-xl bg-[${color}] p-8`}
       >
         <div className="relative z-10 text-white">
           <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
@@ -51,15 +43,7 @@ const SquishyCard = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, rem.
           </p>
         </div>
-        <Background />
-      </motion.div>
-    );
-  };
-  
-  
-  const Background = () => {
-    return (
-      <motion.svg
+        <motion.svg
         width="320"
         height="384"
         viewBox="0 0 320 384"
@@ -112,8 +96,14 @@ const SquishyCard = () => {
           fill="#262626"
         />
       </motion.svg>
+      </motion.div>
+        </div>
+      </section>
     );
   };
+  
 
+  
+ 
 
 export default SquishyCard;

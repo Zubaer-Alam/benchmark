@@ -11,9 +11,12 @@ const Footer = () => {
     <div className="lg:px-24 px-4 text-white mt-20">
       <div className="flex flex-col md:flex-row flex-wrap justify-between items-start gap-12">
         <div className="space-y-4 lg:w-1/3">
-          <a href="" className="text-3xl font-bold text-white">
+          {/* <a href="" className="text-3xl font-bold text-white">
             <span className="text-orange">Bench</span>mark
-          </a>
+          </a> */}
+                <img src="/blogo.svg" 
+          className="h-12 w-32 object-contain"
+          alt="benchmark logo" />
           <p className=" text-gray-300">
             Welcome to arino sed ut perspiciae omunde omnis iste natus error
             sitort voluptatem accusantium.

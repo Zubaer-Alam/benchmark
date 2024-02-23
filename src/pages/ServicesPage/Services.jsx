@@ -9,10 +9,10 @@ const Services = () => {
     <Container className=" my-20">
       <div>
         <div className="text-center py-10">
-          <h1 className="text-6xl font-semibold text-white">
+          <h1 className="text-6xl font-semibold text-neutral-700">
             <span className="text-gradient bg-gradient-to-r from-[#ffa31d] to-[#ed1c24] bg-clip-text text-transparent">Services</span> that we provide.
           </h1>
-          <p className="text-2xl  max-w-[80ch] mx-auto my-5 text-gray-300">
+          <p className="text-2xl  max-w-[80ch] mx-auto my-5 text-gray-600">
             We provide various computer repair services and solutions for our
             new and regular customers. Feel free to find out more below.
           </p>

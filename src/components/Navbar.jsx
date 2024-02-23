@@ -43,7 +43,7 @@ const Navbar = () => {
     <header className={`w-full lg:bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300 
     ${isMenuOpen ? "bg-dark/50" : "bg-transparent"}
     `}>
-      <nav className={`lg:py-4 lg:px-24 px-4 ${isSticky ? "sticky top-0 left-0 right-0 bg-dark/50 transition-all duration-300 ease-in" : "transition-all duration-300 ease-in"
+      <nav className={`lg:px-24 px-4  ${isSticky ? "sticky top-0 left-0 right-0 bg-white/50 transition-all duration-300 ease-in " : "transition-all duration-300 ease-in lg:py-4 "
         }`}>
         <div className="flex justify-between items-center text-base gap-8">
           {/* <a href="" className="text-2xl font-bold text-white"><span className="text-orange">Bench</span>mark</a> */}
@@ -54,7 +54,7 @@ const Navbar = () => {
           <ul className="md:flex space-x-12 hidden navitems">
 
             {
-              navItems.map(({ link, path }) => <NavLink to={path} activeClass="active" spy={true} smooth={true} key={link} offset={-100} href={path} className="link block text-base uppercase text-white hover:text-orange transition-all duration-300">
+              navItems.map(({ link, path }) => <NavLink to={path} activeClass="active" spy={true} smooth={true} key={link} offset={-100} href={path} className="link block font-medium uppercase text-gray-900 hover:text-orange transition-all duration-300">
                 {link}
               </NavLink>)
             }
@@ -70,7 +70,7 @@ const Navbar = () => {
           <div className="md:hidden z-50">
             <button
               onClick={toggleMenu}
-              className="text-white focus:outline-none"
+              className="text-black focus:outline-none"
             >
               {isMenuOpen ? (
                 <FaXmark className="h-6 w-6 text-primary" />
@@ -82,14 +82,14 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`space-y-4 px-4 mt-16 py-7 bg-[#181818]  ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}
+          className={`space-y-4 px-4 mt-16 py-7 bg-[#fbfbfb]  rounded-lg ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}
         >
           {
             navItems.map(({ link, path }) => <Link
               to={path} spy={true} smooth={true} offset={-90}
               key={link}
               onClick={toggleMenu}
-              className="block text-base uppercase text-white hover:text-orange transition-all duration-300  translate-x-2"
+              className="block font-medium uppercase text-gray-900  hover:text-orange transition-all duration-300  translate-x-2"
             >
               {link}
             </Link>)

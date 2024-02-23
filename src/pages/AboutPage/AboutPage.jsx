@@ -4,8 +4,7 @@ import PageIntro from "./PageIntro";
 import Discover from "./Discover";
 import Build from "./Build";
 import Deliver from "./Deliver";
-import Values from "./Values";
-import { LampDemo } from "./LampDemo";
+
 
 const AboutPage = () => {
   return (
@@ -35,8 +34,6 @@ const AboutPage = () => {
         <Deliver />
       </div>
     {/* <LampDemo/> */}
-      {/* Values */}
-      <Values />
     </>
   );
 };

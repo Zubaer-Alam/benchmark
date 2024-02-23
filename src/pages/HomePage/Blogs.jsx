@@ -46,12 +46,12 @@ const Blogs = () => {
         >
           {/* contents */}
           <div className="lg:w-1/2 space-y-5 z-30">
-            <h4 className="text-gray-200 font-semibold text-2xl">Our Activities</h4>
-            <h2 className="text-5xl font-bold mb-5 leading-snug">
+            <h4 className="text-black font-semibold text-2xl">Our Activities</h4>
+            <h2 className="text-5xl text-dark font-bold mb-5 leading-snug">
               Explore recent events
             </h2>
             <a
-              className="inline-flex items-center gap-2 font-semibold mt-5 hover:underline underline-offset-4 hover:text-orange transition-all ease-in duration-300"
+              className="inline-flex items-center gap-2 font-semibold mt-5 hover:underline underline-offset-4 text-black hover:text-orange transition-all ease-in duration-300"
               href="/"
             >
               <span>More on Our Facebook</span>
@@ -76,8 +76,8 @@ const Blogs = () => {
 
         {/* shapes */}
         <div className="hidden lg:block">
-          <div className="cs-shape_4"></div>
-          <div className="cs-shape_4"></div>
+          <div className="cs-shape_4 mx-32 -my-28"></div>
+          <div className="cs-shape_4 -my-32"></div>
         </div>
         <div className="lg:h-60 h-8"></div>
       </div>

@@ -6,10 +6,10 @@ import { TagList, TagListItem } from "./TagList";
 const Discover = () => {
   return (
     <Section title="Discover" image={{ src: imageWhiteboard, shape: 1 }}>
-      <div className="space-y-6 text-base text-white">
+      <div className="space-y-6 text-base text-neutral-600">
         <p>
           We work closely with our clients to understand their{" "}
-          <strong className="font-semibold text-neutral-50">travel needs</strong> and
+          <strong className="font-semibold text-neutral-950">travel needs</strong> and
           preferences, immersing ourselves in their travel dreams to understand
           what makes their ideal vacation.
         </p>
@@ -17,16 +17,16 @@ const Discover = () => {
           Our team of travel consultants research the best destinations and create
           personalized itineraries while our account managers focus on ensuring the
           best deals and experiences. Our senior travel experts then curate the best{" "}
-          <strong className="font-semibold text-neutral-50">tour packages</strong>
+          <strong className="font-semibold text-neutral-950">tour packages</strong>
           that cater to our clients' unique needs.
         </p>
         <p>
           Once the full itinerary is complete, we present our clients with a comprehensive
-          <strong className="font-semibold text-neutral-50">travel plan</strong> and,
+          <strong className="font-semibold text-neutral-950">travel plan</strong> and,
           more importantly, a budget.
         </p>
       </div>
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-50">
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Included in this phase
       </h3>
       <TagList className="mt-4">

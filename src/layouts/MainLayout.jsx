@@ -8,7 +8,7 @@ import FacebookChat from "../components/FacebookChat";
 const MainLayout = () => {
 
     return (
-        <div className="bg-gradient-to-br from-amber-50 to-lime-50">
+        <div className="bg-white">
             <Navbar />
             <div >
                 <main className="">

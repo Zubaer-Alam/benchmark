@@ -12,13 +12,11 @@ import List, { ListItem } from "../AboutPage/List";
 
 const Services = () => {
   return (
-    <div className="text-white lg:px-32 px-4">
-      <div className="h-36"></div>
-
+    <div className="text-white lg:px-32 px-4 mt-96 lg:mt-48">
       {/* service section */}
       <div className="flex lg:flex-row flex-col lg:justify-between items-center" id="services">
         {/* contents */}
-        <div className="lg:w-1/3 space-y-5">
+        <div className="lg:w-1/3 z-50">
           <h4 className="text-black font-semibold text-2xl">
             What Can We Do
           </h4>
@@ -26,10 +24,10 @@ const Services = () => {
             Services we can help you with
           </h2>
           <List>
-            <ListItem title="Testing">
+            <ListItem title="Discover">
               We ensure all aspects of the travel plan are thoroughly checked and confirmed.
             </ListItem>
-            <ListItem title="Infrastructure">
+            <ListItem title="Planning">
               We use the best resources and partnerships to ensure a seamless travel experience.
             </ListItem>
             <ListItem title="Support">
@@ -37,7 +35,7 @@ const Services = () => {
             </ListItem>
           </List>
           <Link
-            className="inline-flex items-center gap-2 font-semibold mt-5 hover:underline underline-offset-4 hover:text-orange transition-all ease-in duration-300"
+            className="inline-flex items-center gap-2 font-semibold mt-10 hover:underline underline-offset-4 text-black hover:text-orange transition-all ease-in duration-300"
             to="/services"
           >
             <span>See All Services</span>
@@ -52,7 +50,7 @@ const Services = () => {
           whileInView="animate"
         >
           <div className="flex flex-col items-end px-3">
-            <section className="bg-neutral-50 px-4 py-12">
+            <section className="px-4 py-12">
               <div className="mx-auto w-fit">
                 <motion.div
                   whileHover="hover"
@@ -67,7 +65,7 @@ const Services = () => {
                   }}
                   className={`relative w-80 shrink-0 overflow-hidden rounded-xl bg-[#9333ea] p-8`}
                 >
-                  <div className="relative z-10 text-white">
+                  <div className="relative z-10 text-white font-semibold">
                     <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
                       Service
                     </span>
@@ -89,7 +87,7 @@ const Services = () => {
                       Aboard
                     </motion.span>
                     <p>
-                      The trustworthy Provider of Student Visa to the Best Universities and Colleges of Malaysia, Singapore, UK, NZ, USA, Germany etc.
+                    The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies across the globe.
                     </p>
                   </div>
                   <motion.svg
@@ -120,7 +118,7 @@ const Services = () => {
                         delay: 0.2,
                       }}
                       d="M15.62,2.83h.023c.206.113.416.218.626.323.011,1.142,0,2.285.005,3.428q0,5.56,0,11.12c0,1.486,0,2.972,0,4.457,0,.711,0,1.422,0,2.133-.213.053-.427.1-.639.151-.01-2.028,0-4.056-.006-6.084a38.321,38.321,0,0,1-4.88,4,40.761,40.761,0,0,1-6.042,3.459A28.663,28.663,0,0,1,2,26.92v-.032a29.479,29.479,0,0,0,2.72-2.552,35.528,35.528,0,0,0,3.954-5.108,59.927,59.927,0,0,0,3.148-5.6,49.117,49.117,0,0,0,2.858-6.987A26.7,26.7,0,0,0,15.62,2.83Z"
-                      style={{ fill: "#ffc525" }}
+                      style={{ fill: "#f47835" }}
                     />
                     <motion.path
                       variants={{
@@ -176,14 +174,14 @@ const Services = () => {
                         delay: 0.2,
                       }}
                       d="M10.747,22.358a38.321,38.321,0,0,0,4.88-4c.008,2.028,0,4.056.006,6.084-.365.052-.735.084-1.1.138A33.472,33.472,0,0,0,8.9,25.837a26.865,26.865,0,0,0-6.014,2.717A9.855,9.855,0,0,0,2,29.166V26.92a28.663,28.663,0,0,0,2.705-1.1A40.761,40.761,0,0,0,10.747,22.358Z"
-                      style={{ fill: "#f47835" }}
+                      style={{ fill: "#ea4833" }}
                     />
                   </motion.svg>
                 </motion.div>
               </div>
             </section>
 
-            <section className="bg-neutral-50 px-4 py-12">
+            <section className=" px-4 py-12">
               <div className="mx-auto w-fit">
                 <motion.div
                   whileHover="hover"
@@ -198,7 +196,7 @@ const Services = () => {
                   }}
                   className={`relative w-80 shrink-0 overflow-hidden rounded-xl bg-[#10b981] p-8`}
                 >
-                  <div className="relative z-10 text-white">
+                  <div className="relative z-10 text-white font-semibold">
                     <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
                       Service
                     </span>
@@ -257,7 +255,7 @@ const Services = () => {
                         delay: 0.2,
                       }}
                     >
-                      <path style={{ fill: "#4EFFBB" }} d="M270.192,33.912c-2.245-1.473-5.112-1.704-7.63-0.466L28.063,148.974
+                      <path style={{ fill: "#0f766e" }} d="M270.192,33.912c-2.245-1.473-5.112-1.704-7.63-0.466L28.063,148.974
       c-2.942,1.434-4.646,4.61-4.261,7.901c0.427,3.291,2.867,5.926,6.119,6.624c27.847,5.848,71.065,15.143,85.706,18.705v75.753
       c0,3.252,2.014,6.197,5.112,7.282c0.853,0.31,1.743,0.466,2.633,0.466c2.245,0,4.454-0.968,5.926-2.789l48.486-58.326
       c13.091,5.151,51.546,19.946,84.426,32.61c0.929,0.349,1.86,0.505,2.789,0.505c1.551,0,3.059-0.466,4.376-1.316
@@ -287,7 +285,7 @@ const Services = () => {
 
           </div>
           <div className="px-3">
-            <section className="bg-neutral-50 px-4 py-12">
+            <section className=" px-4 py-12">
               <div className="mx-auto w-fit">
                 <motion.div
                   whileHover="hover"
@@ -302,7 +300,7 @@ const Services = () => {
                   }}
                   className={`relative w-80 shrink-0 overflow-hidden rounded-xl bg-[#ef4444] p-8`}
                 >
-                  <div className="relative z-10 text-white">
+                  <div className="relative z-10 text-white font-semibold">
                     <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
                       Service
                     </span>
@@ -350,7 +348,7 @@ const Services = () => {
                     }}
                   >
                     <motion.circle
-                      style={{ fill: "#B4D8F1" }}
+                      style={{ fill: " #3b82f6" }}
                       cx="256"
                       cy="256"
                       r="256"
@@ -362,11 +360,11 @@ const Services = () => {
                       }}
                     />
                     <motion.path
-                      style={{ fill: "#98C8ED" }}
+                      style={{ fill: "#0ea5e9" }}
                       d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
                     />
                     <motion.path
-                      style={{ fill: "#95D5A7" }}
+                      style={{ fill: "#10b981" }}
                       d="M102.4,332.8c21.207,0,38.4,17.193,38.4,38.4V384c0,21.207,17.193,38.4,38.4,38.4
     s38.4-17.193,38.4-38.4v-89.6c0-21.207-17.193-38.4-38.4-38.4s-38.4-17.193-38.4-38.4v-12.8c0-35.346,28.654-64,64-64
     c21.207,0,38.4-17.193,38.4-38.4V51.2c0-21.207-17.193-38.4-38.4-38.4h-28.902C74.988,46.019,1.812,140.275,0.052,251.887
@@ -374,12 +372,12 @@ const Services = () => {
                     />
                     <g>
                       <motion.path
-                        style={{ fill: "#80CB93" }}
+                        style={{ fill: "#10b981" }}
                         d="M332.8,115.2c0,42.415,34.385,76.8,76.8,76.8h51.2c14.641,0,28.323-4.096,39.965-11.204
       C477.75,105.798,421.216,45.475,348.635,17.289C338.702,30.23,332.8,46.427,332.8,64V115.2z"
                       />
                       <motion.path
-                        style={{ fill: "#80CB93" }}
+                        style={{ fill: "#10b981" }}
                         d="M473.6,268.8h-128c-21.207,0-38.4,17.193-38.4,38.4s17.193,38.4,38.4,38.4S384,362.793,384,384v25.6
       c0,20.444,19.547,38.34,39.951,39.603c45.426-39.523,76.764-94.803,85.533-157.325C503.197,278.889,488.861,268.8,473.6,268.8z"
                       />

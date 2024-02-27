@@ -86,9 +86,8 @@ const Contact = () => {
         {/* cta text */}
         <div className="h-full  flex items-center justify-center">
           <div className="lg:w-1/2 mx-auto text-center px-4">
-            <h2 className="lg:text-5xl text-3xl text-white font-bold lg:leading-snug leading-normal mb-6">
-              Let's make  <br /> something{" "}
-              <span className="italic">cool </span>  {"  "}together
+            <h2 className="lg:text-4xl text-2xl text-white font-bold lg:leading-snug leading-normal mb-6">
+            Providing online education & career consultancy
             </h2>
 
             {/* here */}

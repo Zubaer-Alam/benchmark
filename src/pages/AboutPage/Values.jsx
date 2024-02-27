@@ -6,7 +6,7 @@ import { GridList, GridListItem } from "./GridList";
 
 const Values = () => {
   return (
-    <div className="relative mt-12">
+    <div className="relative mt-16">
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
         <GridPattern
           className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"

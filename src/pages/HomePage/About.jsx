@@ -20,16 +20,16 @@ const About = () => {
       <div className="md:w-3/5">
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-8">
           <div className="flex h-auto items-center gap-3">
-            <h4 className="md:text-5xl text-3xl font-semibold">40K</h4>
+            <h4 className="md:text-5xl text-3xl font-semibold">10</h4>
             <div className="">
               <span className="text-orange font-bold text-lg">+</span>
               <p className="mb-2 text-sm leading-tight text-gray-300">
-                Global Happy Clients
+                Countries Covered Worldwide
               </p>
             </div>
           </div>
           <div className="flex h-auto items-center gap-3">
-            <h4 className="md:text-5xl text-3xl font-semibold">50K</h4>
+            <h4 className="md:text-5xl text-3xl font-semibold">700</h4>
             <div>
               <span className="text-orange font-bold text-lg">+</span>
               <p className="mb-2 text-sm leading-tight text-gray-300">
@@ -38,20 +38,20 @@ const About = () => {
             </div>
           </div>
           <div className="flex h-auto items-center gap-3">
-            <h4 className="md:text-5xl text-3xl font-semibold">245</h4>
+            <h4 className="md:text-5xl text-3xl font-semibold">5k</h4>
             <div className="">
               <span className="text-orange font-bold text-lg">+</span>
               <p className="mb-2 text-sm leading-tight text-gray-300">
-                Team Members
+                Global Happy Clients
               </p>
             </div>
           </div>
           <div className="flex h-auto items-center gap-3">
-            <h4 className="md:text-5xl text-3xl font-semibold">550</h4>
+            <h4 className="md:text-5xl text-3xl font-semibold">50</h4>
             <div className="">
               <span className="text-orange font-bold text-lg">+</span>
               <p className="mb-2 text-sm leading-tighttext-gray-300">
-                Digital products
+                Team Members
               </p>
             </div>
           </div>

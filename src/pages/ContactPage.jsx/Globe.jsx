@@ -1,44 +1,19 @@
-import { cn } from "../../lib/utils";
 import createGlobe from "cobe";
-import { useCallback, useEffect, useRef } from "react";
-import { useSpring } from "react-spring";
+import { useEffect, useRef } from "react";
+import { useSpring } from 'react-spring';
 
-const GLOBE_CONFIG = {
-    width: 800,
-    height: 800,
-    onRender: () => { },
-    devicePixelRatio: 2,
-    phi: 0,
-    theta: 0.3,
-    dark: 0,
-    diffuse: 0.4,
-    mapSamples: 16000,
-    mapBrightness: 1.2,
-    baseColor: [1, 1, 1],
-    markerColor: [251 / 255, 100 / 255, 21 / 255],
-    glowColor: [4/5, 4/5, 4/5],
-    markers: [
-        { location: [14.5995, 120.9842], size: 0.03 },
-        { location: [19.076, 72.8777], size: 0.1 },
-        { location: [23.8103, 90.4125], size: 0.05 },
-        { location: [30.0444, 31.2357], size: 0.07 },
-        { location: [39.9042, 116.4074], size: 0.08 },
-        { location: [-23.5505, -46.6333], size: 0.1 },
-        { location: [19.4326, -99.1332], size: 0.1 },
-        { location: [40.7128, -74.006], size: 0.1 },
-        { location: [34.6937, 135.5022], size: 0.05 },
-        { location: [41.0082, 28.9784], size: 0.06 },
-    ],
-};
+export default function Globe() {
+    const canvasRef = useRef();
+    const locationToAngles = (lat, long) => {
+        console.log(lat, long)
+        return [Math.PI - ((long * Math.PI) / 180 - Math.PI / 2), (lat * Math.PI) / 180]
+    }
+    const focusRef = useRef([0, 0])
 
-export default function Globe({
-    className,
-    config = GLOBE_CONFIG,
-}) {
-    let phi = 0;
-    let width = 0;
-    const canvasRef = useRef(null);
+    console.log(focusRef.current)
+
     const pointerInteracting = useRef(null);
+    console.log(pointerInteracting.current)
     const pointerInteractionMovement = useRef(0);
     const [{ r }, api] = useSpring(() => ({
         r: 0,
@@ -49,75 +24,140 @@ export default function Globe({
             precision: 0.001,
         },
     }));
-
-    const updatePointerInteraction = (value) => {
-        pointerInteracting.current = value;
-        canvasRef.current.style.cursor = value ? "grabbing" : "grab";
-    };
-
-    const updateMovement = (clientX) => {
-        if (pointerInteracting.current !== null) {
-            const delta = clientX - pointerInteracting.current;
-            pointerInteractionMovement.current = delta;
-            api.start({ r: delta / 200 });
-        }
-    };
-
-    const onRender = useCallback(
-        (state) => {
-            if (!pointerInteracting.current) phi += 0.005;
-            state.phi = phi + r.get();
-            state.width = width * 2;
-            state.height = width * 2;
-        },
-        [pointerInteracting, phi, r]
-    );
-
-    const onResize = () => {
-        if (canvasRef.current) {
-            width = canvasRef.current.offsetWidth;
-        }
-    };
-
     useEffect(() => {
-        window.addEventListener("resize", onResize);
-        onResize();
+        let phi = 0;
+        let width = 0;
+        let currentPhi = 0;
+        let currentTheta = 0;
+        const doublePi = Math.PI * 2;
 
+        const onResize = () => canvasRef.current && (width = canvasRef.current.offsetWidth)
+        window.addEventListener('resize', onResize)
+        onResize()
         const globe = createGlobe(canvasRef.current, {
-            ...config,
+            devicePixelRatio: 2,
             width: width * 2,
             height: width * 2,
-            onRender,
-        });
+            phi: 0,
+            theta: 0.3,
+            dark: 0,
+            diffuse: 0.4,
+            mapSamples: 16000,
+            mapBrightness: 12.0,
+            mapBaseBrightness: 0,
+            baseColor: [1, 1, 1],
+            markerColor: [251 / 255, 100 / 255, 21 / 255],
+            glowColor: [4/5, 4/5, 4/5],
+            opacity: 1,
+            markers: [
+                { location: [37.78, -122.412], size: 0.1 },
+                { location: [52.52, 13.405], size: 0.1 },
+                { location: [35.676, 139.65], size: 0.1 },
+                { location: [-34.60, -58.38], size: 0.1 },
+            ],
 
-        setTimeout(() => (canvasRef.current.style.opacity = "1"));
-        return () => globe.destroy();
-    }, []);
+            onRender: (state) => {
+                // this is dragabble and rotatable
+                // This prevents rotation while dragging
 
-    return (
-        <div
-            className={cn(
-                "aspect-[1/1] w-full max-w-[600px]",
-                className
-            )}
-        >
-            <canvas
-                className={cn(
-                    "h-full w-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
-                )}
-                ref={canvasRef}
-                onPointerDown={(e) =>
-                    updatePointerInteraction(
-                        e.clientX - pointerInteractionMovement.current
-                    )
+                if (!pointerInteracting.current) {
+                    // Called on every animation frame.
+                    // `state` will be an empty object, return updated params.
+                    phi += 0.005
                 }
-                onPointerUp={() => updatePointerInteraction(null)}
-                onPointerOut={() => updatePointerInteraction(null)}
-                onMouseMove={(e) => updateMovement(e.clientX)}
-                onTouchMove={(e) =>
-                    e.touches[0] && updateMovement(e.touches[0].clientX)
+                if (focusRef.current[0] === 0) {
+                    state.phi = phi + r.get()
+                    state.width = width * 2
+                    state.height = width * 2
                 }
-            />
+
+                // This is the focus effect on the globe to  rotate to the location
+                if (focusRef.current[0] !== 0) {
+                    state.phi = currentPhi
+                    state.theta = currentTheta
+                }
+                const [focusPhi, focusTheta] = focusRef.current
+                const distPositive = (focusPhi - currentPhi + doublePi) % doublePi
+                const distNegative = (currentPhi - focusPhi + doublePi) % doublePi
+                // Control the speed
+                if (distPositive < distNegative) {
+                    currentPhi += distPositive * 0.08
+                } else {
+                    currentPhi -= distNegative * 0.08
+                }
+                currentTheta = currentTheta * 0.92 + focusTheta * 0.08
+                state.width = width * 2
+                state.height = width * 2
+            }
+        })
+        setTimeout(() => canvasRef.current.style.opacity = '1')
+        return () => {
+            globe.destroy();
+            window.removeEventListener('resize', onResize);
+        }
+    }, [])
+    return <div style={{
+        width: '100%',
+        maxWidth: 600,
+        aspectRatio: 1,
+        margin: 'auto',
+        position: 'relative',
+    }}>
+        <canvas
+            ref={canvasRef}
+            onPointerDown={(e) => {
+                pointerInteracting.current =
+                    e.clientX - pointerInteractionMovement.current;
+                canvasRef.current.style.cursor = 'grabbing';
+            }}
+            onPointerUp={() => {
+                pointerInteracting.current = null;
+                canvasRef.current.style.cursor = 'grab';
+            }}
+            onPointerOut={() => {
+                pointerInteracting.current = null;
+                canvasRef.current.style.cursor = 'grab';
+            }}
+            onMouseMove={(e) => {
+                if (pointerInteracting.current !== null) {
+                    const delta = e.clientX - pointerInteracting.current;
+                    pointerInteractionMovement.current = delta;
+                   
+                }
+            }}
+            onTouchMove={(e) => {
+                if (pointerInteracting.current !== null && e.touches[0]) {
+                    const delta = e.touches[0].clientX - pointerInteracting.current;
+                    pointerInteractionMovement.current = delta;
+                    api.start({
+                        r: delta / 100,
+                    });
+                }
+            }}
+            style={{
+                width: '100%',
+                height: '100%',
+                cursor: 'grab',
+                contain: 'layout paint size',
+                opacity: 0,
+                transition: 'opacity 1s ease',
+            }}
+        />
+
+        <div className="flex flex-col md:flex-row justify-center items-center control-buttons" style={{ gap: '.5rem' }}>
+            <button onClick={() => {
+                focusRef.current = locationToAngles(37.78, -122.412)
+            }}> San Francisco</button>
+            <button onClick={() => {
+                focusRef.current = locationToAngles(52.52, 13.405)
+            }}> Berlin</button>
+            <button onClick={() => {
+                focusRef.current = locationToAngles(35.676, 139.65)
+            }}>Tokyo</button>
+            <button onClick={() => {
+                focusRef.current = locationToAngles(-34.60, -58.38)
+            }}> Buenos Aires</button>
         </div>
-    );
+    </div>
 }
+

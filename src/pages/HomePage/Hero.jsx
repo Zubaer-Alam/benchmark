@@ -70,7 +70,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="md:w-1/2">
-              <FadeUpStagger title="The trustworthy Provider of Student Visa & professionals visa to the Best Universities and Colleges of Malaysia, Singapore, UK, NZ, USA, Germany etc." />
+              <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
             </div>
           </div>
         </div>

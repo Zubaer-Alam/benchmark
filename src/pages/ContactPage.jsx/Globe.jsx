@@ -4,6 +4,7 @@ import { useSpring } from 'react-spring';
 
 export default function Globe() {
     const canvasRef = useRef();
+    
     const locationToAngles = (lat, long) => {
         console.log(lat, long)
         return [Math.PI - ((long * Math.PI) / 180 - Math.PI / 2), (lat * Math.PI) / 180]

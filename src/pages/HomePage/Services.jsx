@@ -16,14 +16,14 @@ const Services = () => {
       {/* service section */}
       <div className="flex lg:flex-row flex-col lg:justify-between items-center" id="services">
         {/* contents */}
-        <div className="lg:w-1/3 z-50">
+        <div className="lg:w-1/2 z-50">
           <h4 className="text-black font-semibold text-2xl">
             What Can We Do
           </h4>
           <h2 className="text-5xl text-dark font-bold mb-5 leading-snug">
             Services we can help you with
           </h2>
-          <List>
+          <List className="space-y-2">
             <ListItem title="Discover">
               We ensure all aspects of the travel plan are thoroughly checked and confirmed.
             </ListItem>
@@ -50,7 +50,7 @@ const Services = () => {
           whileInView="animate"
         >
           <div className="flex flex-col items-end px-3">
-            <section className="px-4 py-12">
+            <section className="px-4 pt-12 lg:px-0 lg:py-0">
               <div className="mx-auto w-fit">
                 <motion.div
                   whileHover="hover"
@@ -63,7 +63,7 @@ const Services = () => {
                       scale: 1.05,
                     },
                   }}
-                  className={`relative w-80 shrink-0 overflow-hidden rounded-xl bg-[#9333ea] p-8`}
+                  className={`relative w-80 lg:h-48 shrink-0 overflow-hidden rounded-xl bg-[#9333ea] p-8`}
                 >
                   <div className="relative z-10 text-white font-semibold">
                     <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
@@ -80,13 +80,13 @@ const Services = () => {
                         duration: 1,
                         ease: "backInOut",
                       }}
-                      className="my-2 block origin-top-left font-mono text-6xl font-black leading-[1.2]"
+                      className="my-2 lg:my-0 block origin-top-left font-mono text-6xl lg:text-3xl font-black leading-[1.2]"
                     >
-                      Study
-                      <br />
+                      Study 
+                      <br className="lg:hidden" /> {""}
                       Aboard
                     </motion.span>
-                    <p>
+                    <p className="lg:text-sm">
                     The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies across the globe.
                     </p>
                   </div>
@@ -95,7 +95,7 @@ const Services = () => {
                     height="300px"
                     viewBox="0 0 32 32"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute mt-24 ms-10 inset-0 z-0"
+                    className="absolute mt-24 lg:mt-0 ms-10 inset-0 z-0"
                     variants={{
                       hover: {
                         scale: 1.5,
@@ -181,7 +181,7 @@ const Services = () => {
               </div>
             </section>
 
-            <section className=" px-4 py-12">
+            <section className="px-4 py-12 lg:px-0 lg:py-0 lg:pt-4">
               <div className="mx-auto w-fit">
                 <motion.div
                   whileHover="hover"
@@ -194,7 +194,7 @@ const Services = () => {
                       scale: 1.05,
                     },
                   }}
-                  className={`relative w-80 shrink-0 overflow-hidden rounded-xl bg-[#10b981] p-8`}
+                  className={`relative w-80 lg:h-48 shrink-0 overflow-hidden rounded-xl bg-[#10b981] p-8`}
                 >
                   <div className="relative z-10 text-white font-semibold">
                     <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
@@ -211,13 +211,13 @@ const Services = () => {
                         duration: 1,
                         ease: "backInOut",
                       }}
-                      className="my-2 block origin-top-left font-mono text-6xl font-black leading-[1.2]"
+                      className="my-2 lg:my-0 block origin-top-left font-mono text-6xl lg:text-3xl  font-black leading-[1.2]"
                     >
                       Live
-                      <br />
+                      <br className="lg:hidden" /> {""}
                       Abroad
                     </motion.span>
-                    <p>
+                    <p className="lg:text-sm">
                       Professionals visa to the Best Universities and Colleges of Malaysia, Singapore, UK, NZ, USA, Germany etc.
                     </p>
                   </div>
@@ -231,7 +231,7 @@ const Services = () => {
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 274.602 274.602"
                     xml:space="preserve"
-                    className="absolute inset-0 mt-20 z-0"
+                    className="absolute inset-0 mt-20 lg:mt-0 z-0"
                     variants={{
                       hover: {
                         scale: 1.5,
@@ -284,8 +284,8 @@ const Services = () => {
             </section>
 
           </div>
-          <div className="px-3">
-            <section className=" px-4 py-12">
+          <div className="">
+            <section className="">
               <div className="mx-auto w-fit">
                 <motion.div
                   whileHover="hover"
@@ -298,7 +298,7 @@ const Services = () => {
                       scale: 1.05,
                     },
                   }}
-                  className={`relative w-80 shrink-0 overflow-hidden rounded-xl bg-[#ef4444] p-8`}
+                  className={`relative w-80 lg:h-[25rem] shrink-0 overflow-hidden rounded-xl bg-[#ef4444] p-8`}
                 >
                   <div className="relative z-10 text-white font-semibold">
                     <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
@@ -322,7 +322,7 @@ const Services = () => {
                       Tourism
                     </motion.span>
                     <p>
-                      The Best Travel and Tourism Services that you can trust for your next trip.
+                      The Best Travel and Tourism Services that you can trust for your next trip to any part of the world with the best deals.
                     </p>
                   </div>
                   <motion.svg

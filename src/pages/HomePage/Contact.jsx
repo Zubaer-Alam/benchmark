@@ -99,7 +99,7 @@ const Contact = () => {
                   onMouseEnter={() => setHoveredIndex(item.id)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <AnimatePresence mode="wait">
+                  {/* <AnimatePresence mode="wait">
                     {hoveredIndex === item.id && (
                       <motion.div
                         initial={{ opacity: 0, y: 20, scale: 0.6 }}
@@ -129,7 +129,7 @@ const Contact = () => {
                         <div className="text-white text-xs">{item.designation}</div>
                       </motion.div>
                     )}
-                  </AnimatePresence>
+                  </AnimatePresence> */}
                   <img
                     onMouseMove={handleMouseMove}
                     height={100}

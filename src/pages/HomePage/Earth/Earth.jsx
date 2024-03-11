@@ -9,8 +9,7 @@ import texture from '../../../assets/earth/texture.jpg';
 
 const min = 1000;
 const max = 4000;
-const sliceData = pointsData.sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(20, 90);
-
+const sliceData = pointsData.sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(20, 50);
 const arcsData = sliceData.map(() => {
     const randStart = Math.floor(Math.random() * sliceData.length);
     const randEnd = Math.floor(Math.random() * sliceData.length);
@@ -146,24 +145,24 @@ const EarthComponent = () => {
                 }
                 atmosphereColor='#FFFFFF'
                 atmosphereAltitude={0.5}
-                htmlElementsData={gData}
-                htmlElement={d => {
-                    const el = document.createElement('div');
-                    el.innerHTML = `<div class="">
-                    <img
-                    src=${d.src}
-                    class="h-[20px] w-[20px] rounded-full object-cover mr-2"
-                  />
-                    <p class="text-[15px]">${d.label}</p>
-                </div>`;
-                    el.style.color = d.color;
-                    el.style.width = `${d.size}px`;
+                // htmlElementsData={gData}
+                // htmlElement={d => {
+                //     const el = document.createElement('div');
+                //     el.innerHTML = `<div class="">
+                //     <img
+                //     src=${d.src}
+                //     class="h-[20px] w-[20px] rounded-full object-cover mr-2"
+                //   />
+                //     <p class="text-[15px]">${d.label}</p>
+                // </div>`;
+                //     el.style.color = d.color;
+                //     el.style.width = `${d.size}px`;
 
-                    el.style['pointer-events'] = 'auto';
-                    el.style.cursor = 'pointer';
-                    el.onclick = () => console.log(d);
-                    return el;
-                }}
+                //     el.style['pointer-events'] = 'auto';
+                //     el.style.cursor = 'pointer';
+                //     el.onclick = () => console.log(d);
+                //     return el;
+                // }}
                 // pointsMerge={true}
                 // pointsData={pointsData}
                 // pointAltitude={0.01}

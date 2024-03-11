@@ -33,10 +33,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { link: "Home", path: "/" },
     { link: "About", path: "about" },
     { link: "Services", path: "services" },
-    { link: "Contact", path: "contact" },
+    { link: "For Workers", path: "workers" },
+    { link: "For Companies", path: "companies" },
+    { link: "For Corporate", path: "corporate" },
   ];
 
   return (
@@ -48,10 +49,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center text-base gap-8">
           {/* <a href="" className="text-2xl font-bold text-white"><span className="text-orange">Bench</span>mark</a> */}
          <div className="relative">
-         <img src="/blogo.svg"
-            className="h-16 w-32 object-contain"
-            alt="benchmark logo" />
-            <p className="absolute text-[12px] w-[500px] bottom-0 text-black">Career Development Centre & Education Consultancy</p>
+        <Link to="/">
+          <img src="/blogo.svg"
+            className="h-20 w-44 object-contain"
+            alt="benchmark logo" /></Link>
+            <p className="absolute text-[12px] w-[500px] -bottom-1 text-black">Career Development Centre & Education Consultancy</p>
          </div>
 
           <ul className="md:flex space-x-12 hidden navitems">
@@ -63,11 +65,11 @@ const Navbar = () => {
             }
           </ul>
 
-          <div className="space-x-12 hidden md:block">
+          <Link to="/contact" className="space-x-12 hidden md:block">
             <button className="py-2 w-40 h-10 px-6  text-white shadow-lg before:block before:-left-1 before:-top-1 before:bg-red-700 before:absolute before:h-0 before:w-0 before:hover:w-[100%] before:hover:h-[100%]  before:duration-500 before:-z-40 after:block after:-right-1 after:-bottom-1 after:bg-red-700 after:absolute after:h-0 after:w-0 after:hover:w-[100%] after:hover:h-[100%] after:duration-500 after:-z-40 bg-dark relative flex justify-center items-center gap-2 rounded-md">
               <FaPhone /> <span className="font-bold">Contact</span>
             </button>
-          </div>
+          </Link>
 
           {/* menu btn, visible on mobile screen */}
           <div className="md:hidden z-50">

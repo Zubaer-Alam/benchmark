@@ -9,6 +9,8 @@ body {
   /* font-weight: 700; */
   font-style: normal;
   overflow-x: hidden;
+
+  scroll-behavior: smooth;
 }
 
 /* scroll bar */

@@ -1,7 +1,6 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import BlogCards from "../../components/BlogCards";
-import VideoSection from "./VideoSection";
 import { motion } from "framer-motion";
 const Blogs = () => {
 
@@ -33,8 +32,7 @@ const Blogs = () => {
           className=" text-center leading-snug  mx-auto text-6xl flex justify-center font-bold md:px-20 text-gradient bg-gradient-to-r from-[#ffa31d] to-[#ed1c24] bg-clip-text text-transparent">
           Our agile process is ability to adapt and respond to change
         </motion.div>
-        {/* video player */}
-        <VideoSection />
+        {/* <VideoSection /> */}
       </div>
 
       <div className="h-28"></div>

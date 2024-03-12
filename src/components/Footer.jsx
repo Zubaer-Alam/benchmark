@@ -14,12 +14,11 @@ const Footer = () => {
           {/* <a href="" className="text-3xl font-bold text-white">
             <span className="text-orange">Bench</span>mark
           </a> */}
-                <img src="/blogo.svg" 
-          className="h-12 w-32 object-contain"
-          alt="benchmark logo" />
+          <img src="/blogo.svg"
+            className="h-12 w-32 object-contain"
+            alt="benchmark logo" />
           <p className=" text-gray-300">
-            Welcome to arino sed ut perspiciae omunde omnis iste natus error
-            sitort voluptatem accusantium.
+            Career Development and education consultancy
           </p>
           <div className="flex gap-5 text-white">
             <a
@@ -54,17 +53,15 @@ const Footer = () => {
           <h3 className="text-2xl font-semibold">Services</h3>
           <div className="space-y-3 text-gray-300">
             <a href="/" className="block">
-             Service 1
+              Professional Visa
             </a>
             <a href="/" className="block">
-              Service 2
+              Student Visa
             </a>
             <a href="/" className="block">
-              Service 3
+              Tours and Travels
             </a>
-            <a href="/" className="block">
-              Service 3
-            </a>
+
           </div>
         </div>
 
@@ -73,13 +70,19 @@ const Footer = () => {
           <h3 className="text-2xl font-semibold">Contact Us</h3>
           <div className="space-y-3 text-gray-300">
             <a href="/" className="block">
-              +44 454 7800 112
+              Ideal Home, Melody 2,
+              <br />
+              L4, Flat- E/4,
+
             </a>
             <a href="/" className="block">
-              asm@asm.com
+              Chittagong, Bangladesh
+
             </a>
             <a href="/" className="block">
-              50 34 dddff asd, <br /> 44150 SFgfs, UK
+              +880 1537-412382 <br />
+              careerbenchmark71@gmail.com <br />
+              info@thebenchmark-bd.com
             </a>
           </div>
         </div>
@@ -94,15 +97,14 @@ const Footer = () => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="example@email.com"
+                placeholder="info@thebenchmark-bd.com"
               />
               <button className="newsletter_btn">
                 <span>Send</span>
               </button>
             </div>
             <p>
-              At vero eos et accusamus et iusto odio as part dignissimos ducimus
-              qui blandit.
+              Subscribe to our newsletter to get the latest news and updates
             </p>
           </div>
         </div>
@@ -113,7 +115,7 @@ const Footer = () => {
 
       {/* copyright text */}
       <div className="flex flex-col sm:flex-row justify-between pb-7">
-        <p>Copyright © 2022 Asm Raihan.</p>
+        <p className="font-bold">Copyright © automatica.software</p>
         <p>Terms of Use | Privacy Policy</p>
       </div>
     </div>

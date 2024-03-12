@@ -145,7 +145,7 @@ export default function Globe() {
             }}
         />
 
-        <div className="flex flex-col md:flex-row justify-center items-center control-buttons" style={{ gap: '.5rem' }}>
+        {/* <div className="flex flex-col md:flex-row justify-center items-center control-buttons" style={{ gap: '.5rem' }}>
             <button onClick={() => {
                 focusRef.current = locationToAngles(37.78, -122.412)
             }}> San Francisco</button>
@@ -158,7 +158,7 @@ export default function Globe() {
             <button onClick={() => {
                 focusRef.current = locationToAngles(-34.60, -58.38)
             }}> Buenos Aires</button>
-        </div>
+        </div> */}
     </div>
 }
 

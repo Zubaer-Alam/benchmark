@@ -6,7 +6,7 @@ import FadeIn from "./FadeIn";
 const PageIntro = ({ eyebrow, title, children, centered = false }) => {
   return (
     <Container
-      className={clsx("pt-20 sm:pt-28 lg:pt-36", centered && "text-center")}
+      className={clsx("pt-28 lg:pt-36", centered && "text-center")}
     >
       <FadeIn>
         <h1>

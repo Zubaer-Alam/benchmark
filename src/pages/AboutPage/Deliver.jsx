@@ -8,26 +8,28 @@ const Deliver = () => {
     <Section title="Deliver" image={{ src: imageMeeting, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we finalize each travel plan,
-          taking into account any{" "}
-          <strong className="font-semibold text-neutral-950">
+          About halfway through the Build phase, we finalize each staffing plan, considering any
+          changes in requirements. {" "}
+          {/* <strong className="font-semibold text-neutral-950">
             changes in requirements
-          </strong>
-          . This allows us to ensure the best travel experience within the client's budget.
+          </strong> */}
+          This ensures the best match between workers and companies within
+          the client's parameters.
         </p>
         <p>
-          Despite the complexity of planning, most of the{" "}
+          Despite the complexity of planning, the bulk of {" "}
           <strong className="font-semibold text-neutral-950">progress</strong>{" "}
-          on each travel plan takes place in the final stages. The time allocated to each client is 
-          spent crafting the perfect travel experience.
+          progress on each staffing plan occurs in
+          the final stages. Our dedicated time is spent meticulously crafting the ideal worker-company
+          match.
         </p>
         <p>
-          We ensure that all aspects of the travel plan are{" "}
+          e ensure that all aspects of the staffing plan are fully{" "}
           <strong className="font-semibold text-neutral-950">
-            fully functional
+            functional
           </strong>{" "}
-          at launch — the itinerary, accommodations, and activities are all carefully planned 
-          and confirmed.
+          at launch — from
+          worker profiles to company placements are carefully planned and confirmed.
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
@@ -35,13 +37,17 @@ const Deliver = () => {
       </h3>
       <List>
         <ListItem title="Testing">
-          We ensure all aspects of the travel plan are thoroughly checked and confirmed.
+          We ensure all aspects of the staffing plan are thoroughly checked and
+          confirmed.
+
         </ListItem>
         <ListItem title="Infrastructure">
-          We use the best resources and partnerships to ensure a seamless travel experience.
+          We utilize top resources and partnerships to ensure seamless
+          worker-company matching.
         </ListItem>
         <ListItem title="Support">
-          Our dedicated travel consultants are always available to provide support and answer any questions.
+          Our dedicated consultants are always available to provide support and
+          address any questions.
         </ListItem>
       </List>
     </Section>

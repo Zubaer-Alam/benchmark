@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { AnimatePresence, motion } from "framer-motion";
+import React from 'react'
 import { FaUniversity, FaGlobeAmericas } from "react-icons/fa";
 import { MdTravelExplore, MdOutlineCardTravel, MdOutlineAssessment, MdAssistantNavigation, MdDesignServices } from "react-icons/md";
 
@@ -30,7 +29,7 @@ const gridItems = [
     },
     {
         title: "Application Processing",
-        description: "Assess your Canadian immigration eligibility for free Determine your immigration category based on your credentials for free.",
+        description: "Assess your immigration eligibility for free Determine your immigration category based on your credentials for free.",
         link: "https://algochurn.com",
         icon: <span className="p-5 rounded-full bg-red-300 text-white shadow-lg shadow-red-200 z-10">
             <MdOutlineCardTravel size={36} className='text-red-600' />
@@ -56,7 +55,6 @@ const gridItems = [
     },
 ];
 const ServiceGrid = () => {
-    let [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
         <div className="px-3 md:lg:xl:px-40 py-20 bg-opacity-10">
@@ -65,26 +63,9 @@ const ServiceGrid = () => {
                     <div
                         key={idx}
                         className="relative p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer rounded-xl"
-                        onMouseEnter={() => setHoveredIndex(idx)}
-                        onMouseLeave={() => setHoveredIndex(null)}
+                   
                     >
-                        <AnimatePresence>
-                            {hoveredIndex === idx && (
-                                <motion.span
-                                    className="absolute inset-0 h-full w-full bg-amber-100/[0.5] block  rounded-xl text-neutral-950"
-                                    layoutId="hoverBackground" // required for the background to follow
-                                    initial={{ opacity: 0 }}
-                                    animate={{
-                                        opacity: 1,
-                                        transition: { duration: 0.15 },
-                                    }}
-                                    exit={{
-                                        opacity: 0,
-                                        transition: { duration: 0.15, delay: 0.2 },
-                                    }}
-                                />
-                            )}
-                        </AnimatePresence>
+                               
 
                         {item.icon}
 

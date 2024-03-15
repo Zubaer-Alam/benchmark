@@ -32,7 +32,7 @@ const Hero = () => {
   return (
 
     <motion.div
-      className=" "
+      className=""
       layout
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{
@@ -57,19 +57,19 @@ const Hero = () => {
 
         {/* banner content */}
         <div className="px-4 lg:px-24">
-          <h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug">
-            <PullUpText words = "Loyalty is our commitment"/>
+          <h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug  stroke-black stroke-2">
+            <PullUpText words = "Loyalty is our commitment"/> 
           </h1>
 
           {/* banner btn */}
           <div className="text-white text-lg flex flex-col-reverse md:flex-row md:items-center items-start justify-between gap-8">
             <div>
               <a className="inline-flex items-center gap-2 font-semibold hover:text-orange transition-all duration-300" href="/contact">
-                <span>Get a Quote</span>
+                <span className="font-bold">Get a Quote</span>
                 <BsArrowRight />
               </a>
             </div>
-            <div className="md:w-1/2 bg-dark/80 p-4 rounded-md">
+            <div className="md:w-1/2  p-4 rounded-md font-bold stroke-black stroke-2 drop-shadow-lg">
               <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
             </div>
           </div>

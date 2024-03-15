@@ -4,11 +4,8 @@ import Blogs from "./Blogs";
 import Contact from "./Contact";
 import Hero from "./Hero";
 
-import Partners from "../../components/Partners";
-import Portfolio from "../../components/Portfolio";
 import Services from "./Services";
 import EarthComponent from "./Earth/Earth";
-import { SizeMe } from "react-sizeme";
 
 const HomePage = () => {
   return (

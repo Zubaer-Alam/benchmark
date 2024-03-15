@@ -29,8 +29,9 @@ const Blogs = () => {
           initial="initial"
           whileInView="animate"
           variants={PreviewAnimation}
-          className=" text-center leading-snug  mx-auto text-6xl flex justify-center font-bold md:px-20 text-gradient bg-gradient-to-r from-[#ffa31d] to-[#ed1c24] bg-clip-text text-transparent">
-          Our agile process is ability to adapt and respond to change
+          className=" text-center leading-snug  mx-auto text-4xl md:text-6xl flex justify-center font-bold md:px-20 text-gradient bg-gradient-to-r from-[#ffa31d] to-[#ed1c24] bg-clip-text text-transparent">
+      We specialize in connecting skilled workers with reputable companies,
+demonstrating our ability to adapt and respond to evolving needs.
         </motion.div>
         {/* <VideoSection /> */}
       </div>

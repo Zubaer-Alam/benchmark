@@ -98,7 +98,9 @@ const Navbar = () => {
             >
               {link}
             </Link>)
+            
           }
+             <Link    onClick={toggleMenu} to="/contact" className="block font-medium uppercase text-gray-900  hover:text-orange transition-all duration-300  translate-x-2">Contact</Link>
         </div>
 
       </nav>

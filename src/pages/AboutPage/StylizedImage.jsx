@@ -33,7 +33,7 @@ const StylizedImage = ({ shape = 0, className, ...props }) => {
           <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
             <foreignObject width={width} height={height}>
               <img
-                src="/images/portfolio_2.jpeg"
+                src={props.src}
                 className="w-full bg-neutral-700 object-cover"
                 style={{ aspectRatio: `${width} / ${height}` }}
                 // {...props}

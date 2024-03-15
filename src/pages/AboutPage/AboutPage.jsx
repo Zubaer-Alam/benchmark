@@ -14,7 +14,7 @@ const AboutPage = () => {
       title="How we work"
       >
         <div className="flex ">
-        <p className="w-3/5">
+        <p className="lg:w-3/5">
         We believe in efficiency and maximizing our resources to provide the
           best value to our clients.  We believe in efficiency and maximizing our resources to provide 
           the best value to our clients.

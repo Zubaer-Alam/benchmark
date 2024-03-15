@@ -1,11 +1,6 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 // images
-import service1 from "../../assets/service_1.jpeg";
-import service2 from "../../assets/service_2.jpeg";
-import service3 from "../../assets/service_3.jpeg";
-import service4 from "../../assets/service_4.jpeg";
-import SquishyCard from "../../components/SquishyCard";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import List, { ListItem } from "../AboutPage/List";
@@ -82,12 +77,13 @@ const Services = () => {
                       }}
                       className="my-2 lg:my-0 block origin-top-left font-mono text-6xl lg:text-3xl font-black leading-[1.2]"
                     >
-                      Study 
+                      Study
                       <br className="lg:hidden" /> {""}
                       Aboard
                     </motion.span>
                     <p className="lg:text-sm">
-                    The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies across the globe.
+                      The trusted authority for student visas, offering access to top-tier
+                      universities worldwide. Our streamlined processes ensure swift visa acquisition.
                     </p>
                   </div>
                   <motion.svg
@@ -213,12 +209,13 @@ const Services = () => {
                       }}
                       className="my-2 lg:my-0 block origin-top-left font-mono text-6xl lg:text-3xl  font-black leading-[1.2]"
                     >
-                      Live
+                      Work
                       <br className="lg:hidden" /> {""}
                       Abroad
                     </motion.span>
                     <p className="lg:text-sm">
-                      Professionals visa to the Best Universities and Colleges of Malaysia, Singapore, UK, NZ, USA, Germany etc.
+                      Secure professional visas for workers to access top-tier companies
+                      across the EU, facilitating lucrative employment opportunities.
                     </p>
                   </div>
 
@@ -322,7 +319,10 @@ const Services = () => {
                       Tourism
                     </motion.span>
                     <p>
-                      The Best Travel and Tourism Services that you can trust for your next trip to any part of the world with the best deals.
+                      Premier travel and tourism services you can rely on for your next
+                      trip. Our esteemed offerings ensure unparalleled quality and peace of mind throughout
+                      your journey.
+
                     </p>
                   </div>
                   <motion.svg

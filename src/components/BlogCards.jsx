@@ -44,10 +44,10 @@ const BlogCards = () => {
               {blog?.title}
             </h2>
             <div className='opacity-0 group-hover:opacity-100'>
-              <div>
+              {/* <div>
                 <span className="text-blue-400 uppercase "> Instructor : </span>
                 <span className='ml-2 text-white'> {blog?.authorName}</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>)

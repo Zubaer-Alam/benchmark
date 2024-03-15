@@ -50,14 +50,18 @@ nav {
 }
 
 .banner {
-  background-image: url("../public/images/bannerbd.jpg");
+  position: relative;
+  background-image: url("../public/images/background.jpg");
   /* min-height: 960px; */
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  
 }
+
+
 
 .cs-style1 {
   height: calc(100vh + 180px);

@@ -53,26 +53,26 @@ const Navbar = () => {
           <img src="/blogo.svg"
             className="h-20 w-44 object-contain"
             alt="benchmark logo" /></Link>
-            <p className="absolute text-[12px] w-[500px] -bottom-1 text-black">Career Development Centre & Education Consultancy</p>
+            <p className="absolute text-[12px] w-[500px] -bottom-1 text-black font-semibold">Career Development Centre & Education Consultancy</p>
          </div>
 
-          <ul className="md:flex space-x-12 hidden navitems">
+          <ul className="lg:flex space-x-12 hidden navitems">
 
             {
-              navItems.map(({ link, path }) => <NavLink to={path} activeClass="active" spy={true} smooth={true} key={link} offset={-100} href={path} className="link block font-medium uppercase text-gray-900 hover:text-orange transition-all duration-300">
+              navItems.map(({ link, path }) => <NavLink to={path} activeClass="active" spy={true} smooth={true} key={link} offset={-100} href={path} className="link block uppercase text-gray-900 hover:text-orange transition-all duration-300 font-semibold ">
                 {link}
               </NavLink>)
             }
           </ul>
 
-          <Link to="/contact" className="space-x-12 hidden md:block">
+          <Link to="/contact" className="space-x-12 hidden lg:block">
             <button className="py-2 w-40 h-10 px-6  text-white shadow-lg before:block before:-left-1 before:-top-1 before:bg-red-700 before:absolute before:h-0 before:w-0 before:hover:w-[100%] before:hover:h-[100%]  before:duration-500 before:-z-40 after:block after:-right-1 after:-bottom-1 after:bg-red-700 after:absolute after:h-0 after:w-0 after:hover:w-[100%] after:hover:h-[100%] after:duration-500 after:-z-40 bg-dark relative flex justify-center items-center gap-2 rounded-md">
               <FaPhone /> <span className="font-bold">Contact</span>
             </button>
           </Link>
 
           {/* menu btn, visible on mobile screen */}
-          <div className="md:hidden z-50">
+          <div className="lg:hidden z-50">
             <button
               onClick={toggleMenu}
               className="text-black focus:outline-none"
@@ -94,13 +94,13 @@ const Navbar = () => {
               to={path} spy={true} smooth={true} offset={-90}
               key={link}
               onClick={toggleMenu}
-              className="block font-medium uppercase text-gray-900  hover:text-orange transition-all duration-300  translate-x-2"
+              className="block uppercase text-gray-900  hover:text-orange transition-all duration-300  translate-x-2 font-semibold "
             >
               {link}
             </Link>)
             
           }
-             <Link    onClick={toggleMenu} to="/contact" className="block font-medium uppercase text-gray-900  hover:text-orange transition-all duration-300  translate-x-2">Contact</Link>
+             <Link    onClick={toggleMenu} to="/contact" className="block font-semibold uppercase text-gray-900  hover:text-orange transition-all duration-300  translate-x-2">Contact</Link>
         </div>
 
       </nav>

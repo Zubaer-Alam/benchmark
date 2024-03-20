@@ -14,7 +14,7 @@ const HomePage = () => {
       <About />
       <div className="flex flex-col lg:flex-row items-center justify-center relative h-[300px] lg:mt-52">
         <div className="lg:w-[500px] z-10 absolute lg:-translate-x-3/4">
-          <div className="mx-auto lg:pt-20 px-4">
+          <div className="mx-auto lg:pt-20 ">
             <h1 className="text-2xl md:text-5xl font-bold ">
               Start your career
               <br /> anywhere in the world

@@ -112,6 +112,7 @@ nav {
   /* bottom: 25%; */
   height: 35px;
   left: 50%;
+  bottom: 100px;
   margin-left: -10px;
   position: absolute;
   width: 20px;

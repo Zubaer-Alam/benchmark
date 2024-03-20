@@ -9,20 +9,67 @@ import texture from '../../../assets/earth/texture.jpg';
 
 const min = 1000;
 const max = 4000;
-const sliceData = pointsData.sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(20, 50);
-const arcsData = sliceData.map(() => {
-    const randStart = Math.floor(Math.random() * sliceData.length);
-    const randEnd = Math.floor(Math.random() * sliceData.length);
-    const randTime = Math.floor(Math.random() * (max - min + 1) + min);
+
+const countriesData = [
+    { name: 'Bangladesh', lat: 23.6850, lng: 90.3563 },
+    { name: 'Germany', lat: 51.1657, lng: 10.4515 },
+    { name: 'America', lat: 37.0902, lng: -95.7129 },
+    { name: 'Australia', lat: -25.2744, lng: 133.7751 },
+    { name: 'Pakistan', lat: 30.3753, lng: 69.3451 },
+    { name: 'Denmark', lat: 56.2639, lng: 9.5018 },
+    { name: 'Lithuania', lat: 55.1694, lng: 23.8813 },
+    { name: 'Serbia', lat: 44.0165, lng: 21.0059 },
+    { name: 'Italy', lat: 41.8719, lng: 12.5674 },
+    { name: 'Bulgaria', lat: 42.7339, lng: 25.4858 },
+    { name: 'Poland', lat: 51.9194, lng: 19.1451 },
+
+    { name: 'Spain', lat: 40.4637, lng: -3.7492 },
+
+    { name: 'Portugal', lat: 39.3999, lng: -8.2245 },
+
+    { name: 'Greece', lat: 39.0742, lng: 21.8243 },
+
+    { name: 'Turkey', lat: 38.9637, lng: 35.2433 },
+
+    { name: 'Russia', lat: 61.5240, lng: 105.3188 },
+
+    { name: 'China', lat: 35.8617, lng: 104.1954 },
+
+    { name: 'Nepal', lat: 28.3949, lng: 84.1240 },
+
+
+    { name: 'Bhutan', lat: 27.5142, lng: 90.4336 },
+
+
+    { name: 'Maldives', lat: 3.2028, lng: 73.2207 },
+
+    { name: 'Afghanistan', lat: 33.9391, lng: 67.7100 },
+
+
+
+
+
+    { name: 'Jordan', lat: 30.5852, lng: 36.2384 },
+
+
+    { name: 'Lebanon', lat: 33.8547, lng: 35.8623 },
+
+
+
+];
+
+const arcsData = countriesData.map((startCountry, i) => {
+    const endCountry = countriesData[(i + 1) % countriesData.length]; // This will create a loop between countries
     return {
-        startLat: sliceData[randStart].lat,
-        startLng: sliceData[randStart].lng,
-        endLat: sliceData[randEnd].lat,
-        endLng: sliceData[randEnd].lng,
-        time: randTime,
+        startLat: startCountry.lat,
+        startLng: startCountry.lng,
+        endLat: endCountry.lat,
+        endLng: endCountry.lng,
+        time: Math.random() * (max - min) + min,
         color: ['#ffffff00', '#faf7e6', '#ffffff00'],
     };
 });
+
 
 const EarthComponent = () => {
     const globeRef = useRef(null);
@@ -68,7 +115,7 @@ const EarthComponent = () => {
             size: 5 + Math.random() * 20,
             color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
             label: 'Romania',
-            src : "./content/flags/lithuania.png"
+            src: "./content/flags/lithuania.png"
         },
         // {
         //     lat: 55.1694,
@@ -127,7 +174,7 @@ const EarthComponent = () => {
         //     label: 'Czech Republic'
         // }
     ];
-    
+
 
     return (
         <div className='cursor-move'>

@@ -44,7 +44,7 @@ const Services = () => {
           initial="initial"
           whileInView="animate"
         >
-          <div className="flex flex-col items-end px-3">
+          <div className="flex flex-col md:flex-row lg:flex-col items-end px-3">
             <section className="px-4 pt-12 lg:px-0 lg:py-0">
               <div className="mx-auto w-fit">
                 <motion.div
@@ -281,7 +281,7 @@ const Services = () => {
             </section>
 
           </div>
-          <div className="">
+          <div className="md:mt-7 lg:mt-0">
             <section className="">
               <div className="mx-auto w-fit">
                 <motion.div

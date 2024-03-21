@@ -12,8 +12,8 @@ const HomePage = () => {
     <>
       <Hero />
       <About />
-      <div className="flex flex-col lg:flex-row items-center justify-center relative h-[300px] lg:mt-52">
-        <div className="lg:w-[500px] z-10 absolute lg:-translate-x-3/4">
+      <div className="flex flex-col lg:flex-row items-center justify-center relative h-[300px] lg:mt-52 xl:my-80 mx-4 md:mx-0">
+        <div className="lg:w-[500px] z-10 absolute lg:-translate-x-3/4 ">
           <div className="mx-auto lg:pt-20 ">
             <h1 className="text-2xl md:text-5xl font-bold ">
               Start your career

@@ -82,7 +82,7 @@ const EarthComponent = () => {
             globeRef.current.pointOfView({
                 lat: 19.054339351561637,
                 lng: -50.421161072148465,
-                altitude: window.innerWidth > 1000 ? 1.8 : 5,
+                altitude: window.innerWidth > 1000 ? 2 : 5,
             });
         }
     };

@@ -56,7 +56,7 @@ const Hero = () => {
         <div className="cs-shape_1"></div>
 
         {/* banner content */}
-        <div className="px-4 lg:px-24 absolute bottom-80 lg:bottom-44">
+        <div className="px-4 lg:px-24 absolute bottom-[30vh] ">
           <h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug  stroke-black stroke-2">
             <PullUpText words="Loyalty is our commitment"/> 
           </h1>

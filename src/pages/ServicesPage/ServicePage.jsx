@@ -1,6 +1,7 @@
 import React from 'react'
 import ServiceGrid from './ServiceGrid'
 import Values from '../AboutPage/Values'
+import VisaRequirmentSection from './RequirmentsSection/VisaRequirmentSection'
 
 const ServicePage = () => {
   return (
@@ -10,6 +11,7 @@ const ServicePage = () => {
       {/* <HoverEffect /> */}
       <ServiceGrid />
       <Values />
+      <VisaRequirmentSection/>
     </div>
   )
 }

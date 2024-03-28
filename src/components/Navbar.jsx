@@ -38,6 +38,7 @@ const Navbar = () => {
     { link: "For Workers", path: "workers" },
     { link: "For Companies", path: "companies" },
     { link: "For Corporate", path: "corporate" },
+    { link: "Gallery", path: "gallery" },
   ];
 
   return (
@@ -53,7 +54,7 @@ const Navbar = () => {
           <img src="/blogo.svg"
             className="h-20 w-44 object-contain"
             alt="benchmark logo" /></Link>
-            <p className="absolute text-[12px] w-[500px] -bottom-1 text-black font-semibold">Career Development Centre & Education Consultancy</p>
+            <p className="absolute text-[8px] w-[500px] -bottom-1 text-black font-semibold">Career Development Centre & Education Consultancy</p>
          </div>
 
           <ul className="lg:flex space-x-12 hidden navitems">

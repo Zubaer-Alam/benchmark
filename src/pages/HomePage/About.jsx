@@ -4,12 +4,12 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" text-white relative md:-mt-[150px] -mt-10 bg-gradient-to-tr from-[#161616] to-[#080808] md:py-20 py-12 md:px-16 px-6  z-50 flex flex-col md:flex-row justify-between md:items-center gap-12"
+      className=" text-white relative md:-mt-[150px] -mt-10 bg-gradient-to-tr from-[#161616] to-[#080808] md:py-20 py-12 md:px-24 px-4  z-50 flex flex-col md:flex-row justify-between md:items-center gap-12"
     >
       <div className="bg-[url(/src/assets/funfact_bg.svg)] z-[-2] bg-no-repeat bg-center h-full w-full absolute left-0 top-0 opacity-75"></div>
 
       {/* left side text */}
-      <div className=" md:w-2/5">
+      <div className="">
         <h2 className="md:text-5xl text-3xl font-bold mb-5">
           Study. Travel. Live
         </h2>
@@ -19,7 +19,7 @@ const About = () => {
       </div>
 
       {/* right side text */}
-      <div className="md:w-3/5">
+      <div className="">
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-8">
           <div className="flex h-auto items-center gap-3">
             <h4 className="md:text-5xl text-3xl font-semibold">10</h4>

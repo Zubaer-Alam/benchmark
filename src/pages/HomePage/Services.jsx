@@ -7,7 +7,7 @@ import List, { ListItem } from "../AboutPage/List";
 
 const Services = () => {
   return (
-    <div className="text-white lg:px-32 px-4 mt-52 lg:mt-48">
+    <div className="text-white lg:px-24 px-4 mt-52 lg:mt-48">
       {/* service section */}
       <div
         className="flex lg:flex-row flex-col lg:justify-between items-center"
@@ -46,7 +46,7 @@ const Services = () => {
 
         {/* cards */}
         <motion.div
-          className="lg:flex items-center justify-center -mx-4 lg:pl-8"
+          className="lg:flex items-center justify-center  lg:pl-8"
           initial="initial"
           whileInView="animate"
         >

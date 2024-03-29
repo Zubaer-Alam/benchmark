@@ -10,9 +10,11 @@ const About = () => {
 
       {/* left side text */}
       <div className=" md:w-2/5">
-        <h2 className="text-5xl font-bold mb-5">Study. Travel. Live</h2>
-        <p className="text-gray-200 z-auto">
-        The Benchmark Career Development Centre & Education Consultancy
+        <h2 className="md:text-5xl text-3xl font-bold mb-5">
+          Study. Travel. Live
+        </h2>
+        <p className="text-gray-200 z-auto md:text-base text-sm">
+          The Benchmark Career Development Centre & Education Consultancy
         </p>
       </div>
 

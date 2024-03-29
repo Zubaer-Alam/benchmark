@@ -7,26 +7,32 @@ import List, { ListItem } from "../AboutPage/List";
 
 const Services = () => {
   return (
-    <div className="text-white lg:px-32 px-4 mt-96 lg:mt-48">
+    <div className="text-white lg:px-32 px-4 mt-52 lg:mt-48">
       {/* service section */}
-      <div className="flex lg:flex-row flex-col lg:justify-between items-center" id="services">
+      <div
+        className="flex lg:flex-row flex-col lg:justify-between items-center"
+        id="services"
+      >
         {/* contents */}
         <div className="lg:w-1/2 z-50">
-          <h4 className="text-black font-semibold text-2xl">
+          <h4 className="text-black font-semibold md:text-2xl text-xl">
             What Can We Do
           </h4>
-          <h2 className="text-5xl text-dark font-bold mb-5 leading-snug">
+          <h2 className="md:text-5xl text-3xl text-dark font-bold mb-5 leading-snug">
             Services we can help you with
           </h2>
           <List className="space-y-2">
             <ListItem title="Discover">
-              We ensure all aspects of the travel plan are thoroughly checked and confirmed.
+              We ensure all aspects of the travel plan are thoroughly checked
+              and confirmed.
             </ListItem>
             <ListItem title="Planning">
-              We use the best resources and partnerships to ensure a seamless travel experience.
+              We use the best resources and partnerships to ensure a seamless
+              travel experience.
             </ListItem>
             <ListItem title="Support">
-              Our dedicated travel consultants are always available to provide support and answer any questions.
+              Our dedicated travel consultants are always available to provide
+              support and answer any questions.
             </ListItem>
           </List>
           <Link
@@ -75,15 +81,16 @@ const Services = () => {
                         duration: 1,
                         ease: "backInOut",
                       }}
-                      className="my-2 lg:my-0 block origin-top-left font-mono text-6xl lg:text-3xl font-black leading-[1.2]"
+                      className="my-2 lg:my-0 block origin-top-left font-mono text-5xl lg:text-3xl font-black leading-[1.2]"
                     >
                       Study
                       <br className="lg:hidden" /> {""}
                       Aboard
                     </motion.span>
                     <p className="lg:text-sm">
-                      The trusted authority for student visas, offering access to top-tier
-                      universities worldwide. Our streamlined processes ensure swift visa acquisition.
+                      The trusted authority for student visas, offering access
+                      to top-tier universities worldwide. Our streamlined
+                      processes ensure swift visa acquisition.
                     </p>
                   </div>
                   <motion.svg
@@ -214,8 +221,9 @@ const Services = () => {
                       Abroad
                     </motion.span>
                     <p className="lg:text-sm">
-                      Secure professional visas for workers to access top-tier companies
-                      across the EU, facilitating lucrative employment opportunities.
+                      Secure professional visas for workers to access top-tier
+                      companies across the EU, facilitating lucrative employment
+                      opportunities.
                     </p>
                   </div>
 
@@ -252,14 +260,19 @@ const Services = () => {
                         delay: 0.2,
                       }}
                     >
-                      <path style={{ fill: "#0f766e" }} d="M270.192,33.912c-2.245-1.473-5.112-1.704-7.63-0.466L28.063,148.974
+                      <path
+                        style={{ fill: "#0f766e" }}
+                        d="M270.192,33.912c-2.245-1.473-5.112-1.704-7.63-0.466L28.063,148.974
       c-2.942,1.434-4.646,4.61-4.261,7.901c0.427,3.291,2.867,5.926,6.119,6.624c27.847,5.848,71.065,15.143,85.706,18.705v75.753
       c0,3.252,2.014,6.197,5.112,7.282c0.853,0.31,1.743,0.466,2.633,0.466c2.245,0,4.454-0.968,5.926-2.789l48.486-58.326
       c13.091,5.151,51.546,19.946,84.426,32.61c0.929,0.349,1.86,0.505,2.789,0.505c1.551,0,3.059-0.466,4.376-1.316
-      c2.092-1.434,3.33-3.796,3.369-6.353l1.857-189.186C274.646,37.825,272.864,35.189,270.192,33.912z"/>
+      c2.092-1.434,3.33-3.796,3.369-6.353l1.857-189.186C274.646,37.825,272.864,35.189,270.192,33.912z"
+                      />
                       <g id="XMLID_13_">
                         <g>
-                          <path style={{ fill: "#222051" }} d="M98.037,144.162c11.814-10.185,59.756-56.273,103.753-98.95L31.27,129.214
+                          <path
+                            style={{ fill: "#222051" }}
+                            d="M98.037,144.162c11.814-10.185,59.756-56.273,103.753-98.95L31.27,129.214
           C72.787,138.005,90.293,142.032,98.037,144.162z M103.071,145.788c-0.736-0.388-1.512-0.697-2.245-0.814
           C101.794,145.286,102.53,145.557,103.071,145.788z M246.445,10.162c2.672,1.277,4.454,3.913,4.415,6.933L249,206.281
           c-0.039,2.554-1.277,4.92-3.369,6.35c-1.316,0.853-2.828,1.316-4.376,1.316c-0.929,0-1.86-0.156-2.789-0.505
@@ -267,11 +280,18 @@ const Services = () => {
           c-0.89,0-1.782-0.156-2.633-0.466c-3.098-1.085-5.112-4.027-5.112-7.282v-75.753c-14.639-3.564-57.86-12.856-85.706-18.705
           c-3.252-0.697-5.692-3.33-6.119-6.624c-0.388-3.291,1.316-6.467,4.261-7.901L238.815,9.696
           C241.33,8.458,244.197,8.692,246.445,10.162z M233.625,194.975l1.473-149.414c-27.612,46.359-61.115,103.095-71.609,122.343
-          C177.237,173.247,208.101,185.175,233.625,194.975z"/>
-                          <path style={{ fill: "#302C58" }} d="M235.097,45.561l-1.473,149.414c-25.523-9.797-56.387-21.728-70.136-27.071
-          C173.983,148.655,207.482,91.919,235.097,45.561z"/>
-                          <path style={{ fill: "#302C58" }} d="M31.27,129.214l170.52-84.002c-43.997,42.677-91.942,88.766-103.753,98.95
-          C90.293,142.032,72.787,138.005,31.27,129.214z"/>
+          C177.237,173.247,208.101,185.175,233.625,194.975z"
+                          />
+                          <path
+                            style={{ fill: "#302C58" }}
+                            d="M235.097,45.561l-1.473,149.414c-25.523-9.797-56.387-21.728-70.136-27.071
+          C173.983,148.655,207.482,91.919,235.097,45.561z"
+                          />
+                          <path
+                            style={{ fill: "#302C58" }}
+                            d="M31.27,129.214l170.52-84.002c-43.997,42.677-91.942,88.766-103.753,98.95
+          C90.293,142.032,72.787,138.005,31.27,129.214z"
+                          />
                         </g>
                       </g>
                     </motion.g>
@@ -279,7 +299,6 @@ const Services = () => {
                 </motion.div>
               </div>
             </section>
-
           </div>
           <div className="md:mt-7 lg:mt-0">
             <section className="">
@@ -315,14 +334,13 @@ const Services = () => {
                       className="my-2 block origin-top-left font-mono text-6xl font-black leading-[1.2]"
                     >
                       Trave &
-                      <br />
+                      <br className="md:block hidden" />
                       Tourism
                     </motion.span>
                     <p>
-                      Premier travel and tourism services you can rely on for your next
-                      trip. Our esteemed offerings ensure unparalleled quality and peace of mind throughout
-                      your journey.
-
+                      Premier travel and tourism services you can rely on for
+                      your next trip. Our esteemed offerings ensure unparalleled
+                      quality and peace of mind throughout your journey.
                     </p>
                   </div>
                   <motion.svg
@@ -356,7 +374,6 @@ const Services = () => {
                         duration: 1,
                         ease: "backInOut",
                         delay: 0.2,
-
                       }}
                     />
                     <motion.path

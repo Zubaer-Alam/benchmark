@@ -5,9 +5,7 @@ import FadeIn from "./FadeIn";
 
 const PageIntro = ({ eyebrow, title, children, centered = false }) => {
   return (
-    <Container
-      className={clsx("pt-28 lg:pt-36", centered && "text-center")}
-    >
+    <Container className={clsx("pt-28 lg:pt-36", centered && "text-center")}>
       <FadeIn>
         <h1>
           <span className="block font-display text-base font-semibold text-neutral-950">
@@ -16,7 +14,7 @@ const PageIntro = ({ eyebrow, title, children, centered = false }) => {
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              "mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-neutral-950  [text-wrap:balance] sm:text-6xl",
+              "md:mt-6 mt-3 block max-w-5xl font-display md:text-5xl text-3xl font-medium tracking-tight text-neutral-950  [text-wrap:balance] sm:text-6xl",
               centered && "mx-auto"
             )}
           >

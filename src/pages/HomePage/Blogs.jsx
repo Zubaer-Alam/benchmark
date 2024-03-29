@@ -3,12 +3,11 @@ import { BsArrowRight } from "react-icons/bs";
 import BlogCards from "../../components/BlogCards";
 import { motion } from "framer-motion";
 const Blogs = () => {
-
   const PreviewAnimation = {
     initial: {
       y: 30,
       opacity: 0,
-      scale: 0.9
+      scale: 0.9,
     },
     animate: {
       y: 0,
@@ -17,9 +16,9 @@ const Blogs = () => {
       transition: {
         ease: [0.6, 0.01, 0.05, 0.95],
         duration: 0.8,
-      }
-    }
-  }
+      },
+    },
+  };
 
   return (
     <div className="text-white lg:px-24 px-4">
@@ -29,9 +28,10 @@ const Blogs = () => {
           initial="initial"
           whileInView="animate"
           variants={PreviewAnimation}
-          className=" text-center leading-snug  mx-auto text-3xl md:text-5xl lg:text-5xl flex justify-center font-bold lg:px-20 text-gradient bg-gradient-to-r from-[#ffa31d] to-[#ed1c24] bg-clip-text text-transparent">
-      We specialize in connecting skilled workers with reputable companies,
-demonstrating our ability to adapt and respond to evolving needs.
+          className=" text-center leading-snug  mx-auto text-2xl md:text-5xl lg:text-5xl flex justify-center font-bold lg:px-20 text-gradient bg-gradient-to-r from-[#ffa31d] to-[#ed1c24] bg-clip-text text-transparent"
+        >
+          We specialize in connecting skilled workers with reputable companies,
+          demonstrating our ability to adapt and respond to evolving needs.
         </motion.div>
         {/* <VideoSection /> */}
       </div>
@@ -40,13 +40,15 @@ demonstrating our ability to adapt and respond to evolving needs.
       {/* main blog */}
       <div className="relative" id="blogs">
         <div
-          className="flex flex-col lg:flex-row justify-between lg:items-center gap-12"
+          className="flex flex-col lg:flex-row justify-between lg:items-center gmd:ap-12"
           id="services"
         >
           {/* contents */}
-          <div className="lg:w-1/2 space-y-5 z-30">
-            <h4 className="text-black font-semibold text-2xl">Our Activities</h4>
-            <h2 className="text-5xl text-dark font-bold mb-5 leading-snug">
+          <div className="lg:w-1/2 md:space-y-5 z-30">
+            <h4 className="text-black font-semibold md:text-2xl text-xl">
+              Our Activities
+            </h4>
+            <h2 className="md:text-5xl text-3xl text-dark font-bold md:mb-5 leading-snug">
               Explore recent events
             </h2>
             <a
@@ -60,8 +62,6 @@ demonstrating our ability to adapt and respond to evolving needs.
 
           {/* cards */}
           <div className="lg:w-2/3 my-8">
-
-
             {/* blog cards */}
             <BlogCards />
 

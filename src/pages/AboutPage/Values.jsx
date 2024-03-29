@@ -17,8 +17,10 @@ const Values = () => {
         eyebrow="Our values"
         title="Balancing reliability and innovation"
       >
-        <p>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio accusamus quis odio itaque, impedit qui laborum recusandae! Itaque, perferendis voluptatum.
+        <p className="md:text-base text-[15px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+          accusamus quis odio itaque, impedit qui laborum recusandae! Itaque,
+          perferendis voluptatum.
         </p>
       </SectionIntro>
       <Container className="mt-12">

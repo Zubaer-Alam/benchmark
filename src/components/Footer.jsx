@@ -14,9 +14,11 @@ const Footer = () => {
           {/* <a href="" className="text-3xl font-bold text-white">
             <span className="text-orange">Bench</span>mark
           </a> */}
-          <img src="/blogo.svg"
+          <img
+            src="/blogo.svg"
             className="h-12 w-32 object-contain"
-            alt="benchmark logo" />
+            alt="benchmark logo"
+          />
           <p className=" text-gray-300">
             Career Development and education consultancy
           </p>
@@ -50,8 +52,8 @@ const Footer = () => {
 
         {/* Services */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Services</h3>
-          <div className="space-y-3 text-gray-300">
+          <h3 className="md:text-2xl text-xl font-semibold">Services</h3>
+          <div className="space-y-3 text-gray-300 md:text-base text-sm">
             <a href="/" className="block">
               Professional Visa
             </a>
@@ -61,23 +63,20 @@ const Footer = () => {
             <a href="/" className="block">
               Tours and Travels
             </a>
-
           </div>
         </div>
 
         {/* contact */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Contact Us</h3>
-          <div className="space-y-3 text-gray-300">
+          <h3 className="font-semibold md:text-2xl text-xl ">Contact Us</h3>
+          <div className="space-y-3 text-gray-300 md:text-base text-sm">
             <a href="/" className="block">
               Ideal Home, Melody 2,
               <br />
               L4, Flat- E/4,
-
             </a>
             <a href="/" className="block">
               Chittagong, Bangladesh
-
             </a>
             <a href="/" className="block">
               +880 1537-412382 <br />
@@ -89,7 +88,9 @@ const Footer = () => {
 
         {/* newsletter */}
         <div className="space-y-4 lg:w-96">
-          <h3 className="text-2xl font-semibold">Subscribe to our news letter</h3>
+          <h3 className="md:text-2xl text-xl font-semibold">
+            Subscribe to our news letter
+          </h3>
           <div className="space-y-3 text-gray-300">
             <div className="relative w-full">
               <input
@@ -103,7 +104,7 @@ const Footer = () => {
                 <span>Send</span>
               </button>
             </div>
-            <p>
+            <p className="md:text-base text-sm">
               Subscribe to our newsletter to get the latest news and updates
             </p>
           </div>
@@ -114,8 +115,8 @@ const Footer = () => {
       <div className="h-8"></div>
 
       {/* copyright text */}
-      <div className="flex flex-col sm:flex-row justify-between pb-7">
-        <p className="font-bold">Copyright © automatica.software</p>
+      <div className="flex flex-col sm:flex-row justify-between pb-7 md:text-base text-sm md:text-start text-center">
+        <p className="font-bold ">Copyright © automatica.software</p>
         <p>Terms of Use | Privacy Policy</p>
       </div>
     </div>

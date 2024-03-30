@@ -1,9 +1,10 @@
 import React from 'react';
+import ImageGrid from './ImageGrid/ImageGrid';
 
 const GalleryPage = () => {
     return (
         <div className='container mx-auto py-40'>
-            Gallery page
+            <ImageGrid/>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import Values from '../AboutPage/Values'
 import VisaRequirmentSection from './RequirmentsSection/VisaRequirmentSection'
 
 const ServicePage = () => {
+
   return (
     <div className='py-20'>
       {/* <Services /> */}

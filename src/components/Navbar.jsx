@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import * as Scroll from "react-scroll";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 // import icons from react icons
 import { FaXmark, FaBars, FaBarsStaggered, FaPhone } from "react-icons/fa6";
@@ -8,7 +8,9 @@ import { FaXmark, FaBars, FaBarsStaggered, FaPhone } from "react-icons/fa6";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-
+  const location = useLocation();
+  const pathLocation = location.pathname;
+  console.log(pathLocation);
   console.log(isSticky);
 
   const toggleMenu = () => {
@@ -50,7 +52,7 @@ const Navbar = () => {
         className={`lg:px-24 px-4  ${
           isSticky
             ? "sticky top-0 left-0 right-0 bg-white/70 border-b transition-all duration-300 ease-in "
-            : "transition-all bg-black/70 text-whiteduration-300 ease-in lg:py-4 "
+            : "transition-all duration-300 ease-in lg:py-4 "
         }`}
       >
         <div className="flex justify-between items-center text-base gap-8">
@@ -63,7 +65,18 @@ const Navbar = () => {
                 alt="benchmark logo"
               />
             </Link>
-            <p className={`${isSticky?'absolute text-[8px] w-[500px] -bottom-1 text-black font-semibold':"absolute text-[8px] w-[500px] -bottom-1 text-white font-semibold"}`}>
+            <p
+              className={`absolute text-[8px] w-[500px] -bottom-1 font-semibold
+              ${
+                pathLocation === "/"
+                  ? isSticky
+                    ? " text-black "
+                    : " text-white "
+                  : isSticky
+                  ? " text-black "
+                  : " text-black "
+              }`}
+            >
               Career Development Centre & Education Consultancy
             </p>
           </div>
@@ -78,25 +91,32 @@ const Navbar = () => {
                 key={link}
                 offset={-100}
                 href={path}
-                className={` ${isSticky?"link block uppercase text-gray-900 hover:text-orange transition-all duration-300 font-semibold ":"link block uppercase text-white hover:text-orange transition-all duration-300 font-semibold "}`}
+                className={`link block uppercase hover:text-orange transition-all duration-300 font-semibold ${
+                  pathLocation === "/"
+                    ? isSticky
+                      ? "text-gray-900"
+                      : "text-white"
+                    : isSticky
+                    ? "text-gray-900"
+                    : "text-gray-900"
+                }`}
               >
                 {link}
               </NavLink>
             ))}
           </ul>
 
-          {/* <Link to="/contact" className="space-x-12 hidden lg:block">
-            <button className="py-2 w-40 h-10 px-6  text-white shadow-lg before:block before:-left-1 before:-top-1 before:bg-red-700 before:absolute before:h-0 before:w-0 before:hover:w-[100%] before:hover:h-[100%]  before:duration-500 before:-z-40 after:block after:-right-1 after:-bottom-1 after:bg-red-700 after:absolute after:h-0 after:w-0 after:hover:w-[100%] after:hover:h-[100%] after:duration-500 after:-z-40 bg-dark relative flex justify-center items-center gap-2 rounded-md">
-              <FaPhone /> <span className="font-bold">Contact</span>
-            </button>
-          </Link> */}
-          
-          <Link to="/contact" className="space-x-12 fixed bottom-10 right-4">
-            <button className="p-4 text-white shadow-lg before:block before:-left-1 before:-top-1 before:bg-red-700 before:absolute before:h-0 before:w-0 before:hover:w-[100%] before:hover:h-[100%]  before:duration-500 before:-z-40 after:block after:-right-1 after:-bottom-1 after:bg-red-700 after:absolute after:h-0 after:w-0 after:hover:w-[100%] after:hover:h-[100%] after:duration-500 after:-z-40 bg-green-500 relative flex justify-center items-center gap-2 rounded-full">
-              <FaPhone /> 
-              
+          <Link to="/contact" className="space-x-12 hidden lg:block">
+            <button className="py-2  h-10 px-6  text-white shadow-lg before:block before:-left-1 before:-top-1 before:bg-red-700 before:absolute before:h-0 before:w-0 before:hover:w-[100%] before:hover:h-[100%]  before:duration-500 before:-z-40 after:block after:-right-1 after:-bottom-1 after:bg-red-700 after:absolute after:h-0 after:w-0 after:hover:w-[100%] after:hover:h-[100%] after:duration-500 after:-z-40 bg-dark relative flex justify-center items-center gap-2 rounded-md">
+              <FaPhone />
             </button>
           </Link>
+          {/* 
+          <Link to="/contact" className="space-x-12 fixed bottom-10 right-4">
+            <button className="p-4 text-white shadow-lg  after:-right-1 after:-bottom-1 after:border-red-700 after:border-4 after:rounded-full after:absolute after:h-0 after:w-0 after:hover:w-[116%] after:hover:h-[116%] after:duration-500 after:-z-40 bg-green-500 relative flex justify-center items-center gap-2 rounded-full">
+              <FaPhone />
+            </button>
+          </Link> */}
           {/* menu btn, visible on mobile screen */}
           <div className="lg:hidden z-50">
             <button

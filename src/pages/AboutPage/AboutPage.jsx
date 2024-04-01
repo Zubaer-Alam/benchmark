@@ -6,7 +6,7 @@ import Deliver from "./Deliver";
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="mb-20">
       <PageIntro className="" eyebrow="About Us" title="How we work">
         <div className="flex ">
           <p className="lg:w-3/5 md:text-base text-[15px]">
@@ -28,7 +28,7 @@ const AboutPage = () => {
         <Deliver />
       </div>
       {/* <LampDemo/> */}
-    </>
+    </div>
   );
 };
 

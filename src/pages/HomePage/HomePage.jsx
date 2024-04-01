@@ -9,7 +9,7 @@ import EarthComponent from "./Earth/Earth";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="mb-20">
       <Hero />
       <About />
 
@@ -59,7 +59,7 @@ const HomePage = () => {
       <Blogs />
       {/* <Partners/> */}
       <Contact />
-    </>
+    </div>
   );
 };
 

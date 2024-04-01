@@ -5,10 +5,11 @@ import HomePage from "../pages/HomePage/HomePage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import ServicePage from "../pages/ServicesPage/ServicePage";
-import WorkersPage from "../pages/WorkersPage/WorkersPage";
-import CompaniesPage from "../pages/CompaniesPage/CompaniesPage";
-import CorporatePage from "../pages/CorporatePage/CorporatePage";
+import RecruitPage from "../pages/RecruitPage/RecruitPage";
+import CollaboratePage from "../pages/CollaboratePage/CollaboratePage";
 import GalleryPage from "../pages/GalleryPage/GalleryPage";
+import ApplyPage from "../pages/ApplyPage/ApplyPage";
+
 
 
 const router = createBrowserRouter([
@@ -33,16 +34,16 @@ const router = createBrowserRouter([
             },
 
             {
-                path: "/workers",
-                element: <WorkersPage />,
+                path: "/apply",
+                element: <ApplyPage />,
             },
             {
-                path: "/companies",
-                element: <CompaniesPage />,
+                path: "/recruit",
+                element: <RecruitPage />,
             },
             {
-                path: "/corporate",
-                element: <CorporatePage />,
+                path: "/collaborate",
+                element: <CollaboratePage />,
             },
             {
                 path: "/contact",

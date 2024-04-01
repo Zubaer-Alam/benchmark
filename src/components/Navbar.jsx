@@ -36,11 +36,12 @@ const Navbar = () => {
   const navItems = [
     { link: "About", path: "about" },
     { link: "Services", path: "services" },
-    { link: "For Workers", path: "workers" },
-    { link: "For Companies", path: "companies" },
-    { link: "For Corporate", path: "corporate" },
+    { link: "Apply", path: "apply" },
+    { link: "Recruit", path: "recruit" },
+    { link: "Collaborate", path: "collaborate" },
     { link: "Gallery", path: "gallery" },
   ];
+  
 
   return (
     <header
@@ -55,7 +56,7 @@ const Navbar = () => {
             : "transition-all duration-300 ease-in lg:py-4 "
         }`}
       >
-        <div className="flex justify-between items-center text-base gap-8">
+        <div className="flex justify-between items-center  gap-8">
           {/* <a href="" className="text-2xl font-bold text-white"><span className="text-orange">Bench</span>mark</a> */}
           <div className="relative">
             <Link to="/">

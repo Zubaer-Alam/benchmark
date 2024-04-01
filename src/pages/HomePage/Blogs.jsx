@@ -74,10 +74,10 @@ const Blogs = () => {
         </div>
 
         {/* shapes */}
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <div className="cs-shape_4 mx-32 -my-28"></div>
           <div className="cs-shape_4 -my-32"></div>
-        </div>
+        </div> */}
         <div className="lg:h-60 h-8"></div>
       </div>
     </div>

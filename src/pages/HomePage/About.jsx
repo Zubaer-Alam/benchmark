@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" text-white relative md:-mt-[150px] -mt-10 bg-gradient-to-tr from-[#161616] to-[#080808] md:py-20 py-12 md:px-24 px-4  z-50 flex flex-col md:flex-row justify-between md:items-center gap-12"
+      className=" text-white relative md:-mt-[150px] -mt-10 bg-gradient-to-tr from-[#161616] to-[#080808] md:py-20 py-12 md:px-24 px-4  z-50 flex flex-col md:flex-row justify-between md:items-center gap-12 mb-20"
     >
       <div className="bg-[url(/src/assets/funfact_bg.svg)] z-[-2] bg-no-repeat bg-center h-full w-full absolute left-0 top-0 opacity-75"></div>
 

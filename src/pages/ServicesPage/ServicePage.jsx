@@ -6,12 +6,12 @@ import VisaRequirmentSection from './RequirmentsSection/VisaRequirmentSection'
 const ServicePage = () => {
 
   return (
-    <div className='py-20'>
+    <div className='my-20'>
       {/* <Services /> */}
       {/* <ServiceDetails /> */}
       {/* <HoverEffect /> */}
       <ServiceGrid />
-      <Values />
+      {/* <Values /> */}
       <VisaRequirmentSection/>
     </div>
   )

@@ -23,6 +23,19 @@ const Hero = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      const parallax = document.getElementById('home');
+      let scrollPosition = window.pageYOffset;
+      parallax.style.backgroundPositionY = scrollPosition * 0.0 + 'px';
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <motion.div
@@ -43,10 +56,19 @@ const Hero = () => {
         stiffness: 100,
       }}
     >
-      <div
+      {/* <div
         className="bg-[url('../public/images/background.jpg')]  w-full h-screen  relative  overflow-hidden block z-10  bg-cover bg-no-repeat bg-top  before:content-['']   before:absolute    before:inset-0  before:block before:bg-gradient-to-t before:from-black  before:to-transparent   before:opacity-100  before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36"
         id="home"
-      >
+      > */}
+       <div
+      className="bg-cover bg-no-repeat bg-top relative overflow-hidden block z-10 before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:opacity-100 before:z-[-5]"
+      style={{
+        backgroundImage: "url('../public/images/background.jpg')",
+        backgroundAttachment: 'fixed',
+        height: '100vh', // Adjust height as needed
+      }}
+      id="home"
+    >
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>

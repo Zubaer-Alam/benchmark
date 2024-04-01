@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="lg:px-24 px-4 bg-dark text-white mt-20 pt-10 lg:pt-16">
+    <div className="lg:px-24 px-4 bg-dark text-white  pt-10 lg:pt-16">
       <div className="flex flex-col md:flex-row flex-wrap justify-between items-start gap-12">
         <div className="space-y-4 md:w-1/3">
           {/* <a href="" className="text-3xl font-bold text-white">

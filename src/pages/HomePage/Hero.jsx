@@ -56,11 +56,13 @@ const Hero = () => {
         stiffness: 100,
       }}
     >
-      {/* <div
-        className="bg-[url('../public/images/background.jpg')]  w-full h-screen  relative  overflow-hidden block z-10  bg-cover bg-no-repeat bg-top  before:content-['']   before:absolute    before:inset-0  before:block before:bg-gradient-to-t before:from-black  before:to-transparent   before:opacity-100  before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36"
+      <div
+        className="bg-[url('../public/images/background.jpg')]  w-full h-screen  relative  overflow-hidden block z-10  bg-cover bg-no-repeat bg-top  before:content-['']   before:absolute    before:inset-0  before:block before:bg-gradient-to-b   before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36"
         id="home"
-      > */}
-       <div
+      >
+      {/* <div className="bg-[url('../public/images/background.jpg')] w-full h-screen relative overflow-hidden block z-10 bg-cover bg-no-repeat bg-top before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:h-80 before:from-black before:to-transparent before:opacity-120 before:z-[-5] after:content-[''] after:absolute after:inset-0 after:block before:top-[700px] after:bg-gradient-to-t after:h-56 after:from-transparent after:to-black after:opacity-100 after:z-[-5] ms:mb-10 md:mb-36 lg:mb-36" id="home">
+  */}
+       {/* <div
       className="bg-cover bg-no-repeat bg-top relative overflow-hidden block z-10 before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:opacity-100 before:z-[-5]"
       style={{
         backgroundImage: "url('../public/images/background.jpg')",
@@ -68,20 +70,23 @@ const Hero = () => {
         height: '100vh', // Adjust height as needed
       }}
       id="home"
-    >
+    > */}
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
 
         {/* banner content */}
         <div className="px-4 lg:px-24 absolute md:bottom-[30vh] bottom-[18vh] ">
-          <h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug  stroke-black stroke-2">
+          {/* <h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug  stroke-black stroke-2">
             <PullUpText words="Loyalty is our commitment" />
-          </h1>
+          </h1> */}
 
+<h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug stroke-black stroke-2" style={{ textShadow: '2px 2px 15px rgba(0,0,0,10)' }}>
+  <PullUpText words="Loyalty is our commitment" />
+</h1>
           {/* banner btn */}
           <div className="text-white text-lg flex flex-col-reverse md:flex-row md:items-center items-start justify-between gap-8">
-            <div className="mx-4 lg:mx-0">
+            <div className="mx-4 my-10 lg:mx-0">
               <a
                 className="inline-flex items-center gap-2 font-semibold hover:text-orange transition-all duration-300"
                 href="/contact"

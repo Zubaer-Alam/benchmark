@@ -117,7 +117,7 @@ nav {
   position: absolute;
   width: 20px;
   cursor: pointer;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+  
 }
 
 .cs-down_btn:before {
@@ -131,7 +131,6 @@ nav {
   transform: translate(-50%, -50%);
   width: 5px;
   animation: UpAndDown 3s infinite;
-  
 }
 
 @keyframes UpAndDown {

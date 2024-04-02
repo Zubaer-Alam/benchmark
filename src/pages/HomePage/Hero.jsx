@@ -25,15 +25,15 @@ const Hero = () => {
   }, []);
   useEffect(() => {
     const handleScroll = () => {
-      const parallax = document.getElementById('home');
+      const parallax = document.getElementById("home");
       let scrollPosition = window.pageYOffset;
-      parallax.style.backgroundPositionY = scrollPosition * 0.0 + 'px';
+      parallax.style.backgroundPositionY = scrollPosition * 0.0 + "px";
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -60,17 +60,6 @@ const Hero = () => {
         className="bg-[url('../public/images/background.jpg')]  w-full h-screen  relative  overflow-hidden block z-10  bg-fixed bg-no-repeat bg-top  before:content-['']   before:absolute    before:inset-0  before:block before:bg-gradient-to-b   before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36"
         id="home"
       >
-      {/* <div className="bg-[url('../public/images/background.jpg')] w-full h-screen relative overflow-hidden block z-10 bg-cover bg-no-repeat bg-top before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:h-80 before:from-black before:to-transparent before:opacity-120 before:z-[-5] after:content-[''] after:absolute after:inset-0 after:block before:top-[700px] after:bg-gradient-to-t after:h-56 after:from-transparent after:to-black after:opacity-100 after:z-[-5] ms:mb-10 md:mb-36 lg:mb-36" id="home">
-  */}
-       {/* <div
-      className="bg-cover bg-no-repeat bg-top relative overflow-hidden block z-10 before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t before:from-black before:to-transparent before:opacity-100 before:z-[-5]"
-      style={{
-        backgroundImage: "url('../public/images/background.jpg')",
-        backgroundAttachment: 'fixed',
-        height: '100vh', // Adjust height as needed
-      }}
-      id="home"
-    > */}
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
@@ -81,9 +70,12 @@ const Hero = () => {
             <PullUpText words="Loyalty is our commitment" />
           </h1> */}
 
-<h1 className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug stroke-black stroke-2" style={{ textShadow: '2px 2px 15px rgba(0,0,0,10)' }}>
-  <PullUpText words="Loyalty is our commitment" />
-</h1>
+          <h1
+            className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug stroke-black stroke-2"
+            style={{ textShadow: "2px 2px 15px rgba(0,0,0,10)" }}
+          >
+            <PullUpText words="Loyalty is our commitment" />
+          </h1>
           {/* banner btn */}
           <div className="text-white text-lg flex flex-col-reverse md:flex-row md:items-center items-start justify-between gap-8">
             <div className="mx-4 my-10 lg:mx-0">
@@ -91,12 +83,12 @@ const Hero = () => {
                 className="inline-flex items-center gap-2 font-semibold hover:text-orange transition-all duration-300"
                 href="/contact"
               >
-                <span className="font-bold">Get a Quote</span>
+                <span style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }} className="font-bold">Get a Quote</span>
                 <BsArrowRight />
               </a>
             </div>
-            <div className="md:w-1/2 text-[1rem] py-8 pl-20 rounded-md font-bold stroke-black stroke-2 drop-shadow-lg">
-              <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
+            <div className="md:w-1/2 text-[1rem] py-8 pl-20 rounded-md font-bold stroke-black stroke-2 " style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}>
+              <FadeUpStagger  title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
             </div>
           </div>
         </div>
@@ -106,7 +98,7 @@ const Hero = () => {
           to="services"
           spy={true}
           smooth={true}
-          className={`cs-down_btn md:mt-20 mt-20 ${
+          className={`cs-down_btn md:mt-20 mt-20 shadow-[2px_2px_10px_rgba(0,0,0,1)] ${
             !isSticky
               ? "flex transition-all duration-300"
               : "hidden transition-all duration-300"

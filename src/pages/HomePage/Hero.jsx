@@ -95,7 +95,7 @@ const Hero = () => {
                 <BsArrowRight />
               </a>
             </div>
-            <div className="md:w-1/2  p-4 rounded-md font-bold stroke-black stroke-2 drop-shadow-lg">
+            <div className="md:w-1/2 text-[1rem] py-8 pl-20 rounded-md font-bold stroke-black stroke-2 drop-shadow-lg">
               <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
             </div>
           </div>

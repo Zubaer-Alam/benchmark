@@ -34,12 +34,14 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
+    { link: "Home", path: "" },
     { link: "About", path: "about" },
     { link: "Services", path: "services" },
+    { link: "Gallery", path: "gallery" },
     { link: "Apply", path: "apply" },
     { link: "Recruit", path: "recruit" },
     { link: "Collaborate", path: "collaborate" },
-    { link: "Gallery", path: "gallery" },
+    
   ];
   
 

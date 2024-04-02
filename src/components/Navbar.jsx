@@ -45,14 +45,14 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full lg:bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300 
+      className={`w-screen lg:bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300 
     ${isMenuOpen ? "bg-dark/50" : "bg-transparent"}
     `}
     >
       <nav
         className={`lg:px-24 px-4  ${
           isSticky
-            ? "sticky top-0 left-0 right-0 bg-white/70 border-b transition-all duration-300 ease-in "
+            ? "sticky top-0 left-0 right-0 bg-white/70 pb-2 border-b transition-all duration-300 ease-in "
             : "transition-all duration-300 ease-in lg:py-4 "
         }`}
       >
@@ -67,7 +67,7 @@ const Navbar = () => {
               />
             </Link>
             <p
-              className={`absolute text-[8px] w-[500px] -bottom-1 font-semibold
+              className={`absolute text-[8px] w-[300px] -bottom-1 font-semibold
               ${
                 pathLocation === "/"
                   ? isSticky

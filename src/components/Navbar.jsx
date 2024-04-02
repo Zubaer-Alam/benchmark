@@ -41,9 +41,7 @@ const Navbar = () => {
     { link: "Apply", path: "apply" },
     { link: "Recruit", path: "recruit" },
     { link: "Collaborate", path: "collaborate" },
-    
   ];
-  
 
   return (
     <header
@@ -127,9 +125,29 @@ const Navbar = () => {
               className="text-black focus:outline-none"
             >
               {isMenuOpen ? (
-                <FaXmark className="h-6 w-6 text-primary" />
+                <FaXmark
+                  className={`h-6 w-6 text-primary ${
+                    pathLocation === "/"
+                      ? isSticky
+                        ? "text-gray-900"
+                        : "text-white"
+                      : isSticky
+                      ? "text-gray-900"
+                      : "text-gray-900"
+                  }`}
+                />
               ) : (
-                <FaBarsStaggered className="h-7 w-7 text-primary p-1 border rounded-full" />
+                <FaBarsStaggered
+                  className={`h-7 w-7 text-primary p-1 border rounded-full ${
+                    pathLocation === "/"
+                      ? isSticky
+                        ? "text-gray-900"
+                        : "text-white"
+                      : isSticky
+                      ? "text-gray-900"
+                      : "text-gray-900"
+                  }`}
+                />
               )}
             </button>
           </div>

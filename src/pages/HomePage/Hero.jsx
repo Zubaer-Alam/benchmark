@@ -57,7 +57,7 @@ const Hero = () => {
       }}
     >
       <div
-        className="bg-[url('../public/images/background.jpg')]  w-full h-screen  relative  overflow-hidden block z-10  bg-fixed bg-no-repeat bg-top  before:content-['']   before:absolute    before:inset-0  before:block before:bg-gradient-to-b   before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36"
+        className="bg-[url('../public/images/background.jpg')] w-full h-screen relative overflow-hidden block z-10 bg-fixed bg-no-repeat bg-top bg-cover before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36"
         id="home"
       >
         <div className="cs-shape_1"></div>
@@ -83,12 +83,20 @@ const Hero = () => {
                 className="inline-flex items-center gap-2 font-semibold hover:text-orange transition-all duration-300"
                 href="/contact"
               >
-                <span style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }} className="font-bold">Get a Quote</span>
+                <span
+                  style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
+                  className="font-bold"
+                >
+                  Get a Quote
+                </span>
                 <BsArrowRight />
               </a>
             </div>
-            <div className="md:w-1/2 text-[1rem] py-8 pl-20 rounded-md font-bold stroke-black stroke-2 " style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}>
-              <FadeUpStagger  title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
+            <div
+              className="md:w-1/2 text-[1rem] py-8 pl-20 rounded-md font-bold stroke-black stroke-2 "
+              style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
+            >
+              <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const ImageGrid = () => {
   return (
     <div>
       <div
-        className={`grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-4  transition-all duration-500 ${
+        className={`grid mt-10 grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-4  transition-all duration-700 ${
           expanded ? "h-full p-8" : "h-44 overflow-hidden"
         }`}
       >
@@ -82,7 +82,7 @@ const ImageGrid = () => {
         />
       </div>
 
-      <div className="flex justify-center pt-6 border-t-[2px] my-4 border-black">
+      <div className="flex justify-center pt-6 my-4 border-black">
         <button onClick={expand}>
           <SlArrowDown className={`text-3xl ${expanded ? "hidden" : ""}`}  />
         </button>

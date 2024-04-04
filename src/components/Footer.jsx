@@ -117,7 +117,7 @@ const Footer = () => {
       {/* copyright text */}
       <div className="flex flex-col sm:flex-row justify-between pb-7 md:text-base text-sm md:text-start text-center">
         <p className="font-bold ">Copyright © automatica.software</p>
-        <p>Terms of Use | Privacy Policy</p>
+        {/* <p>Terms of Use | Privacy Policy</p> */}
       </div>
     </div>
   );

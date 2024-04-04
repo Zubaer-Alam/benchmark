@@ -76,7 +76,7 @@ const EarthComponent = () => {
     }
   };
 
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
 
   //     const markerSvg = `<div>
   //     <svg viewBox="-4 0 36 36">

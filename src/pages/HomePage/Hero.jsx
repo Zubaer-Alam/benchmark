@@ -55,7 +55,7 @@ const Hero = () => {
         {/* banner content */}
         <div className="px-4 lg:px-24 absolute md:bottom-[30vh] bottom-[18vh] ">
           <h1
-            className="md:w-2/3 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug stroke-black stroke-2"
+            className="md:w-2/4 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug stroke-black stroke-2"
             style={{ textShadow: "2px 2px 15px rgba(0,0,0,10)" }}
           >
             <PullUpText words="Loyalty is our commitment" />
@@ -77,7 +77,7 @@ const Hero = () => {
               </a>
             </div>
             <div
-              className="md:w-1/2 text-[1rem] py-8 pl-20 rounded-md font-bold stroke-black stroke-2 "
+              className="md:w-1/2 text-[1rem] py-8  md:pl-20 lg:pl-20 rounded-md font-bold stroke-black stroke-2 "
               style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
             >
               <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />

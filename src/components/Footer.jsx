@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="lg:px-24 px-4 bg-dark text-white  pt-10 lg:pt-16">
       <div className="flex flex-col md:flex-row flex-wrap justify-between items-start gap-12">
-        <div className="space-y-4 md:w-1/3">
+        <div className="space-y-2 md:w-1/3">
           {/* <a href="" className="text-3xl font-bold text-white">
             <span className="text-orange">Bench</span>mark
           </a> */}
@@ -22,7 +22,7 @@ const Footer = () => {
           <p className=" text-gray-300">
             Career Development and education consultancy
           </p>
-          <div className="flex gap-5 text-white">
+          <div className="flex pt-2 gap-5 text-white">
             <a
               href="/"
               className=" block border-2 p-3 rounded-full hover:border-orange hover:scale-110 transition-all duration-300"

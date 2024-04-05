@@ -11,87 +11,82 @@ import img9 from "../../../../src/assets/watermarked-files/img9.jpg";
 import img10 from "../../../../src/assets/watermarked-files/img10.jpg";
 import { SlArrowDown } from "react-icons/sl";
 import { SlArrowUp } from "react-icons/sl";
+
 const ImageGrid = () => {
-  const [expanded, setExpanded] = useState(false);
-
-  const expand = () => {
-    setExpanded(true);
-  };
-
-  const shrink = () => {
-    setExpanded(false);
-  };
-
+  const [selected, setSelected] = useState(null);
   return (
     <div>
       <div
-        className={`grid mt-10 grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-4  transition-all duration-700 ${
-          expanded ? "h-full p-8" : "h-44 overflow-hidden"
-        }`}
+        className={`relative overflow-hidden ${
+          selected === 1 ? "max-h-[1000px]" : "md:max-h-36 max-h-52 lg:max-h-52"
+        } grid mt-10 grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4 transition-all duration-700`}
       >
         <img
           src={img1}
           alt="Placeholder 1"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img2}
           alt="Placeholder 2"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img3}
           alt="Placeholder 3"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img4}
           alt="Placeholder 4"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
 
         <img
           src={img5}
           alt="Placeholder 5"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img6}
           alt="Placeholder 6"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img7}
           alt="Placeholder 7"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img8}
           alt="Placeholder 8"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img9}
           alt="Placeholder 9"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
         <img
           src={img10}
           alt="Placeholder 10"
-          className="w-full h-auto rounded-lg"
+          className="w-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
       </div>
 
       <div className="flex justify-center pt-6 my-4 border-black">
-        <button onClick={expand}>
-          <SlArrowDown className={`text-3xl ${expanded ? "hidden" : ""}`}  />
-        </button>
-        <button onClick={shrink}>
-          <SlArrowUp className={`text-3xl ${expanded ? "" : "hidden"}`} />
+        <button
+          type="button"
+          className="  p-2 text-left"
+          onClick={() => setSelected(selected !== 1 ? 1 : null)}
+        >
+          <SlArrowDown
+            className={`text-3xl transition-transform  ${
+              selected ? "transform rotate-180 duration-700" : "duration-700 "
+            }`}
+          />
         </button>
       </div>
-
-      
     </div>
   );
 };

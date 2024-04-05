@@ -77,7 +77,7 @@ const Navbar = () => {
       <nav
         className={`lg:px-24 px-4  ${
           isSticky
-            ? "sticky top-0 left-0 right-0 bg-white/70 p-2 border-b transition-all duration-300 ease-in "
+            ? "sticky top-0 left-0 right-0 bg-white/70 p-2 transition-all duration-300 ease-in "
             : "transition-all duration-300 ease-in lg:py-4 "
         }`}
       >
@@ -163,8 +163,8 @@ const Navbar = () => {
                   }`}
                 />
               ) : (
-                <FaBarsStaggered
-                  className={`h-7 w-7 text-primary p-1 border rounded-full ${
+                <FaBars
+                  className={`h-7 w-7 text-primary p-1   ${
                     pathLocation === "/"
                       ? isSticky
                         ? "text-gray-900"
@@ -180,7 +180,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`space-y-4 px-4 mt-16 py-7 bg-[#fbfbfb]  rounded-lg ${
+          className={`space-y-4 px-4 mt-24 py-7 bg-[#fbfbfb]   ${
             isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"
           }`}
         >

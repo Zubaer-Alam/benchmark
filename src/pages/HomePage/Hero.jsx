@@ -77,7 +77,7 @@ const Hero = () => {
               </a>
             </div>
             <div
-              className="md:w-1/2 text-[1rem] py-8  md:pl-20 lg:pl-20 rounded-md font-bold stroke-black stroke-2 "
+              className="md:w-1/2 text-[1rem] py-8  md:pl-20 lg:pl-20 rounded-md font-bold stroke-black stroke-2 text-justify"
               style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
             >
               <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />

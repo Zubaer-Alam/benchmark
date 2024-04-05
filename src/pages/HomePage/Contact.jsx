@@ -55,9 +55,9 @@ const Contact = () => {
     <div className="lg:px-24 px-4" id="contact">
       <div className="relative bg-[url(/src/assets/cta_bg.jpeg)] bg-no-repeat bg-cover h-96 rounded-xl">
         {/* shape moving */}
+        {/* <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
-        <div className="cs-shape_1"></div>
-        <div className="cs-shape_1"></div>
+        <div className="cs-shape_1"></div> */}
 
         {/* cta text */}
         <div className="h-full  flex items-center justify-center">

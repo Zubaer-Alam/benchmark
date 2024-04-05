@@ -85,7 +85,7 @@ const Services = () => {
                     >
                       Study
                       <br className="lg:hidden" /> {""}
-                      Aboard
+                      Abroad
                     </motion.span>
                     <p className="lg:text-sm">
                       The trusted authority for student visas, offering access
@@ -333,7 +333,7 @@ const Services = () => {
                       }}
                       className="my-2 block origin-top-left font-mono text-6xl font-black leading-[1.2]"
                     >
-                      Trave &
+                      Travel &
                       <br className="md:block hidden" />
                       Tourism
                     </motion.span>

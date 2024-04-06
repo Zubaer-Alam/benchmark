@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { PiPlusLight } from "react-icons/pi";
-
+import { IoIosArrowDown } from "react-icons/io";
 const WorkerForm = () => {
-
   // this form is not functional. need validation and other stuff done.
   const [profileImage, setProfileImage] = useState(null);
   const [gender, setGender] = useState("");
@@ -27,7 +26,16 @@ const WorkerForm = () => {
   const handleProfileImageChange = (e) => {
     // Handle profile image change
   };
+  const [fileName, setFileName] = useState("Upload Resume");
 
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setFileName(file.name);
+    } else {
+      setFileName("Upload Resume");
+    }
+  };
   const handleGenderChange = (e) => {
     setGender(e.target.value);
   };
@@ -56,31 +64,25 @@ const WorkerForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="  mx-auto "
+      className=" mx-2 lg:mx-auto bg-black bg-opacity-80  px-8 pt-6 pb-8 lg:mb-4 rounded-xl "
     >
-      <div className="grid grid-cols-5 gap-4 bg-black bg-opacity-60  px-8 pt-6 pb-8 mb-4 rounded-xl">
-        <div className="col-span-3 ">
+      <div className="grid lg:grid-cols-7 gap-4 lg:gap-20 ">
+        <div className="col-span-4 ">
           {/* from section 1 */}
-          <div className="flex justify-between gap-4">
-            <div className="mb-4">
-              <label className="block text-white text-sm font-bold mb-2">
+          <div className="lg:flex justify-between gap-4">
+            <div className="mb-4 ">
+              <label className="block text-center lg:text-left text-white text-sm font-bold mb-5">
                 Profile Image:
               </label>
-              <label class="w-36 h-36 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+              <label class="mx-auto w-52 h-52 lg:w-32 lg:h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                 <PiPlusLight class="mt-2 text-white text-5xl" />
 
                 <input type="file" class="hidden" />
               </label>
             </div>
 
-            <div className=" grid grid-cols-2 gap-4 w-full">
-              <div className="mb-4">
-                <label
-                  htmlFor="gender"
-                  className="block text-white text-sm font-bold mb-2"
-                >
-                  Gender:
-                </label>
+            <div className=" grid md:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
+              <div className="mb-4 relative">
                 <select
                   id="gender"
                   value={gender}
@@ -88,7 +90,7 @@ const WorkerForm = () => {
                   className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 >
                   <option className="text-black" value="">
-                    Select Gender
+                    Gender
                   </option>
                   <option className="text-black" value="male">
                     Male
@@ -100,14 +102,12 @@ const WorkerForm = () => {
                     Other
                   </option>
                 </select>
+                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                  <IoIosArrowDown className="text-white text-xl" />
+                </div>
               </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="targetCountry"
-                  className="block text-white text-sm font-bold mb-2"
-                >
-                  Target Country:
-                </label>
+
+              <div className="mb-4 relative">
                 <select
                   id="targetCountry"
                   value={targetCountry}
@@ -115,7 +115,7 @@ const WorkerForm = () => {
                   className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 >
                   <option className="text-black" value="">
-                    Select Country
+                    Country
                   </option>
                   <option className="text-black" value="country1">
                     Country 1
@@ -124,31 +124,31 @@ const WorkerForm = () => {
                     Country 2
                   </option>
                 </select>
+                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                  <IoIosArrowDown className="text-white text-xl" />
+                </div>
               </div>
 
-              <div className="mb-4">
-                <label
-                  htmlFor="dateOfBirth"
-                  className="block text-white text-sm font-bold mb-2"
-                >
-                  Date of Birth:
-                </label>
+              <div className="mb-4 relative">
                 <input
-                  type="date"
+                  type="text"
                   id="dateOfBirth"
+                  placeholder="Date of birth"
                   value={dateOfBirth}
                   onChange={handleDateOfBirthChange}
-                  className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                  onFocus={(e) => (e.target.type = "date")}
+                  onBlur={(e) => {
+                    if (!e.target.value) e.target.type = "text";
+                  }}
+                  style={{ color: "white" }}
+                  className="appearance-none border-b w-full py-2 px-3 text-white  placeholder-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 />
+                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                  <IoIosArrowDown className="text-white text-xl" />
+                </div>
               </div>
 
-              <div className="mb-4">
-                <label
-                  htmlFor="targetProfession"
-                  className="block text-white text-sm font-bold mb-2"
-                >
-                  Target Profession:
-                </label>
+              <div className="mb-4 relative">
                 <select
                   id="targetProfession"
                   value={targetProfession}
@@ -156,7 +156,7 @@ const WorkerForm = () => {
                   className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 >
                   <option className="text-black" value="">
-                    Select Profession
+                    Profession
                   </option>
                   <option className="text-black" value="profession1">
                     Profession 1
@@ -164,109 +164,88 @@ const WorkerForm = () => {
                   <option className="text-black" value="profession2">
                     Profession 2
                   </option>
+
                 </select>
+                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                  <IoIosArrowDown className="text-white text-xl" />
+                </div>
               </div>
             </div>
           </div>
           {/* from section 2 */}
           <div className="  col-span-3 ">
             <div className="mb-4">
-              <label
-                htmlFor="name"
-                className="block text-white text-sm font-bold mb-2"
-              >
-                Name:
-              </label>
               <input
                 type="text"
                 id="name"
                 name="name"
+                placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
             <div className="mb-4">
-              <label
-                htmlFor="number"
-                className="block text-white text-sm font-bold mb-2"
-              >
-                Number:
-              </label>
               <input
                 type="text"
                 id="number"
+                placeholder="Number"
                 name="number"
                 value={formData.number}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
             <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-white text-sm font-bold mb-2"
-              >
-                Email:
-              </label>
               <input
                 type="email"
                 id="email"
                 name="email"
+                placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none placeholder-white border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="presentAddress"
-                className="block text-white text-sm font-bold mb-2"
-              >
-                Present Address:
-              </label>
               <input
                 type="text"
                 id="presentAddress"
+                placeholder="Present Address"
                 name="presentAddress"
                 value={formData.presentAddress}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
             <div className="mb-4">
-              <label
-                htmlFor="permanentAddress"
-                className="block text-white text-sm font-bold mb-2"
-              >
-                Permanent Address:
-              </label>
               <input
                 type="text"
                 id="permanentAddress"
+                placeholder="Permanent Address"
                 name="permanentAddress"
                 value={formData.permanentAddress}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
           </div>
         </div>
 
         {/* from section 3 */}
-        <div className=" col-span-2">
+        <div className="col-span-4 lg:col-span-3  ">
           <div>
             <label className="block text-white text-sm font-bold mb-2">
               NID Image:
             </label>
             <div className="mb-4 flex gap-4">
-              <label class="w-full h-36 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+              <label class="w-full h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                 <PiPlusLight class="mt-2 text-white text-5xl" />
 
                 <input type="file" class="hidden" />
               </label>
-              <label class="w-full h-36 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+              <label class="w-full h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                 <PiPlusLight class="mt-2 text-white text-5xl" />
 
                 <input type="file" class="hidden" />
@@ -278,30 +257,46 @@ const WorkerForm = () => {
               Passport Image:
             </label>
             <div className="mb-4 flex gap-4">
-              <label class="w-full h-36 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+              <label class="w-full h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                 <PiPlusLight class="mt-2 text-white text-5xl" />
 
                 <input type="file" class="hidden" />
               </label>
-              <label class="w-full h-36 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+              <label class="w-full h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                 <PiPlusLight class="mt-2 text-white text-5xl" />
 
                 <input type="file" class="hidden" />
               </label>
             </div>
           </div>
-          <div>
-            <label className="block text-white text-sm font-bold mb-2">
-              Upload Resume:
-            </label>
-            <input
-              type="file"
-              id="resume"
-              accept="image/*"
-              className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-            />
+
+          <div className="mt-4">
+            <div className="relative">
+              <input
+                type="file"
+                id="resume"
+                accept="image/*"
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                onChange={handleFileChange}
+              />
+              <label
+                htmlFor="resume"
+                className="border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline block"
+              >
+                {fileName}
+              </label>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <svg
+                  className="h-6 w-6 fill-current text-gray-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9 2c-.28 0-.53.11-.71.29L3.5 7.09C2.57 7.82 2 8.88 2 10v6c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2h-3V6c0-.55-.45-1-1-1H9zM8 13l-3-3 4-4 4 4-3 3V9h-2v4z" />
+                </svg>
+              </div>
+            </div>
           </div>
-          <div className="py-4"> 
+          <div className="py-4">
             <div className="pb-4">
               <input type="checkbox" value="option1" />
               <label className="text-white pl-2">
@@ -310,9 +305,7 @@ const WorkerForm = () => {
             </div>
             <div className="pb-4">
               <input type="checkbox" checked value="option1" />
-              <label className="text-white pl-2">
-                Subscribe to newsletter
-              </label>
+              <label className="text-white pl-2">Subscribe to newsletter</label>
             </div>
           </div>
         </div>

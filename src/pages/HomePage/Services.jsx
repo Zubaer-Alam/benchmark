@@ -50,6 +50,110 @@ const Services = () => {
           initial="initial"
           whileInView="animate"
         >
+           <div className="md:mt-7 lg:mt-0">
+            <section className="">
+              <div className="mx-auto w-fit">
+                <motion.div
+                  whileHover="hover"
+                  transition={{
+                    duration: 1,
+                    ease: "backInOut",
+                  }}
+                  variants={{
+                    hover: {
+                      scale: 1.05,
+                    },
+                  }}
+                  className={`relative w-80 lg:h-[25rem] shrink-0 overflow-hidden rounded-xl bg-[#ef4444] p-8`}
+                >
+                  <div className="relative z-10 text-white font-semibold">
+                    <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
+                      Service
+                    </span>
+                    <motion.span
+                      initial={{ scale: 0.85 }}
+                      variants={{
+                        hover: {
+                          scale: 1,
+                        },
+                      }}
+                      transition={{
+                        duration: 1,
+                        ease: "backInOut",
+                      }}
+                      className="my-2 block origin-top-left font-mono text-6xl font-black leading-[1.2]"
+                    >
+                      Work
+                      <br className="lg:hidden" /> {""}
+                      Abroad
+                    </motion.span>
+                    <p>
+                      Secure professional visas for workers to access top-tier
+                      companies across the EU, facilitating lucrative employment
+                      opportunities.
+                    </p>
+                  </div>
+                  <motion.svg
+                    height="250px"
+                    width="250px"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 512 512"
+                    xml:space="preserve"
+                    className="absolute mt-28 ms-20 inset-0 z-0 "
+                    variants={{
+                      hover: {
+                        scale: 1.5,
+                        // move the circle up
+                        x: 100,
+                      },
+                    }}
+                    transition={{
+                      duration: 1,
+                      ease: "backInOut",
+                    }}
+                  >
+                    <motion.circle
+                      style={{ fill: " #3b82f6" }}
+                      cx="256"
+                      cy="256"
+                      r="256"
+                      transition={{
+                        duration: 1,
+                        ease: "backInOut",
+                        delay: 0.2,
+                      }}
+                    />
+                    <motion.path
+                      style={{ fill: "#0ea5e9" }}
+                      d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                    />
+                    <motion.path
+                      style={{ fill: "#10b981" }}
+                      d="M102.4,332.8c21.207,0,38.4,17.193,38.4,38.4V384c0,21.207,17.193,38.4,38.4,38.4
+    s38.4-17.193,38.4-38.4v-89.6c0-21.207-17.193-38.4-38.4-38.4s-38.4-17.193-38.4-38.4v-12.8c0-35.346,28.654-64,64-64
+    c21.207,0,38.4-17.193,38.4-38.4V51.2c0-21.207-17.193-38.4-38.4-38.4h-28.902C74.988,46.019,1.812,140.275,0.052,251.887
+    C10.758,297.673,53.665,332.8,102.4,332.8z"
+                    />
+                    <g>
+                      <motion.path
+                        style={{ fill: "#10b981" }}
+                        d="M332.8,115.2c0,42.415,34.385,76.8,76.8,76.8h51.2c14.641,0,28.323-4.096,39.965-11.204
+      C477.75,105.798,421.216,45.475,348.635,17.289C338.702,30.23,332.8,46.427,332.8,64V115.2z"
+                      />
+                      <motion.path
+                        style={{ fill: "#10b981" }}
+                        d="M473.6,268.8h-128c-21.207,0-38.4,17.193-38.4,38.4s17.193,38.4,38.4,38.4S384,362.793,384,384v25.6
+      c0,20.444,19.547,38.34,39.951,39.603c45.426-39.523,76.764-94.803,85.533-157.325C503.197,278.889,488.861,268.8,473.6,268.8z"
+                      />
+                    </g>
+                  </motion.svg>
+                </motion.div>
+              </div>
+            </section>
+          </div>
           <div className="flex flex-col md:flex-row lg:flex-col items-end px-3">
             <section className="px-4 pt-12 lg:px-0 lg:py-0">
               <div className="mx-auto w-fit">
@@ -214,16 +318,16 @@ const Services = () => {
                         duration: 1,
                         ease: "backInOut",
                       }}
-                      className="my-2 lg:my-0 block origin-top-left font-mono text-6xl lg:text-3xl  font-black leading-[1.2]"
+                      className="my-2 lg:my-0 block origin-top-left font-mono text-4xl lg:text-2xl  font-black leading-[1.2]"
                     >
-                      Work
-                      <br className="lg:hidden" /> {""}
-                      Abroad
+                      Travel &
+                      <br className="md:block hidden" />
+                      Tourism
                     </motion.span>
                     <p className="lg:text-sm">
-                      Secure professional visas for workers to access top-tier
-                      companies across the EU, facilitating lucrative employment
-                      opportunities.
+                      Premier travel and tourism services you can rely on for
+                      your next trip. Our esteemed offerings ensure unparalleled
+                      quality and peace of mind throughout your journey.
                     </p>
                   </div>
 
@@ -300,110 +404,7 @@ const Services = () => {
               </div>
             </section>
           </div>
-          <div className="md:mt-7 lg:mt-0">
-            <section className="">
-              <div className="mx-auto w-fit">
-                <motion.div
-                  whileHover="hover"
-                  transition={{
-                    duration: 1,
-                    ease: "backInOut",
-                  }}
-                  variants={{
-                    hover: {
-                      scale: 1.05,
-                    },
-                  }}
-                  className={`relative w-80 lg:h-[25rem] shrink-0 overflow-hidden rounded-xl bg-[#ef4444] p-8`}
-                >
-                  <div className="relative z-10 text-white font-semibold">
-                    <span className="mb-3 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white">
-                      Service
-                    </span>
-                    <motion.span
-                      initial={{ scale: 0.85 }}
-                      variants={{
-                        hover: {
-                          scale: 1,
-                        },
-                      }}
-                      transition={{
-                        duration: 1,
-                        ease: "backInOut",
-                      }}
-                      className="my-2 block origin-top-left font-mono text-6xl font-black leading-[1.2]"
-                    >
-                      Travel &
-                      <br className="md:block hidden" />
-                      Tourism
-                    </motion.span>
-                    <p>
-                      Premier travel and tourism services you can rely on for
-                      your next trip. Our esteemed offerings ensure unparalleled
-                      quality and peace of mind throughout your journey.
-                    </p>
-                  </div>
-                  <motion.svg
-                    height="250px"
-                    width="250px"
-                    version="1.1"
-                    id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 512 512"
-                    xml:space="preserve"
-                    className="absolute mt-28 ms-20 inset-0 z-0 "
-                    variants={{
-                      hover: {
-                        scale: 1.5,
-                        // move the circle up
-                        x: 100,
-                      },
-                    }}
-                    transition={{
-                      duration: 1,
-                      ease: "backInOut",
-                    }}
-                  >
-                    <motion.circle
-                      style={{ fill: " #3b82f6" }}
-                      cx="256"
-                      cy="256"
-                      r="256"
-                      transition={{
-                        duration: 1,
-                        ease: "backInOut",
-                        delay: 0.2,
-                      }}
-                    />
-                    <motion.path
-                      style={{ fill: "#0ea5e9" }}
-                      d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
-                    />
-                    <motion.path
-                      style={{ fill: "#10b981" }}
-                      d="M102.4,332.8c21.207,0,38.4,17.193,38.4,38.4V384c0,21.207,17.193,38.4,38.4,38.4
-    s38.4-17.193,38.4-38.4v-89.6c0-21.207-17.193-38.4-38.4-38.4s-38.4-17.193-38.4-38.4v-12.8c0-35.346,28.654-64,64-64
-    c21.207,0,38.4-17.193,38.4-38.4V51.2c0-21.207-17.193-38.4-38.4-38.4h-28.902C74.988,46.019,1.812,140.275,0.052,251.887
-    C10.758,297.673,53.665,332.8,102.4,332.8z"
-                    />
-                    <g>
-                      <motion.path
-                        style={{ fill: "#10b981" }}
-                        d="M332.8,115.2c0,42.415,34.385,76.8,76.8,76.8h51.2c14.641,0,28.323-4.096,39.965-11.204
-      C477.75,105.798,421.216,45.475,348.635,17.289C338.702,30.23,332.8,46.427,332.8,64V115.2z"
-                      />
-                      <motion.path
-                        style={{ fill: "#10b981" }}
-                        d="M473.6,268.8h-128c-21.207,0-38.4,17.193-38.4,38.4s17.193,38.4,38.4,38.4S384,362.793,384,384v25.6
-      c0,20.444,19.547,38.34,39.951,39.603c45.426-39.523,76.764-94.803,85.533-157.325C503.197,278.889,488.861,268.8,473.6,268.8z"
-                      />
-                    </g>
-                  </motion.svg>
-                </motion.div>
-              </div>
-            </section>
-          </div>
+         
         </motion.div>
       </div>
 

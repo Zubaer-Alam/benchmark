@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PiPlusLight } from "react-icons/pi";
 import { IoIosArrowDown } from "react-icons/io";
+import { MdPictureAsPdf } from "react-icons/md";
 const WorkerForm = () => {
   // this form is not functional. need validation and other stuff done.
   const [profileImage, setProfileImage] = useState(null);
@@ -64,7 +65,7 @@ const WorkerForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className=" mx-2 lg:mx-auto bg-black bg-opacity-80  px-8 pt-6 pb-8 lg:mb-4 rounded-xl "
+      className=" mx-2 lg:mx-auto bg-black bg-opacity-90 lg:my-20 px-10 py-20 lg:mb-4 rounded-xl "
     >
       <div className="grid lg:grid-cols-7 gap-4 lg:gap-20 ">
         <div className="col-span-4 ">
@@ -81,13 +82,13 @@ const WorkerForm = () => {
               </label>
             </div>
 
-            <div className=" grid md:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
+            <div className=" grid lg:pt-14  md:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
               <div className="mb-4 relative">
                 <select
                   id="gender"
                   value={gender}
                   onChange={handleGenderChange}
-                  className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                  className="appearance-none border-b w-full py-1 pt-3  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 >
                   <option className="text-black" value="">
                     Gender
@@ -102,7 +103,7 @@ const WorkerForm = () => {
                     Other
                   </option>
                 </select>
-                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                <div className="absolute top-3 right-0 flex items-center pr-3 pointer-events-none">
                   <IoIosArrowDown className="text-white text-xl" />
                 </div>
               </div>
@@ -112,7 +113,7 @@ const WorkerForm = () => {
                   id="targetCountry"
                   value={targetCountry}
                   onChange={handleTargetCountryChange}
-                  className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                  className="appearance-none border-b w-full py-1 pt-3  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 >
                   <option className="text-black" value="">
                     Country
@@ -124,7 +125,7 @@ const WorkerForm = () => {
                     Country 2
                   </option>
                 </select>
-                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                <div className="absolute top-3 right-0 flex items-center pr-3 pointer-events-none">
                   <IoIosArrowDown className="text-white text-xl" />
                 </div>
               </div>
@@ -141,9 +142,9 @@ const WorkerForm = () => {
                     if (!e.target.value) e.target.type = "text";
                   }}
                   style={{ color: "white" }}
-                  className="appearance-none border-b w-full py-2 px-3 text-white  placeholder-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                  className="appearance-none border-b w-full py-1 pt-3  text-white  placeholder-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 />
-                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                <div className="absolute top-3 right-0 flex items-center pr-3 pointer-events-none">
                   <IoIosArrowDown className="text-white text-xl" />
                 </div>
               </div>
@@ -153,7 +154,7 @@ const WorkerForm = () => {
                   id="targetProfession"
                   value={targetProfession}
                   onChange={handleTargetProfessionChange}
-                  className="appearance-none border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                  className="appearance-none border-b w-full py-1 pt-3  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                 >
                   <option className="text-black" value="">
                     Profession
@@ -166,7 +167,7 @@ const WorkerForm = () => {
                   </option>
 
                 </select>
-                <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                <div className="absolute top-3 right-0 flex items-center pr-3 pointer-events-none">
                   <IoIosArrowDown className="text-white text-xl" />
                 </div>
               </div>
@@ -182,7 +183,7 @@ const WorkerForm = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full pb-2 lg:pt-6 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
             <div className="mb-4">
@@ -193,7 +194,7 @@ const WorkerForm = () => {
                 name="number"
                 value={formData.number}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full py-1 pt-3  placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
             <div className="mb-4">
@@ -204,7 +205,7 @@ const WorkerForm = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="appearance-none placeholder-white border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none placeholder-white border-b w-full py-1 pt-3  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
 
@@ -216,7 +217,7 @@ const WorkerForm = () => {
                 name="presentAddress"
                 value={formData.presentAddress}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full py-1 pt-3  placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
             <div className="mb-4">
@@ -227,7 +228,7 @@ const WorkerForm = () => {
                 name="permanentAddress"
                 value={formData.permanentAddress}
                 onChange={handleChange}
-                className="appearance-none border-b w-full py-2 px-3 placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                className="appearance-none border-b w-full py-1 pt-3  placeholder-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
               />
             </div>
           </div>
@@ -239,8 +240,8 @@ const WorkerForm = () => {
             <label className="block text-white text-sm font-bold mb-2">
               NID Image:
             </label>
-            <div className="mb-4 flex gap-4">
-              <label class="w-full h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+            <div className="mb-4 md:flex gap-4">
+              <label class="w-full my-3 md:my-0 h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                 <PiPlusLight class="mt-2 text-white text-5xl" />
 
                 <input type="file" class="hidden" />
@@ -256,8 +257,8 @@ const WorkerForm = () => {
             <label className="block text-white text-sm font-bold mb-2">
               Passport Image:
             </label>
-            <div className="mb-4 flex gap-4">
-              <label class="w-full h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+            <div className="mb-4 md:flex gap-4">
+              <label class="w-full my-3 md:my-0 h-32 flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                 <PiPlusLight class="mt-2 text-white text-5xl" />
 
                 <input type="file" class="hidden" />
@@ -281,19 +282,14 @@ const WorkerForm = () => {
               />
               <label
                 htmlFor="resume"
-                className="border-b w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline block"
+                className="border-b w-full py-1 pt-3  text-white leading-tight focus:outline-none focus:shadow-outline block"
               >
                 {fileName}
               </label>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <svg
-                  className="h-6 w-6 fill-current text-gray-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9 2c-.28 0-.53.11-.71.29L3.5 7.09C2.57 7.82 2 8.88 2 10v6c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2h-3V6c0-.55-.45-1-1-1H9zM8 13l-3-3 4-4 4 4-3 3V9h-2v4z" />
-                </svg>
-              </div>
+              <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
+                  <MdPictureAsPdf className="text-white text-xl" />
+                </div>
+              
             </div>
           </div>
           <div className="py-4">
@@ -311,10 +307,10 @@ const WorkerForm = () => {
         </div>
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex justify-center md:justify-end lg:justify-end">
         <button
           type="submit"
-          className="bg-[#ca0b10] hover:bg-[#ca0b40] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-[#ca0b10] hover:bg-[#ca0b40] w-72 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Submit
         </button>

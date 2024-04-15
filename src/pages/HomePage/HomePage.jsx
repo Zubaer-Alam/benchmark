@@ -13,7 +13,7 @@ const HomePage = () => {
       <Hero />
       <About />
 
-      <div className="lg:flex items-center hidden">
+      <div className="lg:flex items-center hidden ">
         <div className="lg:ps-24 ps-4 z-10">
           <div className="lg:pt-20 w-[500px] ">
             <h1 className="md:text-5xl  text-3xl font-bold ">
@@ -32,7 +32,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row lg:hidden  items-center justify-center relative h-[300px] lg:mt-52 xl:my-80 mx-4 md:mx-0">
+      <div className="flex flex-col lg:flex-row lg:hidden  items-center justify-center relative h-[300px] lg:mt-52 -mt-[40px] xl:my-80 mx-4 md:mx-0">
         <div className="lg:w-[500px] z-10 absolute lg:-translate-x-3/4 ">
           <div className="mx-auto lg:pt-20 ">
             <h1 className="md:text-5xl  text-3xl font-bold ">

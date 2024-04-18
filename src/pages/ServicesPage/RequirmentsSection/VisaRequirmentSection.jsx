@@ -2,14 +2,14 @@ import React from "react";
 import SectionIntro from "../../AboutPage/SectionIntro";
 import Requirments from "./Requirments";
 
-import lithuania from "../../../../public/content/flags/lithuania.png"
-import serbia from "../../../../public/content/flags/serbia.png"
-import croatia from "../../../../public/content/flags/croatia.png"
+import lithuania from "../../../../public/content/flags/lithuania.png";
+import serbia from "../../../../public/content/flags/serbia.png";
+import croatia from "../../../../public/content/flags/croatia.png";
 
 const VisaRequirmentSection = () => {
   const countriesData = {
     Lithuania: {
-      flag:lithuania,
+      flag: lithuania,
       processing_time: "45 days for appointment, 5 months for visa (TRC).",
       job_details: null,
       documents: [
@@ -27,7 +27,7 @@ const VisaRequirmentSection = () => {
       },
     },
     Serbia: {
-      flag:serbia,
+      flag: serbia,
       processing_time: "6 months processing time.",
       job_details: {
         Painters: "500-550 euro/month",
@@ -50,7 +50,7 @@ const VisaRequirmentSection = () => {
       },
     },
     Croatia: {
-      flag:croatia,
+      flag: croatia,
       processing_time: "8-9 months processing time.",
       job_details: {
         job: "Welding",
@@ -67,14 +67,13 @@ const VisaRequirmentSection = () => {
   return (
     <div className="py-10 container mx-auto ">
       <SectionIntro
-        eyebrow="Visa Requirments"
-        title="I know Nothing"
+        eyebrow="Worker Visa"
+        title="Applicant requirements"
       ></SectionIntro>
-      <div className="my-4 px-6 grid grid-cols-3 gap-4">
+      <div className="my-4 px-6 grid lg:grid-cols-3 gap-4">
         {Object.entries(countriesData).map(([country, data]) => (
           <Requirments key={country} country={country} data={data} />
         ))}
-        
       </div>
     </div>
   );

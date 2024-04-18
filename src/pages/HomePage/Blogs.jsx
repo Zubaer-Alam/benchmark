@@ -36,7 +36,7 @@ const Blogs = () => {
         {/* <VideoSection /> */}
       </div>
 
-      <div className="h-28"></div>
+      <div className="h-[76px]"></div>
       {/* main blog */}
       <div className="relative" id="blogs">
         <div
@@ -78,7 +78,7 @@ const Blogs = () => {
           <div className="cs-shape_4 mx-32 -my-28"></div>
           <div className="cs-shape_4 -my-32"></div>
         </div> */}
-        <div className="lg:h-60 h-8"></div>
+        {/* <div className="lg:h-60 h-8"></div> */}
       </div>
     </div>
   );

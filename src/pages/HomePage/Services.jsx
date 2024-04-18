@@ -7,7 +7,7 @@ import List, { ListItem } from "../AboutPage/List";
 
 const Services = () => {
   return (
-    <div className="text-white lg:px-24 px-4 mt-52 lg:mt-48">
+    <div className="text-white lg:px-24 px-4 mt-16 md:mt-52 lg:mt-48">
       {/* service section */}
       <div
         className="flex lg:flex-row flex-col lg:justify-between items-center"
@@ -50,7 +50,7 @@ const Services = () => {
           initial="initial"
           whileInView="animate"
         >
-           <div className="md:mt-7 lg:mt-0">
+          <div className="md:mt-7 lg:mt-0">
             <section className="">
               <div className="mx-auto w-fit">
                 <motion.div
@@ -404,7 +404,6 @@ const Services = () => {
               </div>
             </section>
           </div>
-         
         </motion.div>
       </div>
 

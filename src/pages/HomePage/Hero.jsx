@@ -23,7 +23,6 @@ const Hero = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
   return (
     <motion.div
@@ -44,16 +43,13 @@ const Hero = () => {
         stiffness: 100,
       }}
     >
-      <div
-        className="bg-[url('../public/images/background.jpg')] w-full h-screen relative overflow-hidden block z-10 bg-fixed bg-no-repeat bg-top bg-cover before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36"
-       
-      >
+      <div className="bg-[url('../public/images/background.jpg')] w-full lg:h-screen h-[600px] relative overflow-hidden block z-10 bg-fixed bg-no-repeat bg-top bg-cover before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36">
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
 
         {/* banner content */}
-        <div className="px-4 lg:px-24 absolute md:bottom-[30vh] bottom-[18vh] ">
+        <div className="px-4 lg:px-24 absolute lg:bottom-[30vh] mt-28 ">
           <h1
             className="md:w-2/4 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug stroke-black stroke-2"
             style={{ textShadow: "2px 2px 15px rgba(0,0,0,10)" }}

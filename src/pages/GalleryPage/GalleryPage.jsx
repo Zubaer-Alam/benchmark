@@ -5,10 +5,9 @@ import SectionIntro from "../AboutPage/SectionIntro";
 const GalleryPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="container mx-auto py-40">
+    <div className="lg:px-24 px-4 py-40">
       <SectionIntro title="Visa:"></SectionIntro>
       <ImageGrid />
-     
     </div>
   );
 };

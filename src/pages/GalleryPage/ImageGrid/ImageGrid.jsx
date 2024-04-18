@@ -15,11 +15,13 @@ import { SlArrowUp } from "react-icons/sl";
 const ImageGrid = () => {
   const [selected, setSelected] = useState(null);
   return (
-    <div>
+    <div className="">
       <div
         className={`relative overflow-hidden ${
-          selected === 1 ? " max-h-[1560px] lg:max-h-[1020px]" : "md:max-h-36 max-h-52 lg:max-h-52 duration-700"
-        } grid mt-10 grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4  transition-all duration-700`}
+          selected === 1
+            ? "max-h-[1560px] lg:max-h-[1020px]"
+            : "md:max-h-36 max-h-52 lg:max-h-52 duration-700"
+        } grid mt-10 grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4  transition-all duration-700`}
       >
         <img
           src={img1}

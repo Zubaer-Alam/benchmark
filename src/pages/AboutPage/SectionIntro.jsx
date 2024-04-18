@@ -13,7 +13,7 @@ const SectionIntro = ({
 }) => {
   return (
     <Container {...props}>
-      <FadeIn className="max-w-2xl">
+      <FadeIn className="">
         <h2>
           {eyebrow && (
             <>

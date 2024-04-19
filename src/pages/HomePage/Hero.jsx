@@ -43,7 +43,7 @@ const Hero = () => {
         stiffness: 100,
       }}
     >
-      <div className="bg-[url('../public/images/background.jpg')] w-full lg:h-screen h-[600px] relative overflow-hidden block z-10 bg-fixed bg-no-repeat bg-top bg-cover before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] ms:mb-10 md:mb-36 lg:mb-36">
+      <div className="bg-[url('../public/images/background.jpg')] w-full lg:h-screen h-screen relative overflow-hidden block z-10 bg-fixed bg-no-repeat bg-top bg-cover before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:h-56 before:from-black before:to-transparent before:opacity-100 before:z-[-5] mb-10 md:mb-[150px] lg:mb-[150px]">
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
         <div className="cs-shape_1"></div>
@@ -82,11 +82,23 @@ const Hero = () => {
         </div>
 
         {/* scroll arrow to service section */}
-        <Link
+        {/* <Link
           to="services"
           spy={true}
           smooth={true}
           className={`cs-down_btn md:mt-20 mt-20 shadow-[2px_2px_10px_rgba(0,0,0,1)] ${
+            !isSticky
+              ? "flex transition-all duration-300"
+              : "hidden transition-all duration-300"
+          }`}
+        >
+          .
+        </Link> */}
+        <Link
+          to="services"
+          spy={true}
+          smooth={true}
+          className={`cs-down_btn md:mt-20 mt-20 ${
             !isSticky
               ? "flex transition-all duration-300"
               : "hidden transition-all duration-300"

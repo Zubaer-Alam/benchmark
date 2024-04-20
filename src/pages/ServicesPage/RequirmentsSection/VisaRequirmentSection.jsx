@@ -5,13 +5,17 @@ import Requirments from "./Requirments";
 import lithuania from "../../../../public/content/flags/lithuania.png";
 import serbia from "../../../../public/content/flags/serbia.png";
 import croatia from "../../../../public/content/flags/croatia.png";
+import romania from "../../../../public/content/flags/romania.png";
 
-import img from "../../../assets/country/island-4028988_1280.jpg";
+import croatiaimg from "../../../assets/country/croatia.jpg";
+import lithuaniaimg from "../../../assets/country/lithuania.jpg";
+import romanianimg from "../../../assets/country/Romanian.jpg";
+import serbiaimg from "../../../assets/country/Serbia.jpg";
 const VisaRequirmentSection = () => {
   const countriesData = {
     Lithuania: {
       flag: lithuania,
-      thumb: img,
+      thumb: lithuaniaimg,
       processing_time: "45 days for appointment, 5 months for visa (TRC).",
       job_details: null,
       documents: [
@@ -30,7 +34,7 @@ const VisaRequirmentSection = () => {
     },
     Serbia: {
       flag: serbia,
-      thumb: img,
+      thumb: serbiaimg,
       processing_time: "6 months processing time.",
       job_details: {
         Painters: "500-550 euro/month",
@@ -54,7 +58,7 @@ const VisaRequirmentSection = () => {
     },
     Croatia: {
       flag: croatia,
-      thumb: img,
+      thumb: croatiaimg,
       processing_time: "8-9 months processing time.",
       job_details: {
         job: "Welding",
@@ -67,9 +71,9 @@ const VisaRequirmentSection = () => {
         non_refundable: "50,000 taka",
       },
     },
-    Test: {
-      flag: croatia,
-      thumb: img,
+    Romania: {
+      flag: romania,
+      thumb: romanianimg,
       processing_time: "8-9 months processing time.",
       job_details: {
         job: "Welding",

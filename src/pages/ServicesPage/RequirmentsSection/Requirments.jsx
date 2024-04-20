@@ -17,10 +17,12 @@ const Requirments = ({ country, data }) => {
           alt=""
           className="rounded-t-lg h-[315px] w-full object-cover "
         />
-        <h2 className="text-2xl w-40 bg-[#fc432a]  drop-shadow-2xl shadow-black px-6 py-2 text-end rounded-r-lg  -top-20 -left-2    relative font-bold text-white ">
+        <h2 className="shadow-[2px_2px_10px_rgba(0,0,0,.6)]  text-2xl w-40 bg-[#fc432a]  rounded-tl-[4px]  px-6 py-2 text-end rounded-r-[4px]   -top-72 md:-top-20 -left-1    relative font-bold text-white ">
           {country}
         </h2>
-        {/* <div className="text-2xl h-1 w-1 bg-[#fc432a]  drop-shadow-2xl shadow-black px-6 py-2 text-end rounded-r-lg  -top-20 -left-2    relative font-bold text-white "></div> */}
+        <div className="text-2xl h-1 w-1 bg-[#fc432a]  drop-shadow-2xl shadow-black  text-end   -top-72 md:-top-20 -left-1    relative font-bold text-white ">
+          <div className="text-2xl rounded-l-full h-2 w-1 bg-[#5f1208]  drop-shadow-2xl shadow-black  text-end  font-bold text-white "></div>
+        </div>
       </div>
       <div className="flex justify-end items-center h-10  ">
         <img

@@ -67,7 +67,7 @@ const VisaRequirmentSection = () => {
         non_refundable: "50,000 taka",
       },
     },
-    pakistan: {
+    Test: {
       flag: croatia,
       thumb: img,
       processing_time: "8-9 months processing time.",
@@ -89,7 +89,7 @@ const VisaRequirmentSection = () => {
         eyebrow="Worker Visa"
         title="Applicant requirements"
       ></SectionIntro>
-      <div className="columns-1 md:columns-2  gap-4 mt-10">
+      <div className="columns-1 md:columns-2  gap-3 md:gap-4 mt-10">
         {/* <div className="my-4 px-6 grid lg:grid-cols-3 gap-4"> */}
         {Object.entries(countriesData).map(([country, data]) => (
           <Requirments key={country} country={country} data={data} />

@@ -13,7 +13,7 @@ const Navbar = () => {
   console.log(pathLocation);
   console.log(isSticky);
 
-  console.log(window.scrollY)
+  console.log(window.scrollY);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -43,31 +43,7 @@ const Navbar = () => {
     { link: "Recruit", path: "recruit" },
     { link: "Collaborate", path: "collaborate" },
   ];
-  // const navLinks = (
-  //   <>
-  //     <li>
-  //       <NavLink  to="/">Home</NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/about">About</NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/services">Services</NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/gallery">Gallery</NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/apply">Apply</NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/recruit">Recruit</NavLink>
-  //     </li>
-  //     <li>
-  //       <NavLink to="/collaborate">Collaborate</NavLink>
-  //     </li>
-  //   </>
-  // );
+
   return (
     <header
       className={`w-screen lg:bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300 
@@ -77,19 +53,28 @@ const Navbar = () => {
       <nav
         className={`lg:px-24 px-4  ${
           isSticky
-            ? "sticky top-0 left-0 right-0 bg-white/70 p-2 transition-all duration-300 ease-in "
+            ? isMenuOpen
+              ? "bg-[#fbfbfb] sticky top-0 left-0 right-0  p-2 transition-all duration-300 ease-in "
+              : "sticky top-0 left-0 right-0 bg-white/70  p-2 transition-all duration-300 ease-in "
             : "transition-all duration-300 ease-in lg:py-4 "
-        }`}
+        } ${isMenuOpen ? "bg-[#fbfbfb] py-2" : ""}`}
       >
+        {/* <nav
+        className={`lg:px-24 px-4  ${
+          isSticky
+            ? "sticky top-0 left-0 right-0 bg-white/70  p-2 transition-all duration-300 ease-in "
+            : "transition-all duration-300 ease-in lg:py-4 "
+        } ${isMenuOpen ? "bg-white" : ""}`}
+      > */}
         <div className="flex justify-between items-center  gap-8">
           {/* <a href="" className="text-2xl font-bold text-white"><span className="text-orange">Bench</span>mark</a> */}
           <div className="relative ">
             {/* <Link to="/"> */}
-              <img
-                src="/blogo.svg"
-                className="h-20 w-48 object-contain"
-                alt="benchmark logo"
-              />
+            <img
+              src="/blogo.svg"
+              className="h-20 w-48 object-contain"
+              alt="benchmark logo"
+            />
             {/* </Link> */}
             <p
               className={`absolute text-[8px] w-[300px] -bottom-0 font-semibold
@@ -97,6 +82,8 @@ const Navbar = () => {
                 pathLocation === "/"
                   ? isSticky
                     ? " text-black "
+                    : isMenuOpen
+                    ? "text-black"
                     : " text-white "
                   : isSticky
                   ? " text-black "
@@ -156,7 +143,9 @@ const Navbar = () => {
                     pathLocation === "/"
                       ? isSticky
                         ? "text-gray-900"
-                        : "text-white"
+                        : isMenuOpen
+                        ? "text-black"
+                        : " text-white "
                       : isSticky
                       ? "text-gray-900"
                       : "text-gray-900"

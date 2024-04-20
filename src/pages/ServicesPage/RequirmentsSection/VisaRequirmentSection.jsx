@@ -9,8 +9,8 @@ import romania from "../../../../public/content/flags/romania.png";
 
 import croatiaimg from "../../../assets/country/croatia.jpg";
 import lithuaniaimg from "../../../assets/country/lithuania.jpg";
-import romanianimg from "../../../assets/country/Romanian.jpg";
-import serbiaimg from "../../../assets/country/Serbia.jpg";
+import romanianimg from "../../../assets/country/romanian.jpg";
+import serbiaimg from "../../../assets/country/serbia.jpg";
 const VisaRequirmentSection = () => {
   const countriesData = {
     Lithuania: {
@@ -81,12 +81,27 @@ const VisaRequirmentSection = () => {
       },
       documents: ["Passport copy", "Police clearance", "CV", "Work video"],
       training_requirement: "Must be trained enough",
+      payment_procedure: {
+        total_package_cost:
+          "9,00,000/- (Embassy fees, Insurance, Air fare & authorization cost included)",
+        three_step_payment: {
+          advance: "80,000 Taka",
+          after_permit: "1,00,000 Taka",
+          after_visa: "Rest Amount",
+        },
+        from_bangladesh: "India travel cost will be excluded",
+      },
+      processing_time_additional_info:
+        "It will take 6 months to issue the work permit depending on the situation. Then after visa application, it will take 4-6 months to get the appointment. After getting the appointment, candidate have to apply for Indian visa as early as possible. In total we will take 12 months for the whole process.",
+      submission_slip_info:
+        "No Submission Slip will Be Provided. Work permit copy will be provided. Embassy Submission Slip will be provided.",
       return_policy: {
-        refundable: "1 lac taka",
-        non_refundable: "50,000 taka",
+        refundable: "50,000/-",
+        non_refundable: "1,30,000/- (Embassy fees, lawyer fees and others)",
       },
     },
   };
+
   return (
     <div className="py-10 container mx-auto ">
       <SectionIntro

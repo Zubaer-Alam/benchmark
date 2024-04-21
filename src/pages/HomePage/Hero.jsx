@@ -57,7 +57,32 @@ const Hero = () => {
             <PullUpText words="Loyalty is our commitment" />
           </h1>
           {/* banner btn */}
-          <div className="text-white text-lg flex flex-col-reverse md:flex-row md:items-center items-start justify-between gap-8">
+          <div className="text-white text-lg">
+            {/* <div className="text-white text-lg flex flex-col-reverse md:flex-row md:items-center items-start justify-between gap-8"> */}
+            {/* <div className="mx-4 my-10 lg:mx-0">
+              <a
+                className="inline-flex items-center gap-2 font-semibold hover:text-orange transition-all duration-300"
+                href="/contact"
+              >
+                <span
+                  style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
+                  className="font-bold"
+                >
+                  Get a Quote
+                </span>
+                <BsArrowRight />
+              </a>
+            </div> */}
+            <div
+              className="md:w-1/2 text-[1rem] py-8 rounded-md font-bold stroke-black stroke-2 text-justify"
+              style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
+            >
+              {/* <div
+              className="md:w-1/2 text-[1rem] py-8  md:pl-20 lg:pl-20 rounded-md font-bold stroke-black stroke-2 text-justify"
+              style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
+            > */}
+              <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
+            </div>
             <div className="mx-4 my-10 lg:mx-0">
               <a
                 className="inline-flex items-center gap-2 font-semibold hover:text-orange transition-all duration-300"
@@ -71,12 +96,6 @@ const Hero = () => {
                 </span>
                 <BsArrowRight />
               </a>
-            </div>
-            <div
-              className="md:w-1/2 text-[1rem] py-8  md:pl-20 lg:pl-20 rounded-md font-bold stroke-black stroke-2 text-justify"
-              style={{ textShadow: "2px 2px 5px rgba(0,0,0,1)" }}
-            >
-              <FadeUpStagger title="The trustworthy provider of professional visa and student visa to the Best Universities, Factories and Companies of Romania, Lithuania, Serbia, Italy, Bulgaria, Poland, Croatia, Czech Republic etc." />
             </div>
           </div>
         </div>

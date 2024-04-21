@@ -108,7 +108,7 @@ const VisaRequirmentSection = () => {
         eyebrow="Worker Visa"
         title="Applicant requirements"
       ></SectionIntro>
-      <div className="columns-1 md:columns-2  gap-3 md:gap-4 mt-10">
+      <div className="columns-1 md:columns-2  gap-3 md:gap-8 mt-10">
         {/* <div className="my-4 px-6 grid lg:grid-cols-3 gap-4"> */}
         {Object.entries(countriesData).map(([country, data]) => (
           <Requirments key={country} country={country} data={data} />

@@ -10,8 +10,9 @@ import {
 
 const gridItems = [
   {
-    title: "Immigration Services",
-    description: "Benchmark Career Development Centre & Education Consultancy",
+    title: "Visa Application Guidance",
+    description:
+      "Our experienced consultants provide expert guidance to navigate the complex visa application process and maximize your chances of success.",
     link: "https://algochurn.com",
     icon: (
       <span className="p-5 rounded-full bg-green-300 text-white shadow-lg shadow-teal-200 z-10">
@@ -20,9 +21,9 @@ const gridItems = [
     ),
   },
   {
-    title: "Consultation",
+    title: "Document Preparation",
     description:
-      "Consultation Service offers you the opportunity to visit Immigration Consultants having a profound knowledge of the Visa Application Processes..",
+      "We assist in collecting and preparing all necessary documents, forms and supporting materials required for your European work visa application.",
     link: "https://algochurn.com",
     icon: (
       <span className="p-5 rounded-full bg-yellow-300 text-white shadow-lg shadow-yellow-200 z-10">
@@ -31,9 +32,9 @@ const gridItems = [
     ),
   },
   {
-    title: "Eligibility Assessment",
+    title: "Interview Coaching",
     description:
-      "Our Online Assessment will help you find out if you are eligible to apply for a Visitor Visa. Register below to take the Assessment and view your results.",
+      "Receive one-on-one coaching to confidently answer visa interview questions and present a compelling case to immigration officials.",
     link: "https://algochurn.com",
     icon: (
       <span className="p-5 rounded-full bg-emerald-300 text-white shadow-lg shadow-emerald-200 z-10">
@@ -42,9 +43,9 @@ const gridItems = [
     ),
   },
   {
-    title: "Application Processing",
+    title: "Travel & Relocation Support",
     description:
-      "Assess your immigration eligibility for free Determine your immigration category based on your credentials for free.",
+      "We handle all the logistics of your move, from booking flights to arranging housing, so you can focus on starting your new job abroad.",
     link: "https://algochurn.com",
     icon: (
       <span className="p-5 rounded-full bg-red-300 text-white shadow-lg shadow-red-200 z-10">
@@ -53,9 +54,9 @@ const gridItems = [
     ),
   },
   {
-    title: "Client Assistance",
+    title: "Post-Arrival Assistance",
     description:
-      "Client Assistance Program provides a direct one-on-one comprehensive information and referral assistance on basic needs and safety net services.",
+      "Our team helps you get settled in your new country, including registering with local authorities, setting up bank accounts and more.",
     link: "https://algochurn.com",
     icon: (
       <span className="p-5 rounded-full bg-blue-300 text-white shadow-lg shadow-blue-200 z-10">
@@ -64,9 +65,9 @@ const gridItems = [
     ),
   },
   {
-    title: "Pre-Landing Services",
+    title: "Ongoing Check-Ins",
     description:
-      "Assist client in assessment/ evaluation of their qualification from the professional bodies and/or educational institutions in the country of immigration.",
+      "We maintain regular contact to ensure you're adjusting well to your new role and life in Europe, and are available anytime you need support.",
     link: "https://algochurn.com",
     icon: (
       <span className="p-5 rounded-full bg-amber-300 text-white shadow-lg shadow-amber-200 z-10">

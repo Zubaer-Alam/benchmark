@@ -88,7 +88,7 @@ const ServiceGrid = () => {
                 : idx === 1
                 ? "border-b md:border-b lg:border-r lg:border-b"
                 : idx === 2
-                ? "border-b md:border-b md:border-r lg:border-b"
+                ? "border-b md:border-b md:border-r lg:border-r-0 lg:border-b"
                 : idx === 3
                 ? "border-b lg:border-b-0 md:border-b lg:border-r "
                 : idx === 4

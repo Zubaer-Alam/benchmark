@@ -177,13 +177,13 @@ const RecruiterForm = () => {
           </div>
           {/* from section 1 */}
           <div className="">
-            <div className="mb-4 flex items-center justify-between gap-4">
+            <div className="mb-4 md:flex items-center justify-between gap-4">
               <div className="">
                 <label className="block w-52 text-center lg:text-left text-white text-sm font-bold mb-2">
                   Relevant Documents:
                 </label>
               </div>
-              <div className="flex gap-4">
+              <div className="md:flex gap-4">
                 {" "}
                 <label class="mx-auto w-28 h-10   flex items-center justify-center pb-1 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                   <p className="flex gap-2 text-sm text-white">
@@ -235,13 +235,12 @@ const RecruiterForm = () => {
   const renderStep2 = () => {
     return (
       <motion.div
-        initial={{ opacity: 0, x: "100%" }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: "100%" }}
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
         transition={{ duration: 0.9 }}
       >
         <div className=" lg:flex gap-4 lg:my-20 ">
-          <div className="mb-4  mx-2  lg:mx-auto bg-black bg-opacity-90 px-5 md:px-20 py-10  rounded-xl lg:w-screen">
+          <div className="mb-4  mx-2  lg:mx-auto bg-black bg-opacity-90 px-5 md:px-10 py-20  rounded-xl lg:w-screen">
             <div className="md:flex mb-4 justify-between relative">
               <label htmlFor="workerType" className="text-white pt-4">
                 Worker Type:
@@ -283,7 +282,7 @@ const RecruiterForm = () => {
             <div className="flex mb-4 items-center  justify-between space-x-4">
               <span className="text-white">Numbers of Workers:</span>
               <div className="flex items-center space-x-2">
-                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                <div className=" w-12 md-custom:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
                   <div className="text-white  focus:outline-none">
                     <span>-</span>
                   </div>
@@ -293,7 +292,7 @@ const RecruiterForm = () => {
                   </div>
                 </div>
                 <span className="text-white">to</span>
-                <div className="w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                <div className="w-12 md-custom:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
                   <div className="text-white  focus:outline-none">
                     <span>-</span>
                   </div>
@@ -316,7 +315,7 @@ const RecruiterForm = () => {
             <div className="flex mb-4 items-center justify-between space-x-4">
               <span className="text-white">Age Requirements (years):</span>
               <div className="flex items-center space-x-2">
-                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                <div className=" w-12 md-custom:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
                   <div className="text-white  focus:outline-none">
                     <span>-</span>
                   </div>
@@ -326,7 +325,7 @@ const RecruiterForm = () => {
                   </div>
                 </div>
                 <span className="text-white">to</span>
-                <div className="w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                <div className="w-12 md-custom:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
                   <div className="text-white  focus:outline-none">
                     <span>-</span>
                   </div>
@@ -379,7 +378,7 @@ const RecruiterForm = () => {
             <div className="flex  items-center justify-between space-x-4">
               <span className="text-white">Experience in years:</span>
               <div className="flex items-center space-x-2">
-                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                <div className=" w-12 md-custom:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
                   <div className="text-white  focus:outline-none">
                     <span>-</span>
                   </div>
@@ -389,7 +388,7 @@ const RecruiterForm = () => {
                   </div>
                 </div>
                 <span className="text-white">to</span>
-                <div className="w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                <div className="w-12 md-custom:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
                   <div className="text-white  focus:outline-none">
                     <span>-</span>
                   </div>
@@ -442,7 +441,7 @@ const RecruiterForm = () => {
             onChange={(e) => setProposedSalary(e.target.value)}
           /> */}
               <div className="flex gap-10 flex-1">
-                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                <div className=" w-12 md-custom:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
                   <div className="text-white  focus:outline-none">
                     <span>-</span>
                   </div>

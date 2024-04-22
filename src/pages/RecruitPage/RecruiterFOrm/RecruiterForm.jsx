@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineFileUpload } from "react-icons/md";
 import { PiPlusLight } from "react-icons/pi";
-
+import { motion } from "framer-motion";
 const RecruiterForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -234,25 +234,43 @@ const RecruiterForm = () => {
 
   const renderStep2 = () => {
     return (
-      <div className=" lg:flex gap-4 lg:my-20 ">
-        <div className="mb-4  mx-2  lg:mx-auto bg-black bg-opacity-90 px-10 py-10  rounded-xl lg:w-screen">
-          <div>
-            <label htmlFor="workerType" className="text-white">
-              Worker Type:
-            </label>
-            <select
-              id="workerType"
-              value={workerType}
-              onChange={(e) => setWorkerType(e.target.value)}
-            >
-              <option value="">Select Worker Type</option>
-              <option value="Full-Time">Full-Time</option>
-              <option value="Part-Time">Part-Time</option>
-              <option value="Contract">Contract</option>
-              {/* Add other worker types */}
-            </select>
-          </div>
-          {/* <div>
+      <motion.div
+        initial={{ opacity: 0, x: "100%" }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: "100%" }}
+        transition={{ duration: 0.9 }}
+      >
+        <div className=" lg:flex gap-4 lg:my-20 ">
+          <div className="mb-4  mx-2  lg:mx-auto bg-black bg-opacity-90 px-5 md:px-20 py-10  rounded-xl lg:w-screen">
+            <div className="md:flex mb-4 justify-between relative">
+              <label htmlFor="workerType" className="text-white pt-4">
+                Worker Type:
+              </label>
+              <select
+                id="workerType"
+                value={workerType}
+                className="appearance-none w-full md:w-1/2 border-b pb-1 pt-4  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                onChange={(e) => setWorkerType(e.target.value)}
+              >
+                <option className="text-black" value="">
+                  Select Worker Type
+                </option>
+                <option className="text-black" value="Full-Time">
+                  Full-Time
+                </option>
+                <option className="text-black" value="Part-Time">
+                  Part-Timew-20 w-20 w-20 w-20 w-20 w-20
+                </option>
+                <option className="text-black" value="Contract">
+                  Contract
+                </option>
+                {/* Add other worker types */}
+              </select>
+              <div className="absolute top-9 md:top-3  right-0 flex items-center pr-3 pointer-events-none">
+                <IoIosArrowDown className="text-white text-xl" />
+              </div>
+            </div>
+            {/* <div>
           <label htmlFor="numOfWorkers">Number of Workers:</label>
           <input
             type="text"
@@ -262,31 +280,31 @@ const RecruiterForm = () => {
           />
           
         </div> */}
-          <div className="flex items-center space-x-4">
-            <span className="text-white">Numbers of Workers:</span>
-            <div className="flex items-center space-x-2">
-              <div className=" border-2 rounded-md px-2 py-1 flex items-center space-x-1">
-                <div className="text-white  focus:outline-none">
-                  <span>-</span>
+            <div className="flex mb-4 items-center  justify-between space-x-4">
+              <span className="text-white">Numbers of Workers:</span>
+              <div className="flex items-center space-x-2">
+                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                  <div className="text-white  focus:outline-none">
+                    <span>-</span>
+                  </div>
+                  <span className="text-white">4</span>
+                  <div className="text-white  focus:outline-none">
+                    <span>+</span>
+                  </div>
                 </div>
-                <span className="text-white">4</span>
-                <div className="text-white  focus:outline-none">
-                  <span>+</span>
-                </div>
-              </div>
-              <span className="text-white">to</span>
-              <div className=" border-2 rounded-md px-2 py-1 flex items-center space-x-1">
-                <div className="text-white  focus:outline-none">
-                  <span>-</span>
-                </div>
-                <span className="text-white">5</span>
-                <div className="text-white hover:text-white focus:outline-none">
-                  <span>+</span>
+                <span className="text-white">to</span>
+                <div className="w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                  <div className="text-white  focus:outline-none">
+                    <span>-</span>
+                  </div>
+                  <span className="text-white">5</span>
+                  <div className="text-white hover:text-white focus:outline-none">
+                    <span>+</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          {/* <div>
+            {/* <div>
           <label htmlFor="ageRequirements">Age Requirements (years):</label>
           <input
             type="text"
@@ -295,31 +313,31 @@ const RecruiterForm = () => {
             onChange={(e) => setAgeRequirements(e.target.value)}
           />
         </div> */}
-          <div className="flex items-center space-x-4">
-            <span className="text-white">Age Requirements (years):</span>
-            <div className="flex items-center space-x-2">
-              <div className=" border-2 rounded-md px-2 py-1 flex items-center space-x-1">
-                <div className="text-white hover:text-white focus:outline-none">
-                  <span>-</span>
+            <div className="flex mb-4 items-center justify-between space-x-4">
+              <span className="text-white">Age Requirements (years):</span>
+              <div className="flex items-center space-x-2">
+                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                  <div className="text-white  focus:outline-none">
+                    <span>-</span>
+                  </div>
+                  <span className="text-white">4</span>
+                  <div className="text-white  focus:outline-none">
+                    <span>+</span>
+                  </div>
                 </div>
-                <span className="text-white">4</span>
-                <div className="text-white hover:text-white focus:outline-none">
-                  <span>+</span>
-                </div>
-              </div>
-              <span className="text-white">to</span>
-              <div className=" border-2 rounded-md px-2 py-1 flex items-center space-x-1">
-                <div className="text-white hover:text-white focus:outline-none">
-                  <span>-</span>
-                </div>
-                <span className="text-white">5</span>
-                <div className="text-white hover:text-white focus:outline-none">
-                  <span>+</span>
+                <span className="text-white">to</span>
+                <div className="w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                  <div className="text-white  focus:outline-none">
+                    <span>-</span>
+                  </div>
+                  <span className="text-white">5</span>
+                  <div className="text-white hover:text-white focus:outline-none">
+                    <span>+</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
+            {/* <div className="mb-4">
             <label className="text-white">
               <input
                 type="checkbox"
@@ -328,8 +346,18 @@ const RecruiterForm = () => {
               />
               Experience Required
             </label>
-          </div>
-          <div>
+          </div> */}
+            <div className="pb-4">
+              <label className="text-white pr-10">Experience Required:</label>
+              <input type="checkbox" value="option1" />
+            </div>
+            <div className="pb-4">
+              <label className="text-white pr-10">
+                Experience Certificate:
+              </label>
+              <input type="checkbox" value="option1" />{" "}
+            </div>
+            {/* <div className="mb-4">
             <label className="text-white">
               <input
                 type="checkbox"
@@ -338,8 +366,8 @@ const RecruiterForm = () => {
               />
               Experience Certificate
             </label>
-          </div>
-          {/* <div>
+          </div> */}
+            {/* <div>
           <label htmlFor="experienceInYears">Experience in Years:</label>
           <input
             type="text"
@@ -348,87 +376,120 @@ const RecruiterForm = () => {
             onChange={(e) => setExperienceInYears(e.target.value)}
           />
         </div> */}
-          <div className="flex items-center space-x-4">
-            <span className="text-white">Experience in years:</span>
-            <div className="flex items-center space-x-2">
-              <div className=" border-2 rounded-md px-2 py-1 flex items-center space-x-1">
-                <div className="text-white hover:text-white focus:outline-none">
-                  <span>-</span>
+            <div className="flex  items-center justify-between space-x-4">
+              <span className="text-white">Experience in years:</span>
+              <div className="flex items-center space-x-2">
+                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                  <div className="text-white  focus:outline-none">
+                    <span>-</span>
+                  </div>
+                  <span className="text-white">4</span>
+                  <div className="text-white  focus:outline-none">
+                    <span>+</span>
+                  </div>
                 </div>
-                <span className="text-white">4</span>
-                <div className="text-white  focus:outline-none">
-                  <span>+</span>
-                </div>
-              </div>
-              <span className="text-white">to</span>
-              <div className=" border-2 rounded-md px-2 py-1 flex items-center space-x-1">
-                <div className="text-white  focus:outline-none">
-                  <span>-</span>
-                </div>
-                <span className="text-white">5</span>
-                <div className="text-white  focus:outline-none">
-                  <span>+</span>
+                <span className="text-white">to</span>
+                <div className="w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                  <div className="text-white  focus:outline-none">
+                    <span>-</span>
+                  </div>
+                  <span className="text-white">5</span>
+                  <div className="text-white hover:text-white focus:outline-none">
+                    <span>+</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <label htmlFor="educationalRequirements" className="text-white">
-              Educational Requirements:
-            </label>
-            <select
-              id="educationalRequirements"
-              value={educationalRequirements}
-              onChange={(e) => setEducationalRequirements(e.target.value)}
-            >
-              <option value="">Select Educational Requirements</option>
-              <option value="High School Diploma">High School Diploma</option>
-              <option value="Bachelor's Degree">Bachelor's Degree</option>
-              <option value="Master's Degree">Master's Degree</option>
-              {/* Add other educational requirements */}
-            </select>
-          </div>
-          <div>
-            <label htmlFor="proposedSalary" className="text-white">
-              Proposed Salary:
-            </label>
-            {/* <input
+            <div className="md:flex mb-4 justify-between relative">
+              <label
+                htmlFor="educationalRequirements"
+                className="text-white pt-4"
+              >
+                Educational Requirements:
+              </label>
+              <select
+                id="educationalRequirements"
+                value={educationalRequirements}
+                className="appearance-none w-full md:w-1/2 border-b pb-1 pt-4  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                onChange={(e) => setEducationalRequirements(e.target.value)}
+              >
+                <option className="text-black" value="">
+                  Select Educational Requirements
+                </option>
+                <option className="text-black" value="High School Diploma">
+                  High School Diploma
+                </option>
+                <option className="text-black" value="Bachelor's Degree">
+                  Bachelor's Degree
+                </option>
+                <option className="text-black" value="Master's Degree">
+                  Master's Degree
+                </option>
+                {/* Add other educational requirements */}
+              </select>
+              <div className="absolute top-9 md:top-3 right-0 flex items-center pr-3 pointer-events-none">
+                <IoIosArrowDown className="text-white text-xl" />
+              </div>
+            </div>
+            <div className="flex justify-between ">
+              <label htmlFor="proposedSalary" className="text-white flex-1">
+                Proposed Salary:
+              </label>
+              {/* <input
             type="number"
             id="proposedSalary"
             value={proposedSalary}
             onChange={(e) => setProposedSalary(e.target.value)}
           /> */}
-            <div className=" border-2 rounded-md px-2 py-1 flex items-center space-x-1">
-              <div className="text-white  focus:outline-none">
-                <span>-</span>
-              </div>
-              <span className="text-white">4</span>
-              <div className="text-white  focus:outline-none">
-                <span>+</span>
+              <div className="flex gap-10 flex-1">
+                <div className=" w-12 md:w-28 md:gap-3  justify-center border-2 rounded-md px-2 py-1 flex items-center space-x-1">
+                  <div className="text-white  focus:outline-none">
+                    <span>-</span>
+                  </div>
+                  <span className="text-white">4</span>
+                  <div className="text-white  focus:outline-none">
+                    <span>+</span>
+                  </div>
+                </div>
+                <div className="relative  flex-1 ">
+                  <select
+                    value={currencyType}
+                    className="appearance-none w-full border-b pb-1 pt-4  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
+                    onChange={(e) => setCurrencyType(e.target.value)}
+                  >
+                    <option
+                      className="text-black"
+                      className="text-black"
+                      value="USD"
+                    >
+                      USD
+                    </option>
+                    <option className="text-black" value="EUR">
+                      EUR
+                    </option>
+                    <option className="text-black" value="GBP">
+                      GBP
+                    </option>
+                    {/* Add other currency options */}
+                  </select>
+                  <div className="absolute top-3 right-0 flex items-center pr-3 pointer-events-none">
+                    <IoIosArrowDown className="text-white text-xl" />
+                  </div>
+                </div>
               </div>
             </div>
+          </div>{" "}
+          <div className=" mx-2 flex flex-col items-center justify-center lg:mx-auto bg-black bg-opacity-90 px-10 py-10 lg:mb-4 rounded-xl lg:w-screen">
+            <div className="mb-4 ">
+              <label class="mx-auto  flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase  cursor-pointer hover:bg-blue hover:text-white">
+                <PiPlusLight class="mt-2 text-white text-9xl" />
 
-            <select
-              value={currencyType}
-              onChange={(e) => setCurrencyType(e.target.value)}
-            >
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-              {/* Add other currency options */}
-            </select>
-          </div>
-        </div>{" "}
-        <div className=" mx-2 flex flex-col items-center justify-center lg:mx-auto bg-black bg-opacity-90 px-10 py-10 lg:mb-4 rounded-xl lg:w-screen">
-          <div className="mb-4 ">
-            <label class="mx-auto  flex flex-col items-center justify-center px-4 py-6 bg-transparent text-blue rounded-lg shadow-lg tracking-wide uppercase  cursor-pointer hover:bg-blue hover:text-white">
-              <PiPlusLight class="mt-2 text-white text-9xl" />
-
-              <input type="file" class="hidden" />
-            </label>
+                <input type="file" class="hidden" />
+              </label>
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   };
 

@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="cs-shape_1"></div>
 
         {/* banner content */}
-        <div className="px-4 lg:px-24 absolute bottom-[28vh] md:bottom-[30vh] mt-28 ">
+        <div className="px-4 lg:px-24 absolute bottom-[28vh] md:bottom-[12vh]  mt-28  ">
           <h1
             className="md:w-2/4 lg:text-8xl sm:text-6xl text-5xl mb-5 text-white font-bold lg:leading-snug sm:leading-snug leading-snug stroke-black stroke-2"
             style={{ textShadow: "2px 2px 15px rgba(0,0,0,10)" }}

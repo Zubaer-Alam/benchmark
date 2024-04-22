@@ -225,7 +225,7 @@ const RecruiterForm = () => {
             }}
             className={` bg-[#ca0b10] hover:bg-[#ca0b40] w-72 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
           >
-            PROCEED
+            Proceed
           </button>
         </div>
       </div>
@@ -458,7 +458,6 @@ const RecruiterForm = () => {
                   >
                     <option
                       className="text-black"
-                      className="text-black"
                       value="USD"
                     >
                       USD
@@ -509,7 +508,7 @@ const RecruiterForm = () => {
             currentStep === 1 ? "hidden" : ""
           } bg-[#ca0b10] hover:bg-[#ca0b40] w-72 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
         >
-          SUBMIT
+          Submit
         </button>
       </div>
     </form>

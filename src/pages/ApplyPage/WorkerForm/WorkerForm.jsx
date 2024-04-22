@@ -165,7 +165,6 @@ const WorkerForm = () => {
                   <option className="text-black" value="profession2">
                     Profession 2
                   </option>
-
                 </select>
                 <div className="absolute top-3 right-0 flex items-center pr-3 pointer-events-none">
                   <IoIosArrowDown className="text-white text-xl" />
@@ -287,9 +286,8 @@ const WorkerForm = () => {
                 {fileName}
               </label>
               <div className="absolute top-2 right-0 flex items-center pr-3 pointer-events-none">
-                  <MdPictureAsPdf className="text-white text-xl" />
-                </div>
-              
+                <MdPictureAsPdf className="text-white text-xl" />
+              </div>
             </div>
           </div>
           <div className="py-4">

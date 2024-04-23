@@ -2,9 +2,7 @@ import { useRef } from "react";
 import Globe from "react-globe.gl";
 import * as THREE from "three";
 import * as topojson from "topojson-client";
-
 import landTopology from "../../../assets/earth/land_10m.json";
-import pointsData from "../../../assets/earth/random-locations.json";
 import texture from "../../../assets/earth/texture.jpg";
 
 const min = 500;
@@ -76,24 +74,8 @@ const EarthComponent = () => {
     }
   };
 
-  // Gen random data
-  const N = 30;
-
-  const gData = [
-    {
-      lat: 45.9432,
-      lng: 24.9668,
-      size: 5 + Math.random() * 20,
-      color: ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"][
-        Math.round(Math.random() * 3)
-      ],
-      label: "Romania",
-      src: "./content/flags/lithuania.png",
-    },
-  ];
-
   return (
-    <div className="cursor-move">
+    <div className="">
       <Globe
         ref={globeRef}
         onGlobeReady={globeReady}
@@ -102,14 +84,12 @@ const EarthComponent = () => {
         globeMaterial={
           new THREE.MeshPhongMaterial({
             color: "#1a2033",
-            // opacity: 0.95,
-            // transparent: true,
+            opacity: 0.95,
+            transparent: true,
           })
         }
         atmosphereColor="#FFFFFF"
-        atmosphereAltitude={0.2}
-        /* label */
-
+        atmosphereAltitude={0.1}
         arcsData={arcsData}
         arcAltitudeAutoScale={0.5}
         arcColor="color"

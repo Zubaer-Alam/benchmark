@@ -15,7 +15,7 @@ const HomePage = () => {
       <Hero />
       <About />
 
-      <div className="lg:flex  lg:justify-between  lg:pt-0  mx-auto bg-gradient-to-tr from-[#181818] to-[#101010] rounded-b-[260px] lg:rounded-b-[200px] xl:rounded-b-[280px] container">
+      <div className="lg:flex  lg:justify-between  lg:pt-0  mx-auto bg-gradient-to-tr from-[#181818] to-[#101010] rounded-b-[260px] lg:rounded-b-[100px] xl:rounded-b-[150px] container pb-10">
         <div className="lg:ps-24 p-4 z-10">
           <div className=" lg:pt-10 lg:w-[500px] text-white ">
             <h1 className="md:text-5xl  text-3xl font-bold ">
@@ -34,7 +34,8 @@ const HomePage = () => {
           <EarthComponent />
         </div> */}
         <div className=" w-full h-full">
-          <Globe />
+          {/* <Globe /> */}
+          <EarthComponent />
         </div>
       </div>
 

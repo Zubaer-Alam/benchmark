@@ -8,7 +8,7 @@ import pointsData from "../../../assets/earth/random-locations.json";
 import texture from "../../../assets/earth/texture.jpg";
 
 const min = 1000;
-const max = 4000;
+const max = 500;
 
 const countriesData = [
   { name: "Bangladesh", lat: 23.685, lng: 90.3563 },
@@ -171,7 +171,7 @@ const EarthComponent = () => {
       <Globe
         ref={globeRef}
         onGlobeReady={globeReady}
-        backgroundColor="#FFFFFF"
+        backgroundColor="rgba(0,0,0,0)"
         rendererConfig={{ antialias: true, alpha: true }}
         globeMaterial={
           new THREE.MeshPhongMaterial({
@@ -181,7 +181,7 @@ const EarthComponent = () => {
           })
         }
         atmosphereColor="#FFFFFF"
-        atmosphereAltitude={0.5}
+        atmosphereAltitude={0.2}
         // htmlElementsData={gData}
         // htmlElement={d => {
         //     const el = document.createElement('div');
@@ -210,7 +210,7 @@ const EarthComponent = () => {
         /* label */
 
         arcsData={arcsData}
-        arcAltitudeAutoScale={0.3}
+        arcAltitudeAutoScale={0.5}
         arcColor="color"
         arcStroke={0.5}
         arcDashGap={2}

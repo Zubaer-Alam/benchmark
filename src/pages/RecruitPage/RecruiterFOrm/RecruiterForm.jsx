@@ -457,14 +457,7 @@ const RecruiterForm = () => {
                     className="appearance-none w-full border-b pb-1 pt-4  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                     onChange={(e) => setCurrencyType(e.target.value)}
                   >
-<<<<<<< HEAD
-                    <option
-                      className="text-black"
-                      value="USD"
-                    >
-=======
                     <option className="text-black" value="USD">
->>>>>>> 7db5c3a (random)
                       USD
                     </option>
                     <option className="text-black" value="EUR">

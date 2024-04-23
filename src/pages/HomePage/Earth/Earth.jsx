@@ -7,7 +7,7 @@ import landTopology from "../../../assets/earth/land_10m.json";
 import pointsData from "../../../assets/earth/random-locations.json";
 import texture from "../../../assets/earth/texture.jpg";
 
-const min = 1000;
+const min = 500;
 const max = 500;
 
 const countriesData = [
@@ -76,26 +76,8 @@ const EarthComponent = () => {
     }
   };
 
-  // console.log(window.innerWidth);
-
-  //     const markerSvg = `<div>
-  //     <svg viewBox="-4 0 36 36">
-  //     <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
-  //     <circle fill="black" cx="14" cy="14" r="7"></circle>
-  //   </svg>
-  //         <p>{label}</p>
-  //     <div/>`;
-
   // Gen random data
   const N = 30;
-
-  // const gData = [...Array(N).keys()].map(() => ({
-  //     lat: (Math.random() - 0.5) * 180,
-  //     lng: (Math.random() - 0.5) * 360,
-  //     size: 7 + Math.random() * 30,
-  //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-  //     label: 'Country X'
-  // }));
 
   const gData = [
     {
@@ -108,62 +90,6 @@ const EarthComponent = () => {
       label: "Romania",
       src: "./content/flags/lithuania.png",
     },
-    // {
-    //     lat: 55.1694,
-    //     lng: 23.8813,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Lithuania'
-    // },
-    // {
-    //     lat: 44.0165,
-    //     lng: 21.0059,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Serbia'
-    // },
-    // {
-    //     lat: 41.8719,
-    //     lng: 12.5674,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Italy'
-    // },
-    // {
-    //     lat: 51.1657,
-    //     lng: 10.4515,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Germany'
-    // },
-    // {
-    //     lat: 42.7339,
-    //     lng: 25.4858,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Bulgaria'
-    // },
-    // {
-    //     lat: 51.9194,
-    //     lng: 19.1451,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Poland'
-    // },
-    // {
-    //     lat: 45.1,
-    //     lng: 15.2,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Croatia'
-    // },
-    // {
-    //     lat: 49.8175,
-    //     lng: 15.473,
-    //     size: 5 + Math.random() * 20,
-    //     color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'][Math.round(Math.random() * 3)],
-    //     label: 'Czech Republic'
-    // }
   ];
 
   return (
@@ -182,31 +108,6 @@ const EarthComponent = () => {
         }
         atmosphereColor="#FFFFFF"
         atmosphereAltitude={0.2}
-        // htmlElementsData={gData}
-        // htmlElement={d => {
-        //     const el = document.createElement('div');
-        //     el.innerHTML = `<div class="">
-        //     <img
-        //     src=${d.src}
-        //     class="h-[20px] w-[20px] rounded-full object-cover mr-2"
-        //   />
-        //     <p class="text-[15px]">${d.label}</p>
-        // </div>`;
-        //     el.style.color = d.color;
-        //     el.style.width = `${d.size}px`;
-
-        //     el.style['pointer-events'] = 'auto';
-        //     el.style.cursor = 'pointer';
-        //     el.onclick = () => console.log(d);
-        //     return el;
-        // }}
-        // pointsMerge={true}
-        // pointsData={pointsData}
-        // pointAltitude={0.01}
-        // pointRadius={0.2}
-        // pointResolution={5}
-        // pointColor={() => '#eed31f'}
-
         /* label */
 
         arcsData={arcsData}
@@ -221,19 +122,12 @@ const EarthComponent = () => {
         polygonSideColor={() => "#00000000"}
         polygonCapMaterial={
           new THREE.MeshPhongMaterial({
-            color: "#5090cd",
+            color: "#50C878",
             side: THREE.DoubleSide,
             map: new THREE.TextureLoader().load(texture),
           })
         }
         polygonAltitude={0.01}
-        // customLayerData={[...Array(500).keys()].map(() => ({
-        //   lat: (Math.random() - 1) * 360,
-        //   lng: (Math.random() - 1) * 360,
-        //   altitude: 0 ,
-        //   size: Math.random() * 0.4,
-        //   color: 'red',
-        // }))}
         customThreeObject={(sliceData) => {
           const { size, color } = sliceData;
           return new THREE.Mesh(

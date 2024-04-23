@@ -33,7 +33,7 @@ const HomePage = () => {
         {/* <div className="xl:-ms-[265px] lg:ms-[-290px] -z-0 ">
           <EarthComponent />
         </div> */}
-        <div className=" w-full h-full">
+        <div className="overflow-hidden  w-screen h-96 flex justify-center items-center">
           {/* <Globe /> */}
           <EarthComponent />
         </div>

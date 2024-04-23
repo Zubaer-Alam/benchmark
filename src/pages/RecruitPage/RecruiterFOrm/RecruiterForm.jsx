@@ -239,6 +239,7 @@ const RecruiterForm = () => {
         animate={{ x: 0 }}
         transition={{ duration: 0.9 }}
       >
+        className="text-black"
         <div className=" lg:flex gap-4 lg:my-20 ">
           <div className="mb-4  mx-2  lg:mx-auto bg-black bg-opacity-90 px-5 md:px-10 py-20  rounded-xl lg:w-screen">
             <div className="md:flex mb-4 justify-between relative">
@@ -456,10 +457,14 @@ const RecruiterForm = () => {
                     className="appearance-none w-full border-b pb-1 pt-4  text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent"
                     onChange={(e) => setCurrencyType(e.target.value)}
                   >
+<<<<<<< HEAD
                     <option
                       className="text-black"
                       value="USD"
                     >
+=======
+                    <option className="text-black" value="USD">
+>>>>>>> 7db5c3a (random)
                       USD
                     </option>
                     <option className="text-black" value="EUR">

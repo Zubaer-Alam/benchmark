@@ -8,7 +8,7 @@
   width: 80% !important; /* Make width responsive */
   max-width: 80% !important; /* Ensure container doesn't exceed viewport width */
   height: 100% !important;
-
+  /* border: 2px solid red; */
   margin: 0 auto;
   overflow: hidden;
 }
@@ -17,6 +17,7 @@
   width: 100% !important; /* Make canvas responsive */
   height: 100% !important; /* Make canvas responsive */
   display: block !important;
+  /* border: 2px solid green; */
 }
 
 /* Responsive styles for medium devices */

@@ -207,7 +207,7 @@ const EarthComponent = () => {
           new THREE.MeshPhongMaterial({
             color: "#1a2033",
             opacity: 0.95,
-            transparent: true,
+            transparent: false,
           })
         }
         atmosphereColor="#FFFFFF"

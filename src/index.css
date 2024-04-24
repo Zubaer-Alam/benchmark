@@ -5,8 +5,8 @@
 /* Default styles */
 .scene-container {
   position: relative;
-  width: 70% !important; /* Make width responsive */
-  max-width: 70% !important; /* Ensure container doesn't exceed viewport width */
+  width: 100% !important; /* Make width responsive */
+  max-width: 100% !important; /* Ensure container doesn't exceed viewport width */
   height: 100% !important;
   /* border: 2px solid red; */
   margin: 0 auto;

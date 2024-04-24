@@ -16,13 +16,13 @@ const HomePage = () => {
       <About />
 
       <div className="lg:flex  lg:justify-between  lg:pt-0  mx-auto bg-gradient-to-tr from-[#181818] to-[#101010] rounded-b-[260px] lg:rounded-b-[100px] xl:rounded-b-[150px] container pb-10">
-        <div className="lg:ps-24 p-4 z-10">
-          <div className=" lg:pt-10 lg:w-[500px] text-white ">
+        <div className="lg:ps-24 lg:pt-12 p-4 z-10 ">
+          <div className=" lg:pt-10 lg:w-[600px] text-white ">
             <h1 className="md:text-5xl  text-3xl font-bold ">
               Start your career
               <br /> anywhere in the world
             </h1>
-            <p className=" lg:w-[450px] text-justify text-sm md:text-xl md:mt-8 mt-3">
+            <p className=" lg:w-[550px] text-justify text-sm md:text-xl md:mt-8 mt-3">
               Our premier matching infrastructure and international partnerships
               enable us to connect top global companies with workers based on
               their preferences.
@@ -33,7 +33,7 @@ const HomePage = () => {
         {/* <div className="xl:-ms-[265px] lg:ms-[-290px] -z-0 ">
           <EarthComponent />
         </div> */}
-        <div className="overflow-hidden  h-96 flex justify-center items-center">
+        <div className="overflow-hidden  h-96 md:h-[30rem] flex justify-center items-center">
           {/* <Globe /> */}
           <EarthComponent />
         </div>

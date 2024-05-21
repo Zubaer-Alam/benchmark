@@ -3,6 +3,7 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FacebookChat from "../components/FacebookChat";
+import WhatsApp from "../components/WhatsApp";
 // import { useAuth } from "../providers/AuthProvider";
 
 const MainLayout = () => {
@@ -15,6 +16,7 @@ const MainLayout = () => {
                     <Outlet />
                 </main>
             </div>
+            <WhatsApp />
             <Footer />
             <FacebookChat />
             <ScrollRestoration></ScrollRestoration>

@@ -8,7 +8,7 @@ const WorkerForm = () => {
   const [gender, setGender] = useState("");
   const [targetCountry, setTargetCountry] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
-  const [targetProfession, setTargetProfession] = useState("");
+  const [targetProfession, setTargetProfession] = useState(""); 
 
   const [formData, setFormData] = useState({
     name: "",

@@ -42,7 +42,16 @@ import { SlArrowUp } from "react-icons/sl";
 const ImageGrid = () => {
   const [selected, setSelected] = useState(null);
   return (
-    <div className="">
+    <div className="lg:px-20 px-4">
+      {" "}
+      <p className="pt-6 text-base tracking-wider w-4/5">
+        Celebrating the success of our clients! Here are a few of the many
+        individuals who have achieved their dreams with our expert guidance and
+        support. From securing student visas to obtaining work permits, our
+        dedicated team has helped numerous clients embark on their journeys
+        abroad. We are proud to be a part of their success and are committed to
+        continuing to provide top-notch service and support.
+      </p>
       <div
         className={`relative overflow-hidden ${
           selected === 1
@@ -226,7 +235,6 @@ const ImageGrid = () => {
           className="w-auto object-cover mx-auto h-52 md:h-36 lg:h-52 rounded-lg"
         />
       </div>
-
       <div className="flex justify-center pt-6 my-4 border-black">
         <button
           type="button"

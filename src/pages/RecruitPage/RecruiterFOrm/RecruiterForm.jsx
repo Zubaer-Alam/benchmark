@@ -64,7 +64,7 @@ const RecruiterForm = () => {
 
   const handleTargetProfessionChange = (e) => {
     setTargetProfession(e.target.value);
-  };
+  }; 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -78,9 +78,9 @@ const RecruiterForm = () => {
 
   const renderStep1 = () => {
     return (
-      <div className=" mx-2 lg:mx-auto bg-black bg-opacity-90 lg:my-20 px-10 py-10 lg:mb-4 rounded-xl max-w-[700px]">
+      <div className=" mx-2 lg:mx-auto bg-black bg-opacity-90 px-10 py-10 lg:mt-8 rounded-xl max-w-[700px]">
         <div className="col-span-4 ">
-          {/* from section 2 */}
+          {/* from section 2 */} 
           <div className="  col-span-3 ">
             <div className="mb-4">
               <input

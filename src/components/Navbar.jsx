@@ -41,7 +41,7 @@ const Navbar = () => {
     { link: "Gallery", path: "gallery" },
     { link: "Apply", path: "apply" },
     { link: "Recruit", path: "recruit" },
-    { link: "Collaborate", path: "collaborate" },
+    // { link: "Collaborate", path: "collaborate" },
   ];
 
   return (

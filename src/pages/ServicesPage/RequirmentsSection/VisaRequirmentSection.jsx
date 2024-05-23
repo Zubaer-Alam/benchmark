@@ -104,11 +104,19 @@ const VisaRequirmentSection = () => {
 
   return (
     <div className="py-10 container mx-auto ">
-      <SectionIntro
-        eyebrow="Worker Visa"
-        title="Applicant requirements"
-        className="mb-10"
-      />
+      <SectionIntro eyebrow="" title="Services" className="mb-10" />
+      <p className="text-base leading-relaxed px-6 lg:px-8 text-gray-600 mb-8 tracking-wide">
+        We offer comprehensive support including application assistance for
+        university and college admissions, guidance on selecting or changing
+        courses, and support for student visas. We provide recognition of prior
+        learning (RPL) and skills assessments, as well as coaching for language
+        tests like PTE, NAATI, and IELTS. Our services extend to high school
+        program assistance, arrival support such as housing and employment, and
+        comprehensive migration consulting. We also offer various training
+        courses including HACCP, workplace safety, general worker training, and
+        hospitality operations. Additionally, we provide programs focused on
+        sustainable tourism development.
+      </p>
       <div className="columns-1 md:columns-2 px-6 lg:px-8 gap-3 lg:gap-10 space-y-10">
         {/* <div className="my-4 px-6 grid lg:grid-cols-3 gap-4"> */}
         {Object.entries(countriesData).map(([country, data]) => (
